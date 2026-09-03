@@ -1,0 +1,6 @@
+{
+  "name": "AtlantidaOS",
+  "description": "AtlantidaOS - World-Class Multi-Provider Autonomous AI Operating System & Command Center",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

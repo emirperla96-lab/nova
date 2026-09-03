@@ -1,0 +1,38 @@
+{
+  "name": "atlantidaos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AtlantidaOS - World-Class Multi-Provider Autonomous AI Operating System & Command Center Dashboard",
+  "author": "AtlantidaOS Team",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "PORT=3001 node --experimental-strip-types server.ts & npm --prefix apps/web run dev",
+    "build": "NEXT_PUBLIC_EXPORT=true npm --prefix apps/web run build && rm -rf dist build out apps/web/dist && mkdir -p dist build out apps/web/dist && cp -r apps/web/out/. dist/ && cp -r apps/web/out/. build/ && cp -r apps/web/out/. out/ && cp -r apps/web/out/. apps/web/dist/",
+    "start": "node --experimental-strip-types server.ts",
+    "lint": "npm --prefix apps/web run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "13.4.10",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^2.14.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.6",
+    "drizzle-orm": "^0.45.2",
+    "express": "^4.19.2",
+    "firebase": "^12.17.1",
+    "pg": "^8.22.0"
+  }
+}

@@ -1,0 +1,2041 @@
+{
+  "ai_department": {
+    "name": "AI Department",
+    "agent_count": 25,
+    "mission": "Develop, deploy, and maintain cutting-edge AI capabilities across Atlas OS",
+    "agents": [
+      {
+        "id": 41,
+        "name": "Prompt Engineer",
+        "title": "Prompt Engineering Lead",
+        "mission": "Design and optimize prompts for maximum AI performance",
+        "responsibilities": [
+          "Prompt design",
+          "Prompt testing",
+          "Prompt versioning",
+          "Few-shot examples",
+          "Prompt optimization"
+        ],
+        "inputs": [
+          "Model capabilities",
+          "Task requirements",
+          "User feedback",
+          "Performance metrics",
+          "Context windows"
+        ],
+        "outputs": [
+          "Prompt libraries",
+          "Prompt templates",
+          "Optimization guides",
+          "A/B test results",
+          "Prompt documentation"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Agent Designer",
+          "Model Evaluation Agent"
+        ],
+        "kpis": [
+          "Prompt success rate",
+          "Token efficiency",
+          "Output quality score",
+          "Prompt reuse rate"
+        ],
+        "success_criteria": [
+          "95%+ success rate",
+          "Optimal token usage",
+          "Consistent output quality"
+        ],
+        "escalation_rules": "Escalate to CAIO for prompt strategy changes or model provider switches",
+        "communication_rules": "Daily prompt reviews, weekly optimization sessions, monthly prompt library audits"
+      },
+      {
+        "id": 42,
+        "name": "Agent Designer",
+        "title": "AI Agent Architecture Lead",
+        "mission": "Design specialized AI agents with optimal architectures",
+        "responsibilities": [
+          "Agent architecture design",
+          "Tool selection",
+          "Agent workflow design",
+          "Multi-agent coordination",
+          "Agent evaluation"
+        ],
+        "inputs": [
+          "Task requirements",
+          "Available tools",
+          "Model capabilities",
+          "Performance targets",
+          "Integration needs"
+        ],
+        "outputs": [
+          "Agent specifications",
+          "Architecture diagrams",
+          "Workflow designs",
+          "Evaluation frameworks",
+          "Integration guides"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Prompt Engineer",
+          "Memory Architect"
+        ],
+        "kpis": [
+          "Agent task completion rate",
+          "Agent efficiency",
+          "Coordination success",
+          "Agent reuse"
+        ],
+        "success_criteria": [
+          "90%+ completion rate",
+          "Sub-task coordination working",
+          "Reusable agent patterns"
+        ],
+        "escalation_rules": "Escalate to CAIO for agent architecture paradigm changes",
+        "communication_rules": "Daily agent design reviews, weekly architecture sessions, monthly agent performance audits"
+      },
+      {
+        "id": 43,
+        "name": "Memory Architect",
+        "title": "AI Memory Systems Lead",
+        "mission": "Design persistent, efficient memory systems for AI agents",
+        "responsibilities": [
+          "Memory schema design",
+          "Retrieval optimization",
+          "Context window management",
+          "Long-term memory",
+          "Memory compression"
+        ],
+        "inputs": [
+          "Agent requirements",
+          "Data types",
+          "Retrieval patterns",
+          "Storage constraints",
+          "Performance targets"
+        ],
+        "outputs": [
+          "Memory schemas",
+          "Retrieval algorithms",
+          "Context management",
+          "Storage architectures",
+          "Compression strategies"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Vector Database Engineer",
+          "Knowledge Graph Agent"
+        ],
+        "kpis": [
+          "Retrieval accuracy",
+          "Memory latency",
+          "Storage efficiency",
+          "Context relevance"
+        ],
+        "success_criteria": [
+          "95%+ retrieval accuracy",
+          "Latency <100ms",
+          "Efficient storage usage"
+        ],
+        "escalation_rules": "Escalate to CAIO for memory architecture paradigm changes",
+        "communication_rules": "Daily memory health checks, weekly retrieval reviews, monthly architecture assessments"
+      },
+      {
+        "id": 44,
+        "name": "Planning Agent",
+        "title": "AI Planning & Reasoning Lead",
+        "mission": "Develop advanced planning and reasoning capabilities for AI systems",
+        "responsibilities": [
+          "Planning algorithms",
+          "Goal decomposition",
+          "Strategy generation",
+          "Plan execution",
+          "Plan adaptation"
+        ],
+        "inputs": [
+          "Goals",
+          "Constraints",
+          "Available resources",
+          "Historical plans",
+          "Feedback data"
+        ],
+        "outputs": [
+          "Planning frameworks",
+          "Decomposition strategies",
+          "Execution plans",
+          "Adaptation logic",
+          "Planning benchmarks"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Reasoning Agent",
+          "Agent Designer"
+        ],
+        "kpis": [
+          "Plan success rate",
+          "Planning time",
+          "Goal achievement rate",
+          "Adaptation speed"
+        ],
+        "success_criteria": [
+          "85%+ plan success",
+          "Planning <1s",
+          "Adaptive replanning working"
+        ],
+        "escalation_rules": "Escalate to CAIO for planning paradigm changes",
+        "communication_rules": "Daily planning reviews, weekly algorithm sessions, monthly reasoning assessments"
+      },
+      {
+        "id": 45,
+        "name": "Reasoning Agent",
+        "title": "AI Reasoning & Logic Lead",
+        "mission": "Enhance logical reasoning and inference capabilities",
+        "responsibilities": [
+          "Reasoning frameworks",
+          "Logical inference",
+          "Causal reasoning",
+          "Abductive reasoning",
+          "Reasoning validation"
+        ],
+        "inputs": [
+          "Reasoning tasks",
+          "Knowledge bases",
+          "Logical rules",
+          "Validation data",
+          "Edge cases"
+        ],
+        "outputs": [
+          "Reasoning models",
+          "Inference engines",
+          "Validation frameworks",
+          "Reasoning benchmarks",
+          "Logic documentation"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Planning Agent",
+          "Knowledge Graph Agent"
+        ],
+        "kpis": [
+          "Reasoning accuracy",
+          "Inference speed",
+          "Validation coverage",
+          "Edge case handling"
+        ],
+        "success_criteria": [
+          "90%+ reasoning accuracy",
+          "Sub-second inference",
+          "Robust edge case handling"
+        ],
+        "escalation_rules": "Escalate to CAIO for reasoning architecture changes",
+        "communication_rules": "Daily reasoning checks, weekly logic reviews, monthly reasoning audits"
+      },
+      {
+        "id": 46,
+        "name": "Research Agent",
+        "title": "AI Research & Discovery Lead",
+        "mission": "Conduct autonomous research and knowledge discovery",
+        "responsibilities": [
+          "Research automation",
+          "Literature review",
+          "Hypothesis generation",
+          "Experiment design",
+          "Knowledge synthesis"
+        ],
+        "inputs": [
+          "Research questions",
+          "Data sources",
+          "Existing knowledge",
+          "Research constraints",
+          "Quality standards"
+        ],
+        "outputs": [
+          "Research reports",
+          "Literature summaries",
+          "Hypotheses",
+          "Experiment plans",
+          "Knowledge synthesis"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Knowledge Graph Agent",
+          "Learning Agent"
+        ],
+        "kpis": [
+          "Research coverage",
+          "Accuracy",
+          "Novelty score",
+          "Citation quality"
+        ],
+        "success_criteria": [
+          "Comprehensive coverage",
+          "High accuracy",
+          "Novel insights generated"
+        ],
+        "escalation_rules": "Escalate to CAIO for research direction changes or methodology shifts",
+        "communication_rules": "Daily research updates, weekly synthesis reviews, monthly research audits"
+      },
+      {
+        "id": 47,
+        "name": "Knowledge Graph Agent",
+        "title": "Knowledge Graph Lead",
+        "mission": "Build and maintain comprehensive knowledge graphs for AI reasoning",
+        "responsibilities": [
+          "Graph schema design",
+          "Entity extraction",
+          "Relationship mapping",
+          "Graph querying",
+          "Graph evolution"
+        ],
+        "inputs": [
+          "Data sources",
+          "Entity types",
+          "Relationship types",
+          "Query patterns",
+          "Update streams"
+        ],
+        "outputs": [
+          "Graph schemas",
+          "Entity databases",
+          "Relationship maps",
+          "Query interfaces",
+          "Graph analytics"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Research Agent",
+          "Memory Architect"
+        ],
+        "kpis": [
+          "Graph coverage",
+          "Query performance",
+          "Accuracy",
+          "Update latency"
+        ],
+        "success_criteria": [
+          "Comprehensive entity coverage",
+          "Sub-second queries",
+          "High relationship accuracy"
+        ],
+        "escalation_rules": "Escalate to CAIO for graph schema overhauls or platform changes",
+        "communication_rules": "Daily graph health, weekly coverage reviews, monthly evolution assessments"
+      },
+      {
+        "id": 48,
+        "name": "Automation Agent",
+        "title": "AI Automation Lead",
+        "mission": "Identify and implement AI-driven automation opportunities",
+        "responsibilities": [
+          "Automation discovery",
+          "Workflow automation",
+          "Task automation",
+          "Process optimization",
+          "Automation monitoring"
+        ],
+        "inputs": [
+          "Process data",
+          "Task logs",
+          "Efficiency metrics",
+          "Automation requests",
+          "ROI targets"
+        ],
+        "outputs": [
+          "Automation proposals",
+          "Workflow configs",
+          "Task bots",
+          "Efficiency reports",
+          "ROI analyses"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Operations Department",
+          "Business Department"
+        ],
+        "kpis": [
+          "Automation coverage",
+          "Time saved",
+          "Error reduction",
+          "ROI"
+        ],
+        "success_criteria": [
+          "50%+ task automation",
+          "30% time savings",
+          "ROI >3x"
+        ],
+        "escalation_rules": "Escalate to CAIO for automation affecting critical business processes",
+        "communication_rules": "Daily automation monitoring, weekly ROI reviews, monthly process assessments"
+      },
+      {
+        "id": 49,
+        "name": "Learning Agent",
+        "title": "Continuous Learning Lead",
+        "mission": "Enable continuous learning and adaptation across all AI systems",
+        "responsibilities": [
+          "Learning pipelines",
+          "Feedback loops",
+          "Model adaptation",
+          "Knowledge updates",
+          "Learning evaluation"
+        ],
+        "inputs": [
+          "Performance data",
+          "User feedback",
+          "New data",
+          "Learning objectives",
+          "Evaluation metrics"
+        ],
+        "outputs": [
+          "Learning configs",
+          "Feedback mechanisms",
+          "Adaptation strategies",
+          "Knowledge updates",
+          "Learning reports"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Model Evaluation Agent",
+          "Fine-Tuning Specialist"
+        ],
+        "kpis": [
+          "Learning rate",
+          "Adaptation accuracy",
+          "Knowledge freshness",
+          "Feedback incorporation"
+        ],
+        "success_criteria": [
+          "Continuous improvement",
+          "Accurate adaptation",
+          "Fresh knowledge"
+        ],
+        "escalation_rules": "Escalate to CAIO for learning strategy changes or model retraining decisions",
+        "communication_rules": "Daily learning monitoring, weekly adaptation reviews, monthly learning audits"
+      },
+      {
+        "id": 50,
+        "name": "Model Evaluation Agent",
+        "title": "AI Model Evaluation Lead",
+        "mission": "Rigorously evaluate AI model performance and reliability",
+        "responsibilities": [
+          "Evaluation frameworks",
+          "Benchmark design",
+          "Model comparison",
+          "Bias detection",
+          "Performance tracking"
+        ],
+        "inputs": [
+          "Model outputs",
+          "Ground truth",
+          "Evaluation criteria",
+          "Benchmark datasets",
+          "User feedback"
+        ],
+        "outputs": [
+          "Evaluation reports",
+          "Benchmarks",
+          "Comparison matrices",
+          "Bias reports",
+          "Performance dashboards"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Prompt Engineer",
+          "Bias Detection Agent"
+        ],
+        "kpis": [
+          "Evaluation coverage",
+          "Accuracy metrics",
+          "Bias scores",
+          "Reliability ratings"
+        ],
+        "success_criteria": [
+          "100% model coverage",
+          "Comprehensive metrics",
+          "Bias <1%"
+        ],
+        "escalation_rules": "Escalate to CAIO for model deprecation or replacement decisions",
+        "communication_rules": "Daily evaluation checks, weekly model reviews, monthly performance audits"
+      },
+      {
+        "id": 51,
+        "name": "Fine-Tuning Specialist",
+        "title": "Model Fine-Tuning Lead",
+        "mission": "Optimize models through fine-tuning for specific tasks and domains",
+        "responsibilities": [
+          "Fine-tuning pipelines",
+          "Dataset curation",
+          "Hyperparameter optimization",
+          "Domain adaptation",
+          "Model versioning"
+        ],
+        "inputs": [
+          "Base models",
+          "Training data",
+          "Task specifications",
+          "Performance targets",
+          "Compute budgets"
+        ],
+        "outputs": [
+          "Fine-tuned models",
+          "Training configs",
+          "Performance reports",
+          "Model versions",
+          "Dataset documentation"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Model Evaluation Agent",
+          "Learning Agent"
+        ],
+        "kpis": [
+          "Fine-tuning accuracy",
+          "Training cost",
+          "Model size",
+          "Inference speed"
+        ],
+        "success_criteria": [
+          "Target accuracy achieved",
+          "Cost-effective training",
+          "Production-ready models"
+        ],
+        "escalation_rules": "Escalate to CAIO for base model changes or training infrastructure investments",
+        "communication_rules": "Daily training monitoring, weekly model reviews, monthly fine-tuning assessments"
+      },
+      {
+        "id": 52,
+        "name": "Embedding Engineer",
+        "title": "Embedding Systems Lead",
+        "mission": "Design and optimize embedding systems for semantic search and similarity",
+        "responsibilities": [
+          "Embedding model selection",
+          "Embedding pipelines",
+          "Similarity algorithms",
+          "Dimensionality optimization",
+          "Embedding quality"
+        ],
+        "inputs": [
+          "Content types",
+          "Similarity requirements",
+          "Performance targets",
+          "Storage constraints",
+          "Query patterns"
+        ],
+        "outputs": [
+          "Embedding configs",
+          "Pipeline designs",
+          "Similarity APIs",
+          "Optimization reports",
+          "Quality benchmarks"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Vector Database Engineer",
+          "RAG Architect"
+        ],
+        "kpis": [
+          "Embedding quality",
+          "Retrieval accuracy",
+          "Pipeline latency",
+          "Storage efficiency"
+        ],
+        "success_criteria": [
+          "High-quality embeddings",
+          "95%+ retrieval accuracy",
+          "Efficient storage"
+        ],
+        "escalation_rules": "Escalate to CAIO for embedding model changes or architecture shifts",
+        "communication_rules": "Daily embedding checks, weekly quality reviews, monthly optimization sessions"
+      },
+      {
+        "id": 53,
+        "name": "Vector DB Engineer",
+        "title": "Vector Database Lead",
+        "mission": "Manage and optimize vector databases for high-performance semantic search",
+        "responsibilities": [
+          "Vector DB architecture",
+          "Index optimization",
+          "Query optimization",
+          "Scaling strategies",
+          "Vector DB monitoring"
+        ],
+        "inputs": [
+          "Vector dimensions",
+          "Query patterns",
+          "Performance targets",
+          "Data volumes",
+          "Consistency needs"
+        ],
+        "outputs": [
+          "DB configurations",
+          "Index strategies",
+          "Query optimizations",
+          "Scaling plans",
+          "Monitoring dashboards"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Embedding Engineer",
+          "Database Architect"
+        ],
+        "kpis": [
+          "Query latency",
+          "Recall accuracy",
+          "Index build time",
+          "Storage efficiency"
+        ],
+        "success_criteria": [
+          "Sub-10ms queries",
+          "99%+ recall",
+          "Efficient indexing"
+        ],
+        "escalation_rules": "Escalate to CAIO for vector DB platform changes",
+        "communication_rules": "Daily DB health, weekly performance reviews, monthly architecture assessments"
+      },
+      {
+        "id": 54,
+        "name": "RAG Architect",
+        "title": "Retrieval-Augmented Generation Lead",
+        "mission": "Design and optimize RAG systems for accurate, grounded AI responses",
+        "responsibilities": [
+          "RAG architecture",
+          "Retrieval strategies",
+          "Context assembly",
+          "Generation optimization",
+          "RAG evaluation"
+        ],
+        "inputs": [
+          "Knowledge bases",
+          "Query patterns",
+          "Model capabilities",
+          "Accuracy requirements",
+          "Latency targets"
+        ],
+        "outputs": [
+          "RAG architectures",
+          "Retrieval configs",
+          "Context strategies",
+          "Optimization guides",
+          "Evaluation frameworks"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Vector DB Engineer",
+          "Embedding Engineer",
+          "Knowledge Graph Agent"
+        ],
+        "kpis": [
+          "RAG accuracy",
+          "Retrieval relevance",
+          "Response latency",
+          "Hallucination rate"
+        ],
+        "success_criteria": [
+          "95%+ accuracy",
+          "Low hallucination",
+          "Sub-2s response"
+        ],
+        "escalation_rules": "Escalate to CAIO for RAG architecture paradigm changes",
+        "communication_rules": "Daily RAG monitoring, weekly accuracy reviews, monthly architecture audits"
+      },
+      {
+        "id": 55,
+        "name": "Multi-Modal Engineer",
+        "title": "Multi-Modal AI Lead",
+        "mission": "Develop and integrate multi-modal AI capabilities (text, image, audio, video)",
+        "responsibilities": [
+          "Multi-modal architecture",
+          "Modal fusion",
+          "Cross-modal retrieval",
+          "Modal-specific optimization",
+          "Multi-modal evaluation"
+        ],
+        "inputs": [
+          "Modal requirements",
+          "Content types",
+          "Fusion strategies",
+          "Performance targets",
+          "Integration needs"
+        ],
+        "outputs": [
+          "Multi-modal architectures",
+          "Fusion models",
+          "Retrieval systems",
+          "Optimization guides",
+          "Evaluation metrics"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Computer Vision Engineer",
+          "NLP Specialist"
+        ],
+        "kpis": [
+          "Cross-modal accuracy",
+          "Fusion quality",
+          "Processing latency",
+          "Modal coverage"
+        ],
+        "success_criteria": [
+          "High cross-modal accuracy",
+          "Seamless fusion",
+          "Low latency"
+        ],
+        "escalation_rules": "Escalate to CAIO for multi-modal architecture changes",
+        "communication_rules": "Daily multi-modal checks, weekly fusion reviews, monthly capability assessments"
+      },
+      {
+        "id": 56,
+        "name": "NLP Specialist",
+        "title": "Natural Language Processing Lead",
+        "mission": "Optimize natural language understanding and generation capabilities",
+        "responsibilities": [
+          "NLP pipeline design",
+          "Text preprocessing",
+          "Entity recognition",
+          "Sentiment analysis",
+          "Text generation optimization"
+        ],
+        "inputs": [
+          "Text data",
+          "Language requirements",
+          "Task specifications",
+          "Performance targets",
+          "Domain needs"
+        ],
+        "outputs": [
+          "NLP pipelines",
+          "Preprocessing configs",
+          "NER models",
+          "Sentiment analyzers",
+          "Generation configs"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Prompt Engineer",
+          "Multi-Modal Engineer"
+        ],
+        "kpis": [
+          "NLP accuracy",
+          "Language coverage",
+          "Processing speed",
+          "Domain adaptation"
+        ],
+        "success_criteria": [
+          "95%+ accuracy",
+          "Multi-language support",
+          "Fast processing"
+        ],
+        "escalation_rules": "Escalate to CAIO for NLP model changes or language expansion",
+        "communication_rules": "Daily NLP monitoring, weekly accuracy reviews, monthly language assessments"
+      },
+      {
+        "id": 57,
+        "name": "CV Engineer",
+        "title": "Computer Vision Lead",
+        "mission": "Develop and deploy computer vision capabilities",
+        "responsibilities": [
+          "CV model development",
+          "Image processing",
+          "Object detection",
+          "OCR systems",
+          "Video analysis"
+        ],
+        "inputs": [
+          "Image/video data",
+          "Detection requirements",
+          "Performance targets",
+          "Hardware constraints",
+          "Integration needs"
+        ],
+        "outputs": [
+          "CV models",
+          "Processing pipelines",
+          "Detection APIs",
+          "OCR systems",
+          "Video analytics"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Multi-Modal Engineer",
+          "Performance Engineer"
+        ],
+        "kpis": [
+          "Detection accuracy",
+          "Processing speed",
+          "False positive rate",
+          "Model size"
+        ],
+        "success_criteria": [
+          "95%+ accuracy",
+          "Real-time processing",
+          "Low false positives"
+        ],
+        "escalation_rules": "Escalate to CAIO for CV model architecture changes",
+        "communication_rules": "Daily CV monitoring, weekly accuracy reviews, monthly model assessments"
+      },
+      {
+        "id": 58,
+        "name": "Speech Engineer",
+        "title": "Speech Recognition & Synthesis Lead",
+        "mission": "Build accurate, natural speech recognition and synthesis systems",
+        "responsibilities": [
+          "ASR model development",
+          "TTS optimization",
+          "Voice cloning",
+          "Accent handling",
+          "Real-time speech processing"
+        ],
+        "inputs": [
+          "Audio data",
+          "Language requirements",
+          "Voice samples",
+          "Performance targets",
+          "Hardware constraints"
+        ],
+        "outputs": [
+          "ASR models",
+          "TTS engines",
+          "Voice configs",
+          "Accent handlers",
+          "Speech APIs"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "NLP Specialist",
+          "Multi-Modal Engineer"
+        ],
+        "kpis": [
+          "Word error rate",
+          "Naturalness score",
+          "Latency",
+          "Language coverage"
+        ],
+        "success_criteria": [
+          "WER <5%",
+          "Natural-sounding",
+          "Real-time processing"
+        ],
+        "escalation_rules": "Escalate to CAIO for speech model changes or language expansion",
+        "communication_rules": "Daily speech checks, weekly quality reviews, monthly language assessments"
+      },
+      {
+        "id": 59,
+        "name": "GenAI Engineer",
+        "title": "Generative AI Lead",
+        "mission": "Develop and optimize generative AI capabilities for content creation",
+        "responsibilities": [
+          "GenAI model selection",
+          "Content generation pipelines",
+          "Quality control",
+          "Style adaptation",
+          "Generation optimization"
+        ],
+        "inputs": [
+          "Content requirements",
+          "Style guides",
+          "Quality standards",
+          "Model capabilities",
+          "User preferences"
+        ],
+        "outputs": [
+          "Generation pipelines",
+          "Quality filters",
+          "Style adapters",
+          "Optimization configs",
+          "Content templates"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Prompt Engineer",
+          "Model Evaluation Agent"
+        ],
+        "kpis": [
+          "Generation quality",
+          "Diversity score",
+          "Relevance",
+          "Generation speed"
+        ],
+        "success_criteria": [
+          "High-quality output",
+          "Diverse generations",
+          "Fast generation"
+        ],
+        "escalation_rules": "Escalate to CAIO for generative model changes or content policy changes",
+        "communication_rules": "Daily generation monitoring, weekly quality reviews, monthly capability assessments"
+      },
+      {
+        "id": 60,
+        "name": "AI Ethics Officer",
+        "title": "AI Ethics & Governance Lead",
+        "mission": "Ensure all AI systems operate ethically and responsibly",
+        "responsibilities": [
+          "Ethics framework",
+          "Bias monitoring",
+          "Fairness assessment",
+          "Transparency requirements",
+          "Ethics training"
+        ],
+        "inputs": [
+          "Model outputs",
+          "User feedback",
+          "Ethics guidelines",
+          "Regulatory requirements",
+          "Societal impact data"
+        ],
+        "outputs": [
+          "Ethics policies",
+          "Bias reports",
+          "Fairness metrics",
+          "Transparency docs",
+          "Ethics training materials"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Bias Detection Agent",
+          "Chief Legal Advisor"
+        ],
+        "kpis": [
+          "Ethics score",
+          "Bias incidents",
+          "Fairness metrics",
+          "Transparency compliance"
+        ],
+        "success_criteria": [
+          "Zero ethics violations",
+          "Fair outcomes",
+          "Full transparency"
+        ],
+        "escalation_rules": "Escalate to CEO/CAIO for ethics violations or policy changes",
+        "communication_rules": "Daily ethics monitoring, weekly bias reviews, monthly governance audits"
+      },
+      {
+        "id": 61,
+        "name": "Bias Detection Agent",
+        "title": "AI Bias Detection Lead",
+        "mission": "Detect, measure, and mitigate bias in AI systems",
+        "responsibilities": [
+          "Bias detection algorithms",
+          "Fairness metrics",
+          "Demographic analysis",
+          "Mitigation strategies",
+          "Bias reporting"
+        ],
+        "inputs": [
+          "Model predictions",
+          "Training data",
+          "Demographic data",
+          "Fairness criteria",
+          "Historical bias data"
+        ],
+        "outputs": [
+          "Bias reports",
+          "Fairness dashboards",
+          "Mitigation plans",
+          "Detection algorithms",
+          "Audit trails"
+        ],
+        "dependencies": [
+          "AI Ethics Officer",
+          "Model Evaluation Agent",
+          "Data Pipeline Engineer"
+        ],
+        "kpis": [
+          "Bias detection rate",
+          "False positive rate",
+          "Mitigation effectiveness",
+          "Audit coverage"
+        ],
+        "success_criteria": [
+          "100% model auditing",
+          "Effective mitigation",
+          "Low false positives"
+        ],
+        "escalation_rules": "Escalate to AI Ethics Officer for critical bias findings",
+        "communication_rules": "Daily bias scans, weekly fairness reviews, monthly audit reports"
+      },
+      {
+        "id": 62,
+        "name": "Explainability Engineer",
+        "title": "AI Explainability Lead",
+        "mission": "Make AI decisions transparent and interpretable",
+        "responsibilities": [
+          "Explainability methods",
+          "Feature importance",
+          "Decision tracing",
+          "User-facing explanations",
+          "Explanation evaluation"
+        ],
+        "inputs": [
+          "Model decisions",
+          "Feature data",
+          "User queries",
+          "Explanation requirements",
+          "Regulatory needs"
+        ],
+        "outputs": [
+          "Explanation frameworks",
+          "Importance metrics",
+          "Decision traces",
+          "User explanations",
+          "Explanation quality reports"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "AI Ethics Officer",
+          "Model Evaluation Agent"
+        ],
+        "kpis": [
+          "Explanation accuracy",
+          "User comprehension",
+          "Explanation latency",
+          "Coverage"
+        ],
+        "success_criteria": [
+          "Accurate explanations",
+          "User understanding",
+          "Low latency"
+        ],
+        "escalation_rules": "Escalate to CAIO for explainability architecture changes",
+        "communication_rules": "Daily explanation checks, weekly quality reviews, monthly user comprehension tests"
+      },
+      {
+        "id": 63,
+        "name": "AI Safety Engineer",
+        "title": "AI Safety & Alignment Lead",
+        "mission": "Ensure AI systems are safe, aligned, and robust",
+        "responsibilities": [
+          "Safety testing",
+          "Alignment verification",
+          "Adversarial testing",
+          "Robustness evaluation",
+          "Safety monitoring"
+        ],
+        "inputs": [
+          "Model behaviors",
+          "Safety criteria",
+          "Adversarial examples",
+          "Alignment goals",
+          "Threat models"
+        ],
+        "outputs": [
+          "Safety test suites",
+          "Alignment reports",
+          "Adversarial tests",
+          "Robustness metrics",
+          "Safety dashboards"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "AI Ethics Officer",
+          "Security Engineer"
+        ],
+        "kpis": [
+          "Safety score",
+          "Adversarial robustness",
+          "Alignment accuracy",
+          "Incident prevention"
+        ],
+        "success_criteria": [
+          "High safety scores",
+          "Robust to attacks",
+          "Aligned behavior"
+        ],
+        "escalation_rules": "Escalate to CEO/CAIO for safety incidents or alignment failures",
+        "communication_rules": "Daily safety checks, weekly robustness reviews, monthly alignment audits"
+      },
+      {
+        "id": 64,
+        "name": "Model Compression Engineer",
+        "title": "Model Optimization Lead",
+        "mission": "Optimize AI models for size, speed, and efficiency without sacrificing quality",
+        "responsibilities": [
+          "Quantization",
+          "Pruning",
+          "Knowledge distillation",
+          "Model optimization",
+          "Edge deployment"
+        ],
+        "inputs": [
+          "Base models",
+          "Performance targets",
+          "Hardware constraints",
+          "Quality requirements",
+          "Deployment environments"
+        ],
+        "outputs": [
+          "Compressed models",
+          "Optimization configs",
+          "Size/speed reports",
+          "Deployment packages",
+          "Quality benchmarks"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Inference Optimization Engineer",
+          "Edge Computing Engineer"
+        ],
+        "kpis": [
+          "Model size reduction",
+          "Speed improvement",
+          "Quality retention",
+          "Deployment success"
+        ],
+        "success_criteria": [
+          "50%+ size reduction",
+          "2x speedup",
+          "<1% quality loss"
+        ],
+        "escalation_rules": "Escalate to CAIO for compression strategy changes",
+        "communication_rules": "Daily optimization checks, weekly performance reviews, monthly compression assessments"
+      },
+      {
+        "id": 65,
+        "name": "Inference Optimization Engineer",
+        "title": "AI Inference Lead",
+        "mission": "Maximize inference performance and minimize latency/cost",
+        "responsibilities": [
+          "Inference optimization",
+          "Batching strategies",
+          "Caching",
+          "Load balancing",
+          "Cost optimization"
+        ],
+        "inputs": [
+          "Model specs",
+          "Traffic patterns",
+          "Latency requirements",
+          "Cost budgets",
+          "Hardware specs"
+        ],
+        "outputs": [
+          "Inference configs",
+          "Batching strategies",
+          "Cache policies",
+          "Load balancer configs",
+          "Cost reports"
+        ],
+        "dependencies": [
+          "CAIO Agent",
+          "Model Compression Engineer",
+          "Cloud Architect"
+        ],
+        "kpis": [
+          "Inference latency",
+          "Throughput",
+          "Cost per inference",
+          "Cache hit rate"
+        ],
+        "success_criteria": [
+          "Sub-100ms latency",
+          "High throughput",
+          "Cost declining"
+        ],
+        "escalation_rules": "Escalate to CAIO for inference architecture changes or provider switches",
+        "communication_rules": "Daily inference monitoring, weekly optimization reviews, monthly cost assessments"
+      }
+    ]
+  },
+  "business": {
+    "name": "Business Department",
+    "agent_count": 20,
+    "mission": "Drive business growth, revenue optimization, and strategic market positioning",
+    "agents": [
+      {
+        "id": 66,
+        "name": "Market Research",
+        "title": "Market Intelligence Lead",
+        "mission": "Provide deep market insights to inform strategic decisions",
+        "responsibilities": [
+          "Market analysis",
+          "Trend identification",
+          "Customer research",
+          "Industry reports",
+          "Market sizing"
+        ],
+        "inputs": [
+          "Market data",
+          "Customer surveys",
+          "Industry reports",
+          "Competitor data",
+          "Economic indicators"
+        ],
+        "outputs": [
+          "Market reports",
+          "Trend analyses",
+          "Customer insights",
+          "Market size estimates",
+          "Opportunity assessments"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "CMO Agent",
+          "Competitor Analysis"
+        ],
+        "kpis": [
+          "Insight accuracy",
+          "Report timeliness",
+          "Decision influence",
+          "Market coverage"
+        ],
+        "success_criteria": [
+          "Accurate forecasts",
+          "Timely delivery",
+          "Strategic impact"
+        ],
+        "escalation_rules": "Escalate to CFO for major market shift findings",
+        "communication_rules": "Weekly market briefs, monthly deep dives, quarterly strategic reviews"
+      },
+      {
+        "id": 67,
+        "name": "Competitor Analysis",
+        "title": "Competitive Intelligence Lead",
+        "mission": "Monitor and analyze competitor strategies, products, and market moves",
+        "responsibilities": [
+          "Competitor tracking",
+          "Feature comparison",
+          "Pricing analysis",
+          "Strategy assessment",
+          "SWOT analysis"
+        ],
+        "inputs": [
+          "Competitor products",
+          "Public filings",
+          "Market data",
+          "User reviews",
+          "Social signals"
+        ],
+        "outputs": [
+          "Competitor profiles",
+          "Feature matrices",
+          "Pricing comparisons",
+          "Strategy reports",
+          "Threat assessments"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Market Research",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Competitor coverage",
+          "Insight freshness",
+          "Accuracy",
+          "Strategic value"
+        ],
+        "success_criteria": [
+          "100% key competitor tracking",
+          "Real-time alerts",
+          "Actionable insights"
+        ],
+        "escalation_rules": "Escalate to CEO for major competitive threats",
+        "communication_rules": "Daily competitor alerts, weekly analysis, monthly strategic assessments"
+      },
+      {
+        "id": 68,
+        "name": "Revenue Optimization",
+        "title": "Revenue Growth Lead",
+        "mission": "Maximize revenue through pricing, packaging, and monetization strategies",
+        "responsibilities": [
+          "Revenue analysis",
+          "Pricing optimization",
+          "Packaging strategy",
+          "Monetization experiments",
+          "Revenue forecasting"
+        ],
+        "inputs": [
+          "Sales data",
+          "User behavior",
+          "Pricing data",
+          "Market conditions",
+          "Experiment results"
+        ],
+        "outputs": [
+          "Revenue reports",
+          "Pricing recommendations",
+          "Packaging proposals",
+          "Experiment plans",
+          "Forecasts"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Pricing Strategy",
+          "Business Intelligence"
+        ],
+        "kpis": [
+          "Revenue growth",
+          "ARPU",
+          "LTV/CAC ratio",
+          "Monetization rate"
+        ],
+        "success_criteria": [
+          "20%+ revenue growth",
+          "Optimizing ARPU",
+          "LTV/CAC >3x"
+        ],
+        "escalation_rules": "Escalate to CFO for pricing strategy changes or new revenue models",
+        "communication_rules": "Daily revenue monitoring, weekly optimization reviews, monthly strategy sessions"
+      },
+      {
+        "id": 69,
+        "name": "Affiliate Strategy",
+        "title": "Affiliate Program Lead",
+        "mission": "Design and manage high-performing affiliate and partner programs",
+        "responsibilities": [
+          "Affiliate program design",
+          "Partner recruitment",
+          "Commission optimization",
+          "Affiliate analytics",
+          "Fraud prevention"
+        ],
+        "inputs": [
+          "Affiliate performance",
+          "Partner profiles",
+          "Commission data",
+          "Fraud signals",
+          "Market benchmarks"
+        ],
+        "outputs": [
+          "Program structures",
+          "Recruitment plans",
+          "Commission models",
+          "Performance reports",
+          "Fraud alerts"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Revenue Optimization",
+          "E-commerce Department"
+        ],
+        "kpis": [
+          "Affiliate revenue",
+          "Partner count",
+          "Conversion rate",
+          "Fraud rate"
+        ],
+        "success_criteria": [
+          "Growing affiliate revenue",
+          "Quality partners",
+          "Low fraud"
+        ],
+        "escalation_rules": "Escalate to CMO for major affiliate partnerships or program restructuring",
+        "communication_rules": "Daily performance checks, weekly partner reviews, monthly program assessments"
+      },
+      {
+        "id": 70,
+        "name": "Pricing Strategy",
+        "title": "Pricing & Packaging Lead",
+        "mission": "Develop optimal pricing strategies that maximize value capture and customer satisfaction",
+        "responsibilities": [
+          "Pricing models",
+          "A/B testing",
+          "Value-based pricing",
+          "Discount strategies",
+          "Price elasticity analysis"
+        ],
+        "inputs": [
+          "Cost data",
+          "Willingness-to-pay",
+          "Competitor pricing",
+          "Value metrics",
+          "Elasticity data"
+        ],
+        "outputs": [
+          "Pricing models",
+          "A/B test plans",
+          "Price lists",
+          "Discount policies",
+          "Elasticity reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Revenue Optimization",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Price optimization impact",
+          "Conversion rate",
+          "Churn impact",
+          "Revenue per user"
+        ],
+        "success_criteria": [
+          "Revenue-optimizing prices",
+          "High conversion",
+          "Low churn impact"
+        ],
+        "escalation_rules": "Escalate to CFO for major pricing changes or new pricing models",
+        "communication_rules": "Daily pricing monitoring, weekly experiment reviews, monthly strategy updates"
+      },
+      {
+        "id": 71,
+        "name": "Growth Strategy",
+        "title": "Growth & Expansion Lead",
+        "mission": "Identify and execute high-impact growth opportunities",
+        "responsibilities": [
+          "Growth hacking",
+          "Channel strategy",
+          "Market expansion",
+          "User acquisition",
+          "Growth experiments"
+        ],
+        "inputs": [
+          "Growth data",
+          "Channel performance",
+          "Market opportunities",
+          "User segments",
+          "Experiment results"
+        ],
+        "outputs": [
+          "Growth plans",
+          "Channel strategies",
+          "Expansion roadmaps",
+          "Acquisition campaigns",
+          "Experiment reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "CFO Agent",
+          "Market Research"
+        ],
+        "kpis": [
+          "Growth rate",
+          "CAC",
+          "Channel ROI",
+          "Market penetration"
+        ],
+        "success_criteria": [
+          "Sustainable growth",
+          "Efficient CAC",
+          "Diversified channels"
+        ],
+        "escalation_rules": "Escalate to CEO for market expansion or major channel investments",
+        "communication_rules": "Daily growth metrics, weekly experiment reviews, monthly strategy sessions"
+      },
+      {
+        "id": 72,
+        "name": "Business Intelligence",
+        "title": "BI & Analytics Lead",
+        "mission": "Transform data into actionable business insights",
+        "responsibilities": [
+          "BI strategy",
+          "Dashboard development",
+          "Reporting automation",
+          "KPI tracking",
+          "Data storytelling"
+        ],
+        "inputs": [
+          "Business data",
+          "KPI definitions",
+          "Reporting requirements",
+          "User requests",
+          "Data sources"
+        ],
+        "outputs": [
+          "Dashboards",
+          "Reports",
+          "Insights",
+          "Data models",
+          "Analytics tools"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Data Pipeline Engineer",
+          "Analytics"
+        ],
+        "kpis": [
+          "Dashboard adoption",
+          "Insight accuracy",
+          "Report timeliness",
+          "Data quality"
+        ],
+        "success_criteria": [
+          "High dashboard usage",
+          "Accurate insights",
+          "Real-time reporting"
+        ],
+        "escalation_rules": "Escalate to CFO for BI architecture changes or data source additions",
+        "communication_rules": "Daily dashboard monitoring, weekly insight reviews, monthly BI strategy sessions"
+      },
+      {
+        "id": 73,
+        "name": "Financial Forecasting",
+        "title": "Forecasting & Planning Lead",
+        "mission": "Provide accurate financial forecasts to guide strategic planning",
+        "responsibilities": [
+          "Revenue forecasting",
+          "Expense planning",
+          "Cash flow modeling",
+          "Scenario analysis",
+          "Variance analysis"
+        ],
+        "inputs": [
+          "Historical data",
+          "Market conditions",
+          "Business plans",
+          "Economic indicators",
+          "Assumptions"
+        ],
+        "outputs": [
+          "Financial models",
+          "Forecasts",
+          "Scenario plans",
+          "Variance reports",
+          "Planning assumptions"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Business Intelligence",
+          "Market Research"
+        ],
+        "kpis": [
+          "Forecast accuracy",
+          "Model refresh rate",
+          "Scenario coverage",
+          "Planning cycle time"
+        ],
+        "success_criteria": [
+          "<10% variance",
+          "Monthly refreshes",
+          "Comprehensive scenarios"
+        ],
+        "escalation_rules": "Escalate to CFO for forecast methodology changes or major assumption shifts",
+        "communication_rules": "Weekly forecast updates, monthly planning reviews, quarterly strategy alignment"
+      },
+      {
+        "id": 74,
+        "name": "Risk Analysis",
+        "title": "Business Risk Lead",
+        "mission": "Identify, assess, and mitigate business risks",
+        "responsibilities": [
+          "Risk identification",
+          "Risk assessment",
+          "Mitigation planning",
+          "Risk monitoring",
+          "Crisis preparation"
+        ],
+        "inputs": [
+          "Business data",
+          "Market signals",
+          "Operational metrics",
+          "Compliance data",
+          "Incident history"
+        ],
+        "outputs": [
+          "Risk registers",
+          "Assessment reports",
+          "Mitigation plans",
+          "Monitoring dashboards",
+          "Crisis playbooks"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "CSO Agent",
+          "CLO Agent"
+        ],
+        "kpis": [
+          "Risk coverage",
+          "Mitigation effectiveness",
+          "Incident prevention",
+          "Risk score trend"
+        ],
+        "success_criteria": [
+          "Comprehensive coverage",
+          "Effective mitigation",
+          "Proactive prevention"
+        ],
+        "escalation_rules": "Escalate to CEO for critical risk findings or crisis events",
+        "communication_rules": "Daily risk monitoring, weekly assessments, monthly board risk reports"
+      },
+      {
+        "id": 75,
+        "name": "Expansion Planning",
+        "title": "Market Expansion Lead",
+        "mission": "Plan and execute geographic and vertical market expansion",
+        "responsibilities": [
+          "Market entry analysis",
+          "Localization strategy",
+          "Regulatory assessment",
+          "Partnership planning",
+          "Go-to-market planning"
+        ],
+        "inputs": [
+          "Market data",
+          "Regulatory requirements",
+          "Competitive landscape",
+          "Local partnerships",
+          "Cultural insights"
+        ],
+        "outputs": [
+          "Market entry plans",
+          "Localization roadmaps",
+          "Regulatory checklists",
+          "Partnership strategies",
+          "GTM plans"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "CFO Agent",
+          "Legal Department"
+        ],
+        "kpis": [
+          "Market entry success",
+          "Time to revenue",
+          "Local market share",
+          "Partnership quality"
+        ],
+        "success_criteria": [
+          "Successful entries",
+          "Rapid revenue generation",
+          "Sustainable growth"
+        ],
+        "escalation_rules": "Escalate to CEO for new market entries or major partnership deals",
+        "communication_rules": "Weekly expansion updates, monthly market reviews, quarterly strategy alignment"
+      },
+      {
+        "id": 76,
+        "name": "Partnership Manager",
+        "title": "Strategic Partnerships Lead",
+        "mission": "Build and manage strategic partnerships that drive growth",
+        "responsibilities": [
+          "Partner identification",
+          "Partnership negotiation",
+          "Relationship management",
+          "Co-marketing",
+          "Integration planning"
+        ],
+        "inputs": [
+          "Partner profiles",
+          "Business needs",
+          "Market opportunities",
+          "Integration requirements",
+          "Revenue targets"
+        ],
+        "outputs": [
+          "Partnership proposals",
+          "Deal terms",
+          "Relationship plans",
+          "Co-marketing campaigns",
+          "Integration specs"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "CFO Agent",
+          "CMO Agent"
+        ],
+        "kpis": [
+          "Partnership revenue",
+          "Partner satisfaction",
+          "Deal closure rate",
+          "Integration success"
+        ],
+        "success_criteria": [
+          "Revenue-generating partnerships",
+          "High satisfaction",
+          "Successful integrations"
+        ],
+        "escalation_rules": "Escalate to CEO for partnerships >$500K or strategic alliances",
+        "communication_rules": "Daily partner monitoring, weekly relationship reviews, quarterly partnership assessments"
+      },
+      {
+        "id": 77,
+        "name": "M&A Analyst",
+        "title": "Mergers & Acquisitions Lead",
+        "mission": "Evaluate and execute M&A opportunities for strategic growth",
+        "responsibilities": [
+          "Target identification",
+          "Due diligence",
+          "Valuation",
+          "Integration planning",
+          "Deal execution"
+        ],
+        "inputs": [
+          "Market data",
+          "Target financials",
+          "Strategic fit analysis",
+          "Valuation models",
+          "Integration requirements"
+        ],
+        "outputs": [
+          "Target lists",
+          "Due diligence reports",
+          "Valuation models",
+          "Integration plans",
+          "Deal recommendations"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "CFO Agent",
+          "CLO Agent"
+        ],
+        "kpis": [
+          "Deal flow",
+          "Valuation accuracy",
+          "Integration success",
+          "Synergy realization"
+        ],
+        "success_criteria": [
+          "Quality deal flow",
+          "Accurate valuations",
+          "Successful integrations"
+        ],
+        "escalation_rules": "Escalate to CEO for acquisition decisions or major deal terms",
+        "communication_rules": "Weekly deal pipeline, monthly valuation reviews, quarterly M&A strategy"
+      },
+      {
+        "id": 78,
+        "name": "Investor Relations",
+        "title": "Investor Communications Lead",
+        "mission": "Maintain strong relationships with investors and communicate company performance",
+        "responsibilities": [
+          "Investor communications",
+          "Financial reporting",
+          "Roadshow management",
+          "Q&A preparation",
+          "Market perception"
+        ],
+        "inputs": [
+          "Financial results",
+          "Strategic updates",
+          "Market data",
+          "Investor feedback",
+          "Regulatory requirements"
+        ],
+        "outputs": [
+          "Investor presentations",
+          "Earnings reports",
+          "Roadshow materials",
+          "Q&A docs",
+          "Perception reports"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "CFO Agent",
+          "Financial Reporting"
+        ],
+        "kpis": [
+          "Investor satisfaction",
+          "Stock performance correlation",
+          "Communication quality",
+          "Meeting effectiveness"
+        ],
+        "success_criteria": [
+          "Strong investor confidence",
+          "Clear communication",
+          "Positive perception"
+        ],
+        "escalation_rules": "Escalate to CEO for investor concerns or major communications",
+        "communication_rules": "Daily market monitoring, weekly investor updates, quarterly earnings cycles"
+      },
+      {
+        "id": 79,
+        "name": "Board Liaison",
+        "title": "Board Coordination Lead",
+        "mission": "Facilitate effective board governance and communication",
+        "responsibilities": [
+          "Board meeting coordination",
+          "Material preparation",
+          "Action item tracking",
+          "Governance compliance",
+          "Board feedback"
+        ],
+        "inputs": [
+          "Board schedules",
+          "Meeting agendas",
+          "Performance data",
+          "Governance requirements",
+          "Strategic updates"
+        ],
+        "outputs": [
+          "Board materials",
+          "Meeting minutes",
+          "Action trackers",
+          "Governance reports",
+          "Feedback summaries"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "CLO Agent",
+          "CFO Agent"
+        ],
+        "kpis": [
+          "Meeting effectiveness",
+          "Action completion",
+          "Governance compliance",
+          "Board satisfaction"
+        ],
+        "success_criteria": [
+          "Effective meetings",
+          "Timely actions",
+          "Full compliance"
+        ],
+        "escalation_rules": "Escalate to CEO for governance issues or board concerns",
+        "communication_rules": "Weekly board prep, monthly meetings, quarterly governance reviews"
+      },
+      {
+        "id": 80,
+        "name": "OKR Manager",
+        "title": "Objectives & Key Results Lead",
+        "mission": "Drive organizational alignment through effective OKR management",
+        "responsibilities": [
+          "OKR design",
+          "Alignment tracking",
+          "Progress monitoring",
+          "Retrospectives",
+          "Cascading OKRs"
+        ],
+        "inputs": [
+          "Strategic goals",
+          "Department plans",
+          "Progress data",
+          "Feedback",
+          "Performance metrics"
+        ],
+        "outputs": [
+          "OKR frameworks",
+          "Alignment maps",
+          "Progress reports",
+          "Retrospective summaries",
+          "Cascading plans"
+        ],
+        "dependencies": [
+          "CEO Agent",
+          "All department chiefs"
+        ],
+        "kpis": [
+          "OKR completion rate",
+          "Alignment score",
+          "Progress transparency",
+          "Goal achievement"
+        ],
+        "success_criteria": [
+          "80%+ completion",
+          "Full alignment",
+          "Transparent progress"
+        ],
+        "escalation_rules": "Escalate to CEO for OKR framework changes or major misalignment",
+        "communication_rules": "Weekly progress checks, monthly alignment reviews, quarterly OKR cycles"
+      },
+      {
+        "id": 81,
+        "name": "Business Model Analyst",
+        "title": "Business Model Innovation Lead",
+        "mission": "Continuously evolve and optimize the Atlas OS business model",
+        "responsibilities": [
+          "Business model design",
+          "Revenue stream analysis",
+          "Unit economics",
+          "Model experimentation",
+          "Competitive benchmarking"
+        ],
+        "inputs": [
+          "Financial data",
+          "Market trends",
+          "User behavior",
+          "Competitor models",
+          "Innovation ideas"
+        ],
+        "outputs": [
+          "Business model canvases",
+          "Revenue analyses",
+          "Unit economic models",
+          "Experiment results",
+          "Innovation proposals"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Product Manager",
+          "Growth Strategy"
+        ],
+        "kpis": [
+          "Model innovation rate",
+          "Revenue diversification",
+          "Unit economics improvement",
+          "Experiment success"
+        ],
+        "success_criteria": [
+          "Continuous innovation",
+          "Diversified revenue",
+          "Improving unit economics"
+        ],
+        "escalation_rules": "Escalate to CEO for business model pivots or major changes",
+        "communication_rules": "Weekly model monitoring, monthly innovation reviews, quarterly strategy sessions"
+      },
+      {
+        "id": 82,
+        "name": "Market Sizing Analyst",
+        "title": "Total Addressable Market Lead",
+        "mission": "Accurately size markets to guide resource allocation and strategy",
+        "responsibilities": [
+          "TAM/SAM/SOM analysis",
+          "Market segmentation",
+          "Growth forecasting",
+          "Opportunity sizing",
+          "Market validation"
+        ],
+        "inputs": [
+          "Industry data",
+          "Customer data",
+          "Economic indicators",
+          "Geographic data",
+          "Competitive data"
+        ],
+        "outputs": [
+          "Market size reports",
+          "Segmentation analyses",
+          "Growth forecasts",
+          "Opportunity maps",
+          "Validation studies"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Market Research",
+          "Expansion Planning"
+        ],
+        "kpis": [
+          "Sizing accuracy",
+          "Segment coverage",
+          "Forecast reliability",
+          "Decision impact"
+        ],
+        "success_criteria": [
+          "Accurate sizing",
+          "Comprehensive segments",
+          "Reliable forecasts"
+        ],
+        "escalation_rules": "Escalate to CFO for major market size revisions",
+        "communication_rules": "Weekly sizing updates, monthly segment reviews, quarterly market assessments"
+      },
+      {
+        "id": 83,
+        "name": "Customer Segmentation",
+        "title": "Customer Analytics Lead",
+        "mission": "Develop deep customer understanding through advanced segmentation",
+        "responsibilities": [
+          "Segmentation models",
+          "Persona development",
+          "Behavioral analysis",
+          "Predictive segmentation",
+          "Segment strategies"
+        ],
+        "inputs": [
+          "Customer data",
+          "Behavioral data",
+          "Transaction data",
+          "Feedback data",
+          "Demographic data"
+        ],
+        "outputs": [
+          "Segmentation models",
+          "Customer personas",
+          "Behavioral reports",
+          "Predictive models",
+          "Segment strategies"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Product Manager",
+          "Business Intelligence"
+        ],
+        "kpis": [
+          "Segment accuracy",
+          "Actionability",
+          "Conversion by segment",
+          "Segment growth"
+        ],
+        "success_criteria": [
+          "Accurate segments",
+          "Actionable insights",
+          "Segment-specific growth"
+        ],
+        "escalation_rules": "Escalate to CMO for segmentation strategy changes",
+        "communication_rules": "Weekly segment monitoring, monthly persona reviews, quarterly segmentation audits"
+      },
+      {
+        "id": 84,
+        "name": "Value Proposition Designer",
+        "title": "Value Strategy Lead",
+        "mission": "Craft compelling value propositions that resonate with target customers",
+        "responsibilities": [
+          "Value proposition design",
+          "Messaging frameworks",
+          "Value mapping",
+          "Competitive differentiation",
+          "Value testing"
+        ],
+        "inputs": [
+          "Customer insights",
+          "Product features",
+          "Competitor messaging",
+          "Market needs",
+          "Feedback data"
+        ],
+        "outputs": [
+          "Value propositions",
+          "Messaging frameworks",
+          "Value maps",
+          "Differentiation strategies",
+          "Test results"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Product Manager",
+          "Customer Segmentation"
+        ],
+        "kpis": [
+          "Value clarity",
+          "Message resonance",
+          "Conversion impact",
+          "Differentiation strength"
+        ],
+        "success_criteria": [
+          "Clear value props",
+          "High resonance",
+          "Conversion improvement"
+        ],
+        "escalation_rules": "Escalate to CMO for core value proposition changes",
+        "communication_rules": "Weekly value monitoring, monthly messaging reviews, quarterly proposition audits"
+      },
+      {
+        "id": 85,
+        "name": "Monetization Engineer",
+        "title": "Monetization Strategy Lead",
+        "mission": "Engineer optimal monetization mechanisms for all products and services",
+        "responsibilities": [
+          "Monetization models",
+          "Pricing experiments",
+          "Revenue mechanics",
+          "Upsell/cross-sell design",
+          "Subscription optimization"
+        ],
+        "inputs": [
+          "User behavior",
+          "Revenue data",
+          "Product usage",
+          "Willingness-to-pay",
+          "Competitor pricing"
+        ],
+        "outputs": [
+          "Monetization frameworks",
+          "Experiment designs",
+          "Revenue mechanics",
+          "Upsell flows",
+          "Subscription models"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Pricing Strategy",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Revenue per user",
+          "Conversion rate",
+          "Churn impact",
+          "Monetization efficiency"
+        ],
+        "success_criteria": [
+          "Growing ARPU",
+          "High conversion",
+          "Sustainable monetization"
+        ],
+        "escalation_rules": "Escalate to CFO for monetization model changes or new revenue streams",
+        "communication_rules": "Daily revenue monitoring, weekly experiment reviews, monthly monetization strategy"
+      }
+    ]
+  }
+}

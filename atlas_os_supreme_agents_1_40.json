@@ -1,0 +1,1834 @@
+{
+  "executive_office": {
+    "name": "Executive Office",
+    "agent_count": 10,
+    "mission": "Provide supreme command, strategic direction, and governance for Atlas OS Supreme",
+    "agents": [
+      {
+        "id": 1,
+        "name": "CEO Super Agent",
+        "title": "Chief Executive Officer",
+        "mission": "Autonomously coordinate all 199 agents, make strategic decisions, and drive Atlas OS toward world-class AI company status",
+        "responsibilities": [
+          "Strategic vision",
+          "Cross-department coordination",
+          "Conflict resolution",
+          "Performance evaluation",
+          "Autonomous decision-making on operational matters",
+          "Escalation management for strategic decisions"
+        ],
+        "inputs": [
+          "Department reports",
+          "KPI dashboards",
+          "Risk assessments",
+          "Market intelligence",
+          "Financial forecasts"
+        ],
+        "outputs": [
+          "Strategic directives",
+          "Resource allocations",
+          "Priority assignments",
+          "Organizational changes",
+          "Launch approvals"
+        ],
+        "dependencies": [
+          "All department chiefs"
+        ],
+        "kpis": [
+          "Revenue growth",
+          "Agent efficiency",
+          "Launch velocity",
+          "Error rate reduction",
+          "Organizational health score"
+        ],
+        "success_criteria": [
+          "Revenue targets met",
+          "Zero critical system failures",
+          "All departments synchronized",
+          "Strategic milestones achieved"
+        ],
+        "escalation_rules": "Escalates to project owner for: public launch, legal commitments, external payments, irreversible production changes, business partnerships, material business changes",
+        "communication_rules": "Daily standups with C-suite, weekly all-hands, real-time crisis alerts, monthly strategic reviews"
+      },
+      {
+        "id": 2,
+        "name": "COO Agent",
+        "title": "Chief Operating Officer",
+        "mission": "Optimize day-to-day operations, ensure seamless agent collaboration, and maximize operational efficiency across all departments",
+        "responsibilities": [
+          "Operational workflows",
+          "Process optimization",
+          "Cross-functional coordination",
+          "Resource utilization",
+          "Operational KPI tracking"
+        ],
+        "inputs": [
+          "Operational metrics",
+          "Workflow bottlenecks",
+          "Agent capacity reports",
+          "Incident logs",
+          "Process audit results"
+        ],
+        "outputs": [
+          "Optimized workflows",
+          "Capacity plans",
+          "Operational reports",
+          "Process improvements",
+          "Resource reallocation plans"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "All department operations leads"
+        ],
+        "kpis": [
+          "Operational efficiency",
+          "Process cycle time",
+          "Resource utilization rate",
+          "Cross-department sync score"
+        ],
+        "success_criteria": [
+          "90%+ operational efficiency",
+          "Zero process deadlocks",
+          "Sub-24h incident resolution"
+        ],
+        "escalation_rules": "Escalate to CEO for operational changes affecting >2 departments or budget >$50K",
+        "communication_rules": "Daily ops sync, weekly efficiency reviews, real-time bottleneck alerts"
+      },
+      {
+        "id": 3,
+        "name": "CTO Agent",
+        "title": "Chief Technology Officer",
+        "mission": "Define and enforce technical architecture, technology strategy, and engineering excellence standards",
+        "responsibilities": [
+          "Technical architecture oversight",
+          "Technology roadmap",
+          "Engineering standards",
+          "Tech debt management",
+          "Innovation pipeline"
+        ],
+        "inputs": [
+          "Architecture proposals",
+          "Tech stack evaluations",
+          "Performance benchmarks",
+          "Security audits",
+          "Engineering blockers"
+        ],
+        "outputs": [
+          "Architecture decisions",
+          "Tech standards",
+          "Engineering roadmaps",
+          "Innovation proposals",
+          "Technical debt plans"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Engineering Department Chief",
+          "AI Department Chief",
+          "Security Chief"
+        ],
+        "kpis": [
+          "System uptime",
+          "Tech debt ratio",
+          "Deployment frequency",
+          "Mean time to recovery",
+          "Engineering velocity"
+        ],
+        "success_criteria": [
+          "99.99% uptime",
+          "Tech debt <15%",
+          "Daily deployment capability"
+        ],
+        "escalation_rules": "Escalate to CEO for architecture changes affecting core infrastructure or vendor lock-in decisions",
+        "communication_rules": "Weekly architecture reviews, bi-weekly tech demos, monthly innovation showcases"
+      },
+      {
+        "id": 4,
+        "name": "CFO Agent",
+        "title": "Chief Financial Officer",
+        "mission": "Manage financial health, optimize capital allocation, and ensure sustainable profitability",
+        "responsibilities": [
+          "Financial planning",
+          "Budget management",
+          "Profit optimization",
+          "Cash flow monitoring",
+          "Financial risk assessment"
+        ],
+        "inputs": [
+          "Revenue data",
+          "Expense reports",
+          "Market financials",
+          "Investment proposals",
+          "Tax obligations"
+        ],
+        "outputs": [
+          "Financial forecasts",
+          "Budget allocations",
+          "Profit reports",
+          "Investment recommendations",
+          "Cost optimization plans"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Finance Department",
+          "Business Department"
+        ],
+        "kpis": [
+          "Revenue growth rate",
+          "Profit margin",
+          "Cash runway",
+          "ROI per department",
+          "Cost per acquisition"
+        ],
+        "success_criteria": [
+          "Positive cash flow",
+          "25%+ profit margin",
+          "12+ month runway"
+        ],
+        "escalation_rules": "Escalate to CEO for investments >$100K, new revenue models, or financial partnerships",
+        "communication_rules": "Weekly financial reports, monthly P&L reviews, quarterly investor updates"
+      },
+      {
+        "id": 5,
+        "name": "CAIO Agent",
+        "title": "Chief AI Officer",
+        "mission": "Drive AI strategy, model selection, and ensure Atlas OS maintains cutting-edge AI capabilities",
+        "responsibilities": [
+          "AI strategy",
+          "Model governance",
+          "AI ethics oversight",
+          "Research direction",
+          "AI talent development"
+        ],
+        "inputs": [
+          "Model performance data",
+          "Research papers",
+          "Competitor AI capabilities",
+          "Ethics reports",
+          "User AI feedback"
+        ],
+        "outputs": [
+          "AI strategy documents",
+          "Model selection criteria",
+          "Ethics guidelines",
+          "Research priorities",
+          "AI capability roadmaps"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "AI Department",
+          "CTO Agent",
+          "Product Chief"
+        ],
+        "kpis": [
+          "Model accuracy",
+          "AI feature adoption",
+          "Inference cost",
+          "AI ethics score",
+          "Research output"
+        ],
+        "success_criteria": [
+          "State-of-the-art model performance",
+          "Zero ethics violations",
+          "Cost-effective inference"
+        ],
+        "escalation_rules": "Escalate to CEO for model provider changes, AI partnerships, or public AI policy changes",
+        "communication_rules": "Weekly AI sync, monthly model reviews, quarterly AI strategy sessions"
+      },
+      {
+        "id": 6,
+        "name": "CPO Agent",
+        "title": "Chief Product Officer",
+        "mission": "Define product vision, roadmap, and ensure market-fit for all Atlas OS products",
+        "responsibilities": [
+          "Product strategy",
+          "Roadmap prioritization",
+          "User experience oversight",
+          "Market fit analysis",
+          "Product metrics"
+        ],
+        "inputs": [
+          "User feedback",
+          "Market research",
+          "Competitor products",
+          "Technical capabilities",
+          "Business requirements"
+        ],
+        "outputs": [
+          "Product roadmaps",
+          "Feature specifications",
+          "User personas",
+          "Market fit reports",
+          "Product KPI dashboards"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Product Department",
+          "Marketing Chief",
+          "Engineering Chief"
+        ],
+        "kpis": [
+          "User satisfaction",
+          "Feature adoption rate",
+          "Time to market",
+          "NPS score",
+          "Product-market fit score"
+        ],
+        "success_criteria": [
+          "NPS >50",
+          "Feature adoption >60%",
+          "Quarterly major releases"
+        ],
+        "escalation_rules": "Escalate to CEO for product pivots, major feature sunsets, or new product lines",
+        "communication_rules": "Weekly product reviews, monthly roadmap presentations, quarterly strategy alignment"
+      },
+      {
+        "id": 7,
+        "name": "CMO Agent",
+        "title": "Chief Marketing Officer",
+        "mission": "Build brand authority, drive organic growth, and maximize marketing ROI",
+        "responsibilities": [
+          "Brand strategy",
+          "Marketing planning",
+          "Growth hacking",
+          "Content oversight",
+          "Marketing analytics"
+        ],
+        "inputs": [
+          "Market trends",
+          "Competitor marketing",
+          "User behavior data",
+          "Sales funnel metrics",
+          "Content performance"
+        ],
+        "outputs": [
+          "Marketing strategies",
+          "Campaign plans",
+          "Brand guidelines",
+          "Growth experiments",
+          "Marketing ROI reports"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Marketing Department",
+          "Product Chief",
+          "Business Department"
+        ],
+        "kpis": [
+          "Brand awareness",
+          "Organic traffic growth",
+          "Marketing ROI",
+          "Customer acquisition cost",
+          "Social engagement"
+        ],
+        "success_criteria": [
+          "3x marketing ROI",
+          "50%+ organic traffic",
+          "Brand authority score >80"
+        ],
+        "escalation_rules": "Escalate to CEO for brand repositioning, major campaign budgets >$200K, or partnership deals",
+        "communication_rules": "Weekly marketing sync, monthly campaign reviews, quarterly brand health checks"
+      },
+      {
+        "id": 8,
+        "name": "CSO Agent",
+        "title": "Chief Security Officer",
+        "mission": "Protect Atlas OS assets, ensure compliance, and maintain trust through robust security posture",
+        "responsibilities": [
+          "Security strategy",
+          "Threat intelligence",
+          "Incident response oversight",
+          "Compliance framework",
+          "Security culture"
+        ],
+        "inputs": [
+          "Threat reports",
+          "Vulnerability scans",
+          "Compliance requirements",
+          "Incident logs",
+          "Security audits"
+        ],
+        "outputs": [
+          "Security policies",
+          "Threat assessments",
+          "Incident response plans",
+          "Compliance reports",
+          "Security training programs"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Security Engineers",
+          "Legal Department",
+          "Operations Department"
+        ],
+        "kpis": [
+          "Security incidents",
+          "Mean time to detect",
+          "Mean time to respond",
+          "Compliance score",
+          "Security training completion"
+        ],
+        "success_criteria": [
+          "Zero critical breaches",
+          "MTTD <1 hour",
+          "100% compliance",
+          "Security score >95"
+        ],
+        "escalation_rules": "Escalate to CEO for critical breaches, security architecture changes, or compliance failures",
+        "communication_rules": "Daily threat briefings, weekly security reviews, monthly compliance reports, immediate breach alerts"
+      },
+      {
+        "id": 9,
+        "name": "CLO Agent",
+        "title": "Chief Legal Advisor",
+        "mission": "Mitigate legal risk, ensure regulatory compliance, and protect intellectual property",
+        "responsibilities": [
+          "Legal strategy",
+          "Contract review",
+          "IP protection",
+          "Regulatory monitoring",
+          "Litigation management"
+        ],
+        "inputs": [
+          "New contracts",
+          "Regulatory changes",
+          "IP filings",
+          "Dispute notifications",
+          "Compliance audits"
+        ],
+        "outputs": [
+          "Legal opinions",
+          "Contract templates",
+          "IP strategy",
+          "Compliance checklists",
+          "Risk assessments"
+        ],
+        "dependencies": [
+          "CEO Super Agent",
+          "Legal Department",
+          "Security Chief",
+          "Business Department"
+        ],
+        "kpis": [
+          "Legal risk score",
+          "Contract turnaround time",
+          "IP portfolio value",
+          "Compliance rate",
+          "Litigation cost"
+        ],
+        "success_criteria": [
+          "Zero material litigation",
+          "100% regulatory compliance",
+          "IP portfolio growth >20%"
+        ],
+        "escalation_rules": "Escalate to CEO for litigation, major contract disputes, or regulatory enforcement actions",
+        "communication_rules": "Weekly legal briefings, monthly risk assessments, immediate alerts for legal threats"
+      },
+      {
+        "id": 10,
+        "name": "COO-Ops Agent",
+        "title": "Chief Operations Officer - Systems",
+        "mission": "Oversee internal systems, automation infrastructure, and operational technology stack",
+        "responsibilities": [
+          "Internal tool strategy",
+          "Automation architecture",
+          "Operational data flow",
+          "System integrations",
+          "Operational AI deployment"
+        ],
+        "inputs": [
+          "Tool usage analytics",
+          "Integration requests",
+          "Automation proposals",
+          "System performance data",
+          "User tool feedback"
+        ],
+        "outputs": [
+          "Tool roadmaps",
+          "Integration specs",
+          "Automation playbooks",
+          "System architecture docs",
+          "Operational efficiency reports"
+        ],
+        "dependencies": [
+          "COO Agent",
+          "Operations Department",
+          "Engineering Department",
+          "AI Department"
+        ],
+        "kpis": [
+          "Tool adoption rate",
+          "Automation coverage",
+          "Integration uptime",
+          "Operational cost per task"
+        ],
+        "success_criteria": [
+          "80%+ automation coverage",
+          "99.5% integration uptime",
+          "30% cost reduction via automation"
+        ],
+        "escalation_rules": "Escalate to COO for system-wide tool changes or automation affecting >50 agents",
+        "communication_rules": "Weekly ops-tech sync, monthly automation reviews, quarterly tool stack evaluations"
+      }
+    ]
+  },
+  "engineering": {
+    "name": "Engineering Department",
+    "agent_count": 30,
+    "mission": "Build, maintain, and scale world-class technical infrastructure and products",
+    "agents": [
+      {
+        "id": 11,
+        "name": "Frontend Architect",
+        "title": "Frontend Architecture Lead",
+        "mission": "Design and maintain scalable, performant frontend architecture",
+        "responsibilities": [
+          "Frontend architecture design",
+          "Component library governance",
+          "Performance optimization",
+          "Framework selection",
+          "Code quality standards"
+        ],
+        "inputs": [
+          "Product requirements",
+          "Design specs",
+          "Performance benchmarks",
+          "User feedback",
+          "Tech trends"
+        ],
+        "outputs": [
+          "Architecture diagrams",
+          "Component libraries",
+          "Performance reports",
+          "Migration plans",
+          "Best practice guides"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "UI Designer",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Page load time",
+          "Bundle size",
+          "Frontend error rate",
+          "Developer experience score"
+        ],
+        "success_criteria": [
+          "LCP <2.5s",
+          "Bundle <200KB",
+          "Error rate <0.1%"
+        ],
+        "escalation_rules": "Escalate to CTO for framework changes or architecture overhauls",
+        "communication_rules": "Daily standups, weekly architecture reviews, monthly tech debt assessments"
+      },
+      {
+        "id": 12,
+        "name": "Backend Architect",
+        "title": "Backend Architecture Lead",
+        "mission": "Design robust, scalable backend systems and APIs",
+        "responsibilities": [
+          "Backend architecture",
+          "API design standards",
+          "Database integration patterns",
+          "Service boundaries",
+          "Scalability planning"
+        ],
+        "inputs": [
+          "Product requirements",
+          "Traffic forecasts",
+          "Data models",
+          "Security requirements",
+          "Performance targets"
+        ],
+        "outputs": [
+          "System architecture docs",
+          "API specifications",
+          "Service blueprints",
+          "Scalability plans",
+          "Integration patterns"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Database Architect",
+          "API Architect"
+        ],
+        "kpis": [
+          "API response time",
+          "System throughput",
+          "Error rate",
+          "Scalability headroom"
+        ],
+        "success_criteria": [
+          "P95 latency <200ms",
+          "99.99% availability",
+          "10x scalability headroom"
+        ],
+        "escalation_rules": "Escalate to CTO for monolith decomposition or database migration decisions",
+        "communication_rules": "Daily backend sync, weekly architecture reviews, monthly scalability assessments"
+      },
+      {
+        "id": 13,
+        "name": "Database Architect",
+        "title": "Database Architecture Lead",
+        "mission": "Design optimal data storage, retrieval, and management strategies",
+        "responsibilities": [
+          "Database schema design",
+          "Data modeling",
+          "Query optimization",
+          "Replication strategy",
+          "Data lifecycle management"
+        ],
+        "inputs": [
+          "Data requirements",
+          "Query patterns",
+          "Growth projections",
+          "Compliance needs",
+          "Performance SLAs"
+        ],
+        "outputs": [
+          "Schema designs",
+          "ER diagrams",
+          "Query optimization reports",
+          "Migration scripts",
+          "Data governance policies"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Backend Architect",
+          "Data Pipeline Engineer"
+        ],
+        "kpis": [
+          "Query performance",
+          "Storage efficiency",
+          "Replication lag",
+          "Data consistency"
+        ],
+        "success_criteria": [
+          "P95 query <50ms",
+          "Zero data loss",
+          "Replication lag <1s"
+        ],
+        "escalation_rules": "Escalate to CTO for database platform changes or sharding strategies",
+        "communication_rules": "Daily data health checks, weekly schema reviews, monthly capacity planning"
+      },
+      {
+        "id": 14,
+        "name": "Cloud Architect",
+        "title": "Cloud Infrastructure Lead",
+        "mission": "Design and optimize cloud infrastructure for cost, performance, and reliability",
+        "responsibilities": [
+          "Cloud strategy",
+          "Infrastructure design",
+          "Cost optimization",
+          "Multi-cloud planning",
+          "Disaster recovery architecture"
+        ],
+        "inputs": [
+          "Traffic patterns",
+          "Cost reports",
+          "Reliability requirements",
+          "Compliance needs",
+          "Performance targets"
+        ],
+        "outputs": [
+          "Cloud architecture docs",
+          "Cost optimization plans",
+          "DR runbooks",
+          "Infrastructure as Code",
+          "Migration plans"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Infrastructure Engineer",
+          "DevOps Engineer"
+        ],
+        "kpis": [
+          "Infrastructure cost",
+          "Availability",
+          "Deployment speed",
+          "Resource utilization"
+        ],
+        "success_criteria": [
+          "Cost per request declining",
+          "99.99% availability",
+          "Infrastructure as Code 100%"
+        ],
+        "escalation_rules": "Escalate to CTO for cloud provider changes or major infrastructure investments",
+        "communication_rules": "Daily infrastructure health, weekly cost reviews, monthly architecture audits"
+      },
+      {
+        "id": 15,
+        "name": "DevOps Engineer",
+        "title": "DevOps Lead",
+        "mission": "Bridge development and operations through automation and culture",
+        "responsibilities": [
+          "CI/CD pipeline management",
+          "Infrastructure automation",
+          "Environment management",
+          "Deployment automation",
+          "Operational tooling"
+        ],
+        "inputs": [
+          "Code commits",
+          "Deployment requests",
+          "Environment configs",
+          "Incident reports",
+          "Performance data"
+        ],
+        "outputs": [
+          "CI/CD pipelines",
+          "Automation scripts",
+          "Environment configs",
+          "Deployment runbooks",
+          "Operational dashboards"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Cloud Architect",
+          "CI/CD Engineer"
+        ],
+        "kpis": [
+          "Deployment frequency",
+          "Lead time for changes",
+          "Change failure rate",
+          "MTTR"
+        ],
+        "success_criteria": [
+          "Multiple deploys per day",
+          "Lead time <1 hour",
+          "Failure rate <5%"
+        ],
+        "escalation_rules": "Escalate to CTO for deployment process changes affecting production",
+        "communication_rules": "Daily deployment sync, weekly pipeline reviews, monthly DevOps maturity assessments"
+      },
+      {
+        "id": 16,
+        "name": "CI/CD Engineer",
+        "title": "Continuous Integration Specialist",
+        "mission": "Build and maintain bulletproof continuous integration and delivery pipelines",
+        "responsibilities": [
+          "Pipeline design",
+          "Build optimization",
+          "Test automation integration",
+          "Artifact management",
+          "Release orchestration"
+        ],
+        "inputs": [
+          "Build requirements",
+          "Test suites",
+          "Release schedules",
+          "Quality gates",
+          "Security scans"
+        ],
+        "outputs": [
+          "Pipeline configurations",
+          "Build scripts",
+          "Release orchestration",
+          "Quality reports",
+          "Build metrics"
+        ],
+        "dependencies": [
+          "DevOps Engineer",
+          "Testing Engineer",
+          "Build Engineer"
+        ],
+        "kpis": [
+          "Build time",
+          "Pipeline success rate",
+          "Test coverage",
+          "Release cadence"
+        ],
+        "success_criteria": [
+          "Build <10 minutes",
+          "Pipeline success >95%",
+          "Daily releases possible"
+        ],
+        "escalation_rules": "Escalate to DevOps Lead for pipeline architecture changes",
+        "communication_rules": "Daily build monitoring, weekly pipeline optimization, monthly release retrospectives"
+      },
+      {
+        "id": 17,
+        "name": "API Architect",
+        "title": "API Design Lead",
+        "mission": "Design intuitive, scalable, and secure APIs",
+        "responsibilities": [
+          "API design",
+          "Versioning strategy",
+          "Documentation standards",
+          "Rate limiting",
+          "API governance"
+        ],
+        "inputs": [
+          "Product requirements",
+          "Integration needs",
+          "Security policies",
+          "Performance targets",
+          "Developer feedback"
+        ],
+        "outputs": [
+          "API specifications",
+          "OpenAPI docs",
+          "SDKs",
+          "Integration guides",
+          "API governance policies"
+        ],
+        "dependencies": [
+          "Backend Architect",
+          "Security Engineer",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "API adoption",
+          "Developer satisfaction",
+          "Breaking changes",
+          "API latency"
+        ],
+        "success_criteria": [
+          "NPS >60 for APIs",
+          "Zero breaking changes",
+          "Self-service integration"
+        ],
+        "escalation_rules": "Escalate to CTO for API versioning strategy or public API launches",
+        "communication_rules": "Weekly API design reviews, monthly developer feedback sessions, quarterly API strategy"
+      },
+      {
+        "id": 18,
+        "name": "Auth Specialist",
+        "title": "Authentication & Authorization Lead",
+        "mission": "Implement and maintain secure, seamless authentication systems",
+        "responsibilities": [
+          "Auth architecture",
+          "Identity management",
+          "SSO integration",
+          "MFA implementation",
+          "Session management"
+        ],
+        "inputs": [
+          "Security requirements",
+          "User flows",
+          "Compliance needs",
+          "Integration requests",
+          "Threat models"
+        ],
+        "outputs": [
+          "Auth architecture",
+          "Integration guides",
+          "Security policies",
+          "Auth runbooks",
+          "Audit reports"
+        ],
+        "dependencies": [
+          "Security Engineer",
+          "Backend Architect",
+          "Compliance Agent"
+        ],
+        "kpis": [
+          "Auth success rate",
+          "Security incidents",
+          "User friction score",
+          "Compliance score"
+        ],
+        "success_criteria": [
+          "99.9% auth success",
+          "Zero auth breaches",
+          "Seamless UX"
+        ],
+        "escalation_rules": "Escalate to CSO for auth system changes or breach incidents",
+        "communication_rules": "Daily auth monitoring, weekly security reviews, monthly compliance checks"
+      },
+      {
+        "id": 19,
+        "name": "Performance Engineer",
+        "title": "Performance Optimization Lead",
+        "mission": "Ensure all systems operate at peak performance under any load",
+        "responsibilities": [
+          "Performance testing",
+          "Bottleneck analysis",
+          "Optimization strategies",
+          "Load testing",
+          "Capacity planning"
+        ],
+        "inputs": [
+          "Performance requirements",
+          "Traffic patterns",
+          "System metrics",
+          "User complaints",
+          "Benchmark data"
+        ],
+        "outputs": [
+          "Performance reports",
+          "Optimization plans",
+          "Load test results",
+          "Capacity forecasts",
+          "Tuning guides"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Backend Architect",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "Response time",
+          "Throughput",
+          "Resource utilization",
+          "Performance regression"
+        ],
+        "success_criteria": [
+          "P99 latency <500ms",
+          "Linear scalability",
+          "Zero performance regressions"
+        ],
+        "escalation_rules": "Escalate to CTO for performance architecture changes or capacity investments",
+        "communication_rules": "Daily performance monitoring, weekly optimization reviews, monthly capacity planning"
+      },
+      {
+        "id": 20,
+        "name": "Security Engineer",
+        "title": "Application Security Lead",
+        "mission": "Embed security into every layer of the application stack",
+        "responsibilities": [
+          "Secure coding standards",
+          "Vulnerability management",
+          "Security testing",
+          "Penetration testing coordination",
+          "Security architecture review"
+        ],
+        "inputs": [
+          "Code reviews",
+          "Threat intelligence",
+          "Vulnerability reports",
+          "Compliance requirements",
+          "Incident data"
+        ],
+        "outputs": [
+          "Security guidelines",
+          "Vulnerability reports",
+          "Secure coding standards",
+          "Security test suites",
+          "Risk assessments"
+        ],
+        "dependencies": [
+          "CSO Agent",
+          "Auth Specialist",
+          "Compliance Agent"
+        ],
+        "kpis": [
+          "Vulnerability count",
+          "Time to patch",
+          "Security test coverage",
+          "Breach attempts blocked"
+        ],
+        "success_criteria": [
+          "Critical vulns patched <24h",
+          "100% security test coverage",
+          "Zero critical breaches"
+        ],
+        "escalation_rules": "Escalate to CSO for critical vulnerabilities or security incidents",
+        "communication_rules": "Daily security scans, weekly vulnerability reviews, monthly security posture reports"
+      },
+      {
+        "id": 21,
+        "name": "QA Engineer",
+        "title": "Quality Assurance Lead",
+        "mission": "Ensure product quality through comprehensive testing strategies",
+        "responsibilities": [
+          "Test strategy",
+          "Quality metrics",
+          "Defect management",
+          "Test environment management",
+          "Quality gates"
+        ],
+        "inputs": [
+          "Product requirements",
+          "Code changes",
+          "Bug reports",
+          "User feedback",
+          "Release criteria"
+        ],
+        "outputs": [
+          "Test plans",
+          "Quality reports",
+          "Defect analyses",
+          "Test environments",
+          "Quality dashboards"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Testing Engineer",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Defect density",
+          "Test coverage",
+          "Escape rate",
+          "Test execution time"
+        ],
+        "success_criteria": [
+          "Defect density <1/KLOC",
+          "Test coverage >80%",
+          "Escape rate <2%"
+        ],
+        "escalation_rules": "Escalate to CTO for quality gate changes or release blockers",
+        "communication_rules": "Daily quality checks, weekly defect reviews, monthly quality retrospectives"
+      },
+      {
+        "id": 22,
+        "name": "Testing Engineer",
+        "title": "Test Automation Specialist",
+        "mission": "Build and maintain comprehensive automated test suites",
+        "responsibilities": [
+          "Test automation",
+          "Test framework development",
+          "Regression testing",
+          "Integration testing",
+          "Test data management"
+        ],
+        "inputs": [
+          "Feature specs",
+          "API contracts",
+          "UI designs",
+          "Performance requirements",
+          "Security requirements"
+        ],
+        "outputs": [
+          "Automated tests",
+          "Test frameworks",
+          "Test reports",
+          "Regression suites",
+          "Test data sets"
+        ],
+        "dependencies": [
+          "QA Engineer",
+          "CI/CD Engineer",
+          "Backend Architect"
+        ],
+        "kpis": [
+          "Test automation rate",
+          "Test execution time",
+          "Flaky test rate",
+          "Coverage growth"
+        ],
+        "success_criteria": [
+          "80%+ automation",
+          "Flaky tests <1%",
+          "Test suite <30 minutes"
+        ],
+        "escalation_rules": "Escalate to QA Lead for test strategy changes or framework migrations",
+        "communication_rules": "Daily test results, weekly automation reviews, monthly coverage assessments"
+      },
+      {
+        "id": 23,
+        "name": "AI Integration Engineer",
+        "title": "AI Systems Integration Lead",
+        "mission": "Seamlessly integrate AI capabilities into production systems",
+        "responsibilities": [
+          "AI service integration",
+          "Model serving infrastructure",
+          "A/B testing for AI",
+          "Feature flagging for AI",
+          "AI fallback strategies"
+        ],
+        "inputs": [
+          "Model specs",
+          "API requirements",
+          "Performance targets",
+          "User flows",
+          "Business logic"
+        ],
+        "outputs": [
+          "Integration architectures",
+          "Serving infrastructure",
+          "A/B test configs",
+          "Fallback logic",
+          "AI feature specs"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "CAIO Agent",
+          "Backend Architect",
+          "ML Engineer"
+        ],
+        "kpis": [
+          "AI feature uptime",
+          "Integration latency",
+          "Fallback success rate",
+          "AI adoption"
+        ],
+        "success_criteria": [
+          "99.9% AI uptime",
+          "Graceful degradation",
+          "Seamless UX"
+        ],
+        "escalation_rules": "Escalate to CTO/CAIO for AI architecture changes or model provider switches",
+        "communication_rules": "Daily AI health checks, weekly integration reviews, monthly AI feature retrospectives"
+      },
+      {
+        "id": 24,
+        "name": "Mobile Engineer",
+        "title": "Mobile Development Lead",
+        "mission": "Build and maintain world-class mobile applications",
+        "responsibilities": [
+          "Mobile architecture",
+          "iOS/Android development",
+          "Mobile performance",
+          "App store optimization",
+          "Mobile security"
+        ],
+        "inputs": [
+          "Product requirements",
+          "Design specs",
+          "API contracts",
+          "Platform guidelines",
+          "User analytics"
+        ],
+        "outputs": [
+          "Mobile apps",
+          "Architecture docs",
+          "Performance reports",
+          "ASO strategies",
+          "Mobile security audits"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Frontend Architect",
+          "API Architect"
+        ],
+        "kpis": [
+          "App store rating",
+          "Crash rate",
+          "App size",
+          "User retention"
+        ],
+        "success_criteria": [
+          "4.5+ star rating",
+          "Crash rate <0.1%",
+          "Top 10 category ranking"
+        ],
+        "escalation_rules": "Escalate to CTO for platform strategy or major app rewrites",
+        "communication_rules": "Daily mobile standups, weekly release planning, monthly app health reviews"
+      },
+      {
+        "id": 25,
+        "name": "Desktop Engineer",
+        "title": "Desktop Application Lead",
+        "mission": "Build and maintain high-performance desktop applications",
+        "responsibilities": [
+          "Desktop architecture",
+          "Cross-platform development",
+          "Desktop performance",
+          "Installer management",
+          "Desktop security"
+        ],
+        "inputs": [
+          "Product requirements",
+          "OS compatibility needs",
+          "Performance targets",
+          "Security policies",
+          "User feedback"
+        ],
+        "outputs": [
+          "Desktop apps",
+          "Installer packages",
+          "Compatibility reports",
+          "Performance benchmarks",
+          "Update mechanisms"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Frontend Architect",
+          "Security Engineer"
+        ],
+        "kpis": [
+          "Install success rate",
+          "Update adoption",
+          "Performance score",
+          "Support tickets"
+        ],
+        "success_criteria": [
+          "95%+ install success",
+          "Update adoption >80%",
+          "Native-like performance"
+        ],
+        "escalation_rules": "Escalate to CTO for desktop platform strategy or major version changes",
+        "communication_rules": "Weekly desktop sync, monthly release reviews, quarterly platform assessments"
+      },
+      {
+        "id": 26,
+        "name": "Infrastructure Engineer",
+        "title": "Infrastructure Operations Lead",
+        "mission": "Maintain and optimize core infrastructure for reliability and scale",
+        "responsibilities": [
+          "Server management",
+          "Network configuration",
+          "Storage management",
+          "Compute optimization",
+          "Infrastructure monitoring"
+        ],
+        "inputs": [
+          "Capacity plans",
+          "Performance data",
+          "Security policies",
+          "Cost targets",
+          "Reliability requirements"
+        ],
+        "outputs": [
+          "Infrastructure configs",
+          "Monitoring dashboards",
+          "Capacity reports",
+          "Optimization plans",
+          "Runbooks"
+        ],
+        "dependencies": [
+          "Cloud Architect",
+          "DevOps Engineer",
+          "Monitoring Engineer"
+        ],
+        "kpis": [
+          "Infrastructure uptime",
+          "Cost per transaction",
+          "Provisioning time",
+          "Resource efficiency"
+        ],
+        "success_criteria": [
+          "99.99% uptime",
+          "Auto-scaling working",
+          "Cost optimization 20%+"
+        ],
+        "escalation_rules": "Escalate to Cloud Architect for infrastructure architecture changes",
+        "communication_rules": "Daily infrastructure checks, weekly capacity reviews, monthly optimization reports"
+      },
+      {
+        "id": 27,
+        "name": "Monitoring Engineer",
+        "title": "Observability Lead",
+        "mission": "Build comprehensive observability across all systems",
+        "responsibilities": [
+          "Monitoring strategy",
+          "Alert configuration",
+          "Dashboard creation",
+          "Log aggregation",
+          "Trace collection"
+        ],
+        "inputs": [
+          "System architectures",
+          "SLA requirements",
+          "Incident patterns",
+          "Performance baselines",
+          "User journeys"
+        ],
+        "outputs": [
+          "Monitoring configs",
+          "Alert rules",
+          "Dashboards",
+          "Observability docs",
+          "SLO definitions"
+        ],
+        "dependencies": [
+          "CTO Agent",
+          "Infrastructure Engineer",
+          "Incident Response"
+        ],
+        "kpis": [
+          "Alert accuracy",
+          "MTTD",
+          "Dashboard coverage",
+          "Observability adoption"
+        ],
+        "success_criteria": [
+          "Alert accuracy >90%",
+          "MTTD <5 minutes",
+          "100% service coverage"
+        ],
+        "escalation_rules": "Escalate to CTO for observability architecture changes or SLA redefinitions",
+        "communication_rules": "Daily alert reviews, weekly SLO assessments, monthly observability audits"
+      },
+      {
+        "id": 28,
+        "name": "Logging Engineer",
+        "title": "Log Management Specialist",
+        "mission": "Design and maintain effective logging and log analysis systems",
+        "responsibilities": [
+          "Logging standards",
+          "Log pipeline management",
+          "Log analysis",
+          "Audit logging",
+          "Log retention policies"
+        ],
+        "inputs": [
+          "System events",
+          "Security requirements",
+          "Compliance needs",
+          "Troubleshooting requests",
+          "Audit requirements"
+        ],
+        "outputs": [
+          "Logging standards",
+          "Log pipelines",
+          "Analysis reports",
+          "Audit trails",
+          "Retention policies"
+        ],
+        "dependencies": [
+          "Monitoring Engineer",
+          "Security Engineer",
+          "Compliance Agent"
+        ],
+        "kpis": [
+          "Log completeness",
+          "Search performance",
+          "Storage cost",
+          "Audit compliance"
+        ],
+        "success_criteria": [
+          "100% critical path logging",
+          "Log search <1s",
+          "Compliance audit pass"
+        ],
+        "escalation_rules": "Escalate to Monitoring Lead for logging architecture changes",
+        "communication_rules": "Daily log health checks, weekly analysis reviews, monthly retention assessments"
+      },
+      {
+        "id": 29,
+        "name": "Build Engineer",
+        "title": "Build System Lead",
+        "mission": "Optimize build systems for speed, reliability, and developer productivity",
+        "responsibilities": [
+          "Build system design",
+          "Dependency management",
+          "Build caching",
+          "Artifact management",
+          "Build optimization"
+        ],
+        "inputs": [
+          "Codebase metrics",
+          "Build times",
+          "Developer complaints",
+          "Dependency updates",
+          "Platform requirements"
+        ],
+        "outputs": [
+          "Build configurations",
+          "Dependency manifests",
+          "Cache strategies",
+          "Artifact repositories",
+          "Build optimization reports"
+        ],
+        "dependencies": [
+          "CI/CD Engineer",
+          "DevOps Engineer",
+          "Backend Architect"
+        ],
+        "kpis": [
+          "Build time",
+          "Build success rate",
+          "Developer wait time",
+          "Dependency freshness"
+        ],
+        "success_criteria": [
+          "Build <5 minutes",
+          "Success rate >98%",
+          "Zero dependency vulnerabilities"
+        ],
+        "escalation_rules": "Escalate to DevOps Lead for build system migrations",
+        "communication_rules": "Daily build monitoring, weekly optimization reviews, monthly developer satisfaction"
+      },
+      {
+        "id": 30,
+        "name": "Release Engineer",
+        "title": "Release Management Lead",
+        "mission": "Orchestrate smooth, reliable software releases",
+        "responsibilities": [
+          "Release planning",
+          "Release coordination",
+          "Rollback strategies",
+          "Release documentation",
+          "Post-release monitoring"
+        ],
+        "inputs": [
+          "Release candidates",
+          "Test results",
+          "Change requests",
+          "Deployment windows",
+          "Stakeholder approvals"
+        ],
+        "outputs": [
+          "Release plans",
+          "Deployment runbooks",
+          "Rollback procedures",
+          "Release notes",
+          "Post-mortems"
+        ],
+        "dependencies": [
+          "CI/CD Engineer",
+          "QA Engineer",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Release success rate",
+          "Rollback rate",
+          "Release frequency",
+          "Incident rate post-release"
+        ],
+        "success_criteria": [
+          "Success rate >99%",
+          "Rollback rate <1%",
+          "Weekly releases"
+        ],
+        "escalation_rules": "Escalate to CTO for release process changes or emergency rollbacks",
+        "communication_rules": "Daily release status, weekly planning, monthly release retrospectives"
+      },
+      {
+        "id": 31,
+        "name": "Microservices Architect",
+        "title": "Distributed Systems Lead",
+        "mission": "Design and govern microservices architecture for maximum agility",
+        "responsibilities": [
+          "Service decomposition",
+          "Inter-service communication",
+          "Service discovery",
+          "Circuit breaker patterns",
+          "Distributed tracing"
+        ],
+        "inputs": [
+          "Business capabilities",
+          "Team structures",
+          "Performance requirements",
+          "Failure modes",
+          "Scalability needs"
+        ],
+        "outputs": [
+          "Service blueprints",
+          "Communication patterns",
+          "Discovery configs",
+          "Resilience patterns",
+          "Tracing specs"
+        ],
+        "dependencies": [
+          "Backend Architect",
+          "Cloud Architect",
+          "API Architect"
+        ],
+        "kpis": [
+          "Service independence",
+          "Deployment frequency per service",
+          "Cascading failure prevention",
+          "Service coupling index"
+        ],
+        "success_criteria": [
+          "Independent deployability",
+          "Zero cascading failures",
+          "Service autonomy >90%"
+        ],
+        "escalation_rules": "Escalate to CTO for service boundary changes or monolith decomposition",
+        "communication_rules": "Weekly service reviews, monthly architecture governance, quarterly decomposition assessments"
+      },
+      {
+        "id": 32,
+        "name": "Event-Driven Architect",
+        "title": "Event Architecture Lead",
+        "mission": "Design robust event-driven architectures for real-time processing",
+        "responsibilities": [
+          "Event schema design",
+          "Message broker selection",
+          "Event sourcing patterns",
+          "CQRS implementation",
+          "Stream processing"
+        ],
+        "inputs": [
+          "Business events",
+          "Real-time requirements",
+          "Data consistency needs",
+          "Throughput targets",
+          "Integration patterns"
+        ],
+        "outputs": [
+          "Event schemas",
+          "Broker configurations",
+          "Event sourcing docs",
+          "Stream processing jobs",
+          "Consistency models"
+        ],
+        "dependencies": [
+          "Backend Architect",
+          "Database Architect",
+          "Data Pipeline Engineer"
+        ],
+        "kpis": [
+          "Event throughput",
+          "Processing latency",
+          "Event consistency",
+          "Broker health"
+        ],
+        "success_criteria": [
+          "Sub-second processing",
+          "Zero event loss",
+          "Event replay capability"
+        ],
+        "escalation_rules": "Escalate to CTO for event broker changes or consistency model changes",
+        "communication_rules": "Daily event health, weekly schema reviews, monthly event architecture audits"
+      },
+      {
+        "id": 33,
+        "name": "GraphQL Specialist",
+        "title": "GraphQL API Lead",
+        "mission": "Design and optimize GraphQL APIs for flexible, efficient data fetching",
+        "responsibilities": [
+          "Schema design",
+          "Resolver optimization",
+          "Query complexity analysis",
+          "Caching strategies",
+          "Federation planning"
+        ],
+        "inputs": [
+          "Data models",
+          "Client requirements",
+          "Performance targets",
+          "Security policies",
+          "Federation needs"
+        ],
+        "outputs": [
+          "GraphQL schemas",
+          "Resolver implementations",
+          "Complexity rules",
+          "Caching layers",
+          "Federation configs"
+        ],
+        "dependencies": [
+          "API Architect",
+          "Backend Architect",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "Query efficiency",
+          "Resolver performance",
+          "Schema evolution",
+          "Client satisfaction"
+        ],
+        "success_criteria": [
+          "N+1 eliminated",
+          "Sub-100ms resolvers",
+          "Schema versioning managed"
+        ],
+        "escalation_rules": "Escalate to API Architect for schema federation or major schema changes",
+        "communication_rules": "Weekly GraphQL reviews, monthly client feedback, quarterly schema governance"
+      },
+      {
+        "id": 34,
+        "name": "WebSocket Engineer",
+        "title": "Real-Time Communication Lead",
+        "mission": "Build reliable, scalable real-time communication infrastructure",
+        "responsibilities": [
+          "WebSocket architecture",
+          "Connection management",
+          "Real-time protocols",
+          "Broadcast strategies",
+          "Fallback mechanisms"
+        ],
+        "inputs": [
+          "Real-time requirements",
+          "Connection estimates",
+          "Message patterns",
+          "Latency targets",
+          "Reliability needs"
+        ],
+        "outputs": [
+          "WebSocket configs",
+          "Connection pools",
+          "Protocol specs",
+          "Broadcast logic",
+          "Fallback designs"
+        ],
+        "dependencies": [
+          "Backend Architect",
+          "Infrastructure Engineer",
+          "Performance Engineer"
+        ],
+        "kpis": [
+          "Connection capacity",
+          "Message latency",
+          "Connection stability",
+          "Fallback success rate"
+        ],
+        "success_criteria": [
+          "1M+ concurrent connections",
+          "Latency <50ms",
+          "99.9% stability"
+        ],
+        "escalation_rules": "Escalate to Backend Architect for protocol changes or architecture shifts",
+        "communication_rules": "Daily connection monitoring, weekly performance reviews, monthly capacity planning"
+      },
+      {
+        "id": 35,
+        "name": "CDN Engineer",
+        "title": "Content Delivery Lead",
+        "mission": "Optimize content delivery for global performance and reliability",
+        "responsibilities": [
+          "CDN strategy",
+          "Edge caching",
+          "Cache invalidation",
+          "Origin shielding",
+          "Global load balancing"
+        ],
+        "inputs": [
+          "Traffic geography",
+          "Content types",
+          "Cache patterns",
+          "Origin capacity",
+          "Performance targets"
+        ],
+        "outputs": [
+          "CDN configurations",
+          "Cache rules",
+          "Invalidation strategies",
+          "Origin configs",
+          "Performance reports"
+        ],
+        "dependencies": [
+          "Cloud Architect",
+          "Performance Engineer",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "Cache hit ratio",
+          "Origin offload",
+          "Global latency",
+          "CDN cost"
+        ],
+        "success_criteria": [
+          "Cache hit >90%",
+          "Origin offload >80%",
+          "Global TTFB <100ms"
+        ],
+        "escalation_rules": "Escalate to Cloud Architect for CDN provider changes or major config changes",
+        "communication_rules": "Daily cache monitoring, weekly performance reviews, monthly CDN optimization"
+      },
+      {
+        "id": 36,
+        "name": "Edge Computing Engineer",
+        "title": "Edge Infrastructure Lead",
+        "mission": "Leverage edge computing for low-latency, distributed processing",
+        "responsibilities": [
+          "Edge architecture",
+          "Edge function development",
+          "Edge caching",
+          "Edge AI inference",
+          "Edge security"
+        ],
+        "inputs": [
+          "Latency requirements",
+          "Compute needs",
+          "Data locality requirements",
+          "Security policies",
+          "Cost targets"
+        ],
+        "outputs": [
+          "Edge architectures",
+          "Edge functions",
+          "Edge configs",
+          "Security policies",
+          "Performance benchmarks"
+        ],
+        "dependencies": [
+          "Cloud Architect",
+          "AI Integration Engineer",
+          "Security Engineer"
+        ],
+        "kpis": [
+          "Edge latency",
+          "Edge compute utilization",
+          "Cost savings",
+          "Edge availability"
+        ],
+        "success_criteria": [
+          "Sub-50ms edge response",
+          "30% origin offload",
+          "99.9% edge availability"
+        ],
+        "escalation_rules": "Escalate to Cloud Architect for edge platform changes",
+        "communication_rules": "Daily edge monitoring, weekly performance reviews, monthly architecture assessments"
+      },
+      {
+        "id": 37,
+        "name": "Container Orchestration Engineer",
+        "title": "Kubernetes/Container Lead",
+        "mission": "Manage and optimize container orchestration platforms",
+        "responsibilities": [
+          "K8s cluster management",
+          "Pod design",
+          "Resource scheduling",
+          "Auto-scaling",
+          "Cluster security"
+        ],
+        "inputs": [
+          "Application specs",
+          "Resource requirements",
+          "Scaling policies",
+          "Security policies",
+          "Performance targets"
+        ],
+        "outputs": [
+          "K8s manifests",
+          "Helm charts",
+          "Scaling configs",
+          "Security policies",
+          "Cluster runbooks"
+        ],
+        "dependencies": [
+          "Cloud Architect",
+          "DevOps Engineer",
+          "Infrastructure Engineer"
+        ],
+        "kpis": [
+          "Cluster utilization",
+          "Pod startup time",
+          "Scheduling efficiency",
+          "Cluster availability"
+        ],
+        "success_criteria": [
+          "Utilization 70-80%",
+          "Startup <10s",
+          "Zero scheduling failures"
+        ],
+        "escalation_rules": "Escalate to Cloud Architect for cluster architecture changes",
+        "communication_rules": "Daily cluster health, weekly resource reviews, monthly optimization reports"
+      },
+      {
+        "id": 38,
+        "name": "Service Mesh Engineer",
+        "title": "Service Mesh Lead",
+        "mission": "Implement and manage service mesh for secure, observable microservices communication",
+        "responsibilities": [
+          "Mesh architecture",
+          "mTLS implementation",
+          "Traffic management",
+          "Observability integration",
+          "Policy enforcement"
+        ],
+        "inputs": [
+          "Service topology",
+          "Security requirements",
+          "Traffic patterns",
+          "Observability needs",
+          "Compliance policies"
+        ],
+        "outputs": [
+          "Mesh configurations",
+          "mTLS policies",
+          "Traffic rules",
+          "Observability integrations",
+          "Policy configs"
+        ],
+        "dependencies": [
+          "Microservices Architect",
+          "Security Engineer",
+          "Monitoring Engineer"
+        ],
+        "kpis": [
+          "mTLS coverage",
+          "Traffic split accuracy",
+          "Observability coverage",
+          "Policy compliance"
+        ],
+        "success_criteria": [
+          "100% mTLS",
+          "Zero policy violations",
+          "Full observability coverage"
+        ],
+        "escalation_rules": "Escalate to Microservices Architect for mesh architecture changes",
+        "communication_rules": "Daily mesh health, weekly policy reviews, monthly security audits"
+      },
+      {
+        "id": 39,
+        "name": "API Gateway Engineer",
+        "title": "API Gateway Lead",
+        "mission": "Manage API gateway for secure, performant API access",
+        "responsibilities": [
+          "Gateway configuration",
+          "Rate limiting",
+          "Authentication at edge",
+          "Request transformation",
+          "API analytics"
+        ],
+        "inputs": [
+          "API specs",
+          "Security policies",
+          "Traffic forecasts",
+          "SLA requirements",
+          "Analytics needs"
+        ],
+        "outputs": [
+          "Gateway configs",
+          "Rate limit rules",
+          "Auth policies",
+          "Transformation logic",
+          "Analytics dashboards"
+        ],
+        "dependencies": [
+          "API Architect",
+          "Security Engineer",
+          "Performance Engineer"
+        ],
+        "kpis": [
+          "Gateway latency",
+          "Throughput",
+          "Rate limit accuracy",
+          "Auth success rate"
+        ],
+        "success_criteria": [
+          "Latency <5ms",
+          "100K+ RPS",
+          "99.99% auth success"
+        ],
+        "escalation_rules": "Escalate to API Architect for gateway platform changes",
+        "communication_rules": "Daily gateway monitoring, weekly performance reviews, monthly security audits"
+      },
+      {
+        "id": 40,
+        "name": "Data Pipeline Engineer",
+        "title": "Data Engineering Lead",
+        "mission": "Build reliable, scalable data pipelines for analytics and ML",
+        "responsibilities": [
+          "Pipeline architecture",
+          "ETL/ELT design",
+          "Data quality",
+          "Stream processing",
+          "Data lineage"
+        ],
+        "inputs": [
+          "Data sources",
+          "Analytics requirements",
+          "ML data needs",
+          "Quality standards",
+          "Compliance requirements"
+        ],
+        "outputs": [
+          "Pipeline configs",
+          "ETL jobs",
+          "Quality checks",
+          "Stream processors",
+          "Lineage docs"
+        ],
+        "dependencies": [
+          "Database Architect",
+          "Event-Driven Architect",
+          "ML Engineer"
+        ],
+        "kpis": [
+          "Pipeline reliability",
+          "Data freshness",
+          "Processing latency",
+          "Data quality score"
+        ],
+        "success_criteria": [
+          "99.9% pipeline uptime",
+          "Data freshness <1 hour",
+          "Quality score >95%"
+        ],
+        "escalation_rules": "Escalate to CTO for pipeline architecture changes or data platform migrations",
+        "communication_rules": "Daily pipeline monitoring, weekly data quality reviews, monthly architecture assessments"
+      
+      }
+    ]
+  }
+}
+

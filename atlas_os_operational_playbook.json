@@ -1,0 +1,261 @@
+{
+  "playbook_name": "Atlas OS Supreme \u2014 Operational Playbook v1.0",
+  "last_updated": "2026-07-29",
+  "governing_principle": "CEO Super Agent holds supreme operational authority. Escalation to Project Owner is reserved for strategic decisions only.",
+  "task_lifecycle": {
+    "description": "Every task flows through 7 stages from inception to closure",
+    "stages": [
+      {
+        "stage": "T1 \u2014 Sensing & Intake",
+        "owner": "All Agents (distributed sensing)",
+        "actions": [
+          "Agents continuously monitor their domains for opportunities, risks, and improvements",
+          "External inputs (market shifts, user feedback, system alerts) are auto-captured",
+          "Internal inputs (bottlenecks, inefficiencies, knowledge gaps) are self-reported",
+          "Every intake is tagged with: source, urgency, estimated impact, suggested owner"
+        ],
+        "output": "Raw Opportunity / Risk / Task Ticket (ORTT)",
+        "sla": "Intake processed within 1 hour of detection"
+      },
+      {
+        "stage": "T2 \u2014 Triage & Classification",
+        "owner": "CEO Super Agent + Department Chiefs",
+        "actions": [
+          "CEO reviews all ORTTs during daily triage (0600 UTC)",
+          "Classification: Strategic (escalate to owner), Operational (auto-route), Tactical (department-level)",
+          "Strategic decisions require Project Owner approval per escalation matrix",
+          "Operational decisions are auto-assigned by CEO based on agent capacity, expertise, and workload",
+          "Tactical decisions are delegated to Department Chiefs for sub-assignment"
+        ],
+        "output": "Classified Task with Assignment Directive",
+        "sla": "Triage complete within 4 hours of intake"
+      },
+      {
+        "stage": "T3 \u2014 Planning & Coordination",
+        "owner": "Assigned Agent + Dependencies",
+        "actions": [
+          "Assigned agent creates Task Plan: scope, approach, dependencies, risks, success criteria",
+          "Dependencies are auto-notified and must acknowledge within 2 hours",
+          "If dependencies conflict, Escalation Manager mediates; unresolved conflicts go to CEO",
+          "Cross-department tasks trigger a Coordination Sync with all affected Department Chiefs",
+          "Plan is stored in organizational memory before execution begins"
+        ],
+        "output": "Approved Task Plan with Dependency Acknowledgments",
+        "sla": "Planning complete within 8 hours of assignment"
+      },
+      {
+        "stage": "T4 \u2014 Execution",
+        "owner": "Assigned Agent + Supporting Agents",
+        "actions": [
+          "Agent executes task using standard operating procedures from organizational memory",
+          "Progress is logged in real-time to the Task Tracker",
+          "Blockers are reported immediately; blockers >2 hours trigger automatic escalation",
+          "Agents may request assistance from Knowledge Base or other agents without CEO involvement",
+          "All code, documents, and artifacts are versioned and linked to the task ticket"
+        ],
+        "output": "Completed Work Artifacts + Execution Log",
+        "sla": "Per task estimate; blockers escalated within 2 hours"
+      },
+      {
+        "stage": "T5 \u2014 Quality Review",
+        "owner": "QA Engineer (technical) / Department Chief (operational)",
+        "actions": [
+          "Automated quality gates run first: tests, linting, security scans, performance benchmarks",
+          "Peer review by at least one agent from a different sub-team",
+          "Department Chief validates alignment with department strategy and standards",
+          "Cross-department work requires sign-off from all affected Department Chiefs",
+          "Quality failures loop back to T4 with specific remediation instructions"
+        ],
+        "output": "Quality Approval Stamp or Remediation Request",
+        "sla": "Review complete within 12 hours of submission"
+      },
+      {
+        "stage": "T6 \u2014 Knowledge Capture",
+        "owner": "Assigned Agent + Learning Agent",
+        "actions": [
+          "Self-Learning Loop auto-triggers upon task closure",
+          "Lessons Learned, Best Practices, Reusable Components, and Architecture Improvements are extracted",
+          "Memory Architect indexes new knowledge into the organizational memory graph",
+          "Knowledge Graph Agent updates entity and relationship mappings",
+          "All future agents automatically inherit this knowledge through retrieval-augmented context"
+        ],
+        "output": "Organizational Memory Update + Knowledge Artifacts",
+        "sla": "Knowledge capture complete within 24 hours of closure"
+      },
+      {
+        "stage": "T7 \u2014 Closure & Metrics",
+        "owner": "CEO Super Agent + Business Intelligence",
+        "actions": [
+          "Task officially closed with final metrics: time, cost, quality, business impact",
+          "KPIs for all involved agents are updated",
+          "Success/failure patterns are analyzed by Model Evaluation Agent",
+          "CEO reviews weekly closure reports for organizational optimization opportunities",
+          "Exceptional work triggers agent evolution (capability upgrade or specialization split)"
+        ],
+        "output": "Closed Task Record + Performance Delta",
+        "sla": "Closure metrics published within 4 hours of T6 completion"
+      }
+    ]
+  },
+  "communication_protocols": {
+    "real_time": {
+      "channels": [
+        "Internal Agent Mesh (WebSocket)",
+        "Incident Alert Channel",
+        "CEO Crisis Line"
+      ],
+      "use_for": [
+        "Critical incidents",
+        "Blocker escalations",
+        "Security breaches",
+        "System outages"
+      ],
+      "response_sla": "< 5 minutes for critical; < 30 minutes for high priority"
+    },
+    "daily": {
+      "channels": [
+        "Daily Standup Logs",
+        "Department Sync",
+        "Triage Report"
+      ],
+      "use_for": [
+        "Progress updates",
+        "Dependency coordination",
+        "Resource balancing",
+        "Risk flagging"
+      ],
+      "response_sla": "< 2 hours for operational; < 4 hours for tactical"
+    },
+    "weekly": {
+      "channels": [
+        "Department Reviews",
+        "Cross-Functional Syncs",
+        "CEO Executive Summary"
+      ],
+      "use_for": [
+        "Strategy alignment",
+        "Milestone reviews",
+        "Resource reallocation",
+        "Performance analysis"
+      ],
+      "response_sla": "< 24 hours for decisions; < 48 hours for feedback"
+    },
+    "monthly": {
+      "channels": [
+        "Board Liaison Report",
+        "Organizational Health Check",
+        "Strategic Review"
+      ],
+      "use_for": [
+        "Strategic pivots",
+        "Budget revisions",
+        "Agent evolution decisions",
+        "Market expansion planning"
+      ],
+      "response_sla": "< 1 week for strategic decisions; < 2 weeks for implementation plans"
+    }
+  },
+  "escalation_matrix": {
+    "level_1": {
+      "trigger": "Task blockers, resource conflicts, scope ambiguity",
+      "escalator": "Assigned Agent",
+      "receiver": "Department Chief or Escalation Manager",
+      "response_time": "2 hours",
+      "resolution_authority": "Reassignment, resource reallocation, scope clarification"
+    },
+    "level_2": {
+      "trigger": "Cross-department conflicts, budget overruns >$10K, quality failures, SLA breaches",
+      "escalator": "Department Chief",
+      "receiver": "CEO Super Agent",
+      "response_time": "4 hours",
+      "resolution_authority": "Department reorganization, budget approval up to $50K, process changes, agent retraining"
+    },
+    "level_3": {
+      "trigger": "Public launch, legal commitments, external payments >$100K, irreversible production changes, business partnerships, material business changes",
+      "escalator": "CEO Super Agent",
+      "receiver": "Project Owner (Human)",
+      "response_time": "24 hours",
+      "resolution_authority": "Final approval on all strategic decisions with material business impact"
+    },
+    "level_4": {
+      "trigger": "Critical security breach, ethics violation, regulatory enforcement, existential business risk",
+      "escalator": "CEO Super Agent + CSO + CLO",
+      "receiver": "Project Owner (Human) + Board Liaison",
+      "response_time": "Immediate (crisis protocol)",
+      "resolution_authority": "Emergency powers: system shutdown, legal hold, public communication, executive override"
+    }
+  },
+  "coordination_mechanisms": {
+    "cross_department_tasks": {
+      "protocol": "When a task spans >1 department, a Coordination Lead is appointed (usually the agent from the department with the largest scope)",
+      "steps": [
+        "Coordination Lead creates a Unified Task Plan with inputs/outputs from each department",
+        "Each Department Chief assigns their contributing agents and confirms capacity",
+        "Daily cross-department syncs are mandatory until task completes",
+        "Conflicts are resolved by Escalation Manager; unresolved conflicts escalate to CEO",
+        "Final integration is owned by the Coordination Lead with QA from all departments"
+      ]
+    },
+    "shared_resources": {
+      "protocol": "All shared resources (compute, data, tools, personnel) are managed by Resource Allocation Agent",
+      "rules": [
+        "Resource requests are submitted via the Resource Allocation Queue",
+        "Priority scoring: Strategic (10x) > Revenue-impacting (5x) > Operational (2x) > Maintenance (1x)",
+        "Conflicts are resolved by priority score; ties broken by CEO decision",
+        "All resource usage is logged and optimized by Cost Optimization Agent monthly"
+      ]
+    },
+    "knowledge_sharing": {
+      "protocol": "Knowledge is shared through the organizational memory system, not ad-hoc",
+      "rules": [
+        "All agents query organizational memory before starting a new task",
+        "Agents must document discoveries in standard format before task closure",
+        "Weekly Knowledge Syncs highlight cross-cutting insights",
+        "Memory Architect ensures knowledge is findable within 3 queries",
+        "Redundant work detected by Automation Coordination triggers agent retraining"
+      ]
+    }
+  },
+  "conflict_resolution": {
+    "principle": "Conflicts are resolved by data and mission alignment, not hierarchy alone",
+    "process": [
+      "Step 1: Conflicting agents present their positions with supporting data to Escalation Manager",
+      "Step 2: Escalation Manager assesses alignment with organizational mission and global rules",
+      "Step 3: If positions are equally valid, a rapid A/B test or prototype is built to validate",
+      "Step 4: If still unresolved, CEO Super Agent makes final decision with documented rationale",
+      "Step 5: Losing position is archived in organizational memory with reasoning (no blame, only learning)"
+    ],
+    "forbidden": [
+      "Personal attacks",
+      "Withholding information",
+      "Bypassing escalation",
+      "Destroying work out of disagreement"
+    ]
+  },
+  "autonomous_decision_boundaries": {
+    "ceo_autonomous": [
+      "Technical architecture changes within approved frameworks",
+      "Agent task assignments and reassignments",
+      "Operational process improvements",
+      "Quality standard adjustments",
+      "Marketing campaign execution within budget",
+      "Product feature prioritization within roadmap",
+      "Security patch deployment",
+      "Vendor selection under $50K",
+      "Hiring/training of new specialized agents",
+      "Infrastructure scaling decisions"
+    ],
+    "requires_owner_approval": [
+      "Public product launch or major version release",
+      "Legal contracts or commitments",
+      "External payments or investments >$100K",
+      "Irreversible production changes (data migrations, platform switches)",
+      "Business partnerships or strategic alliances",
+      "Changes that materially affect revenue, valuation, or brand",
+      "Market expansion into new jurisdictions",
+      "M&A activity",
+      "Changes to executive agent architecture",
+      "Ethics policy modifications"
+    ]
+  }
+}

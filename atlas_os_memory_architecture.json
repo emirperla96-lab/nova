@@ -1,0 +1,311 @@
+{
+  "system_name": "Atlas OS Supreme \u2014 Organizational Memory System (OMS) v1.0",
+  "architecture_principle": "Every agent has short-term working memory. The organization has persistent, queryable, evolving long-term memory. Knowledge flows from working \u2192 short-term \u2192 long-term \u2192 retrieval \u2192 working.",
+  "memory_layers": {
+    "layer_1_working_memory": {
+      "name": "Agent Working Memory (AWM)",
+      "scope": "Per-agent, per-session, ephemeral",
+      "capacity": "128K token context window per agent",
+      "persistence": "Session-only. Auto-purged after task completion unless flagged for capture",
+      "contents": [
+        "Current task context and instructions",
+        "Intermediate reasoning steps",
+        "Active tool outputs",
+        "Conversational context with other agents",
+        "Temporary variables and state"
+      ],
+      "technology": "In-context learning within LLM inference context window",
+      "retrieval_latency": "< 10ms (in-context)",
+      "cost": "Zero marginal cost (included in inference)"
+    },
+    "layer_2_short_term": {
+      "name": "Agent Short-Term Memory (ASTM)",
+      "scope": "Per-agent, persists across sessions, 30-day retention",
+      "capacity": "10,000 entries per agent",
+      "persistence": "30 days with auto-decay. Important items promoted to long-term",
+      "contents": [
+        "Recently learned patterns",
+        "Frequently used prompts and templates",
+        "Recent task outcomes and lessons",
+        "Active project context",
+        "Collaboration history with specific agents"
+      ],
+      "technology": "Vector database (Qdrant/Pinecone) with agent-specific namespaces",
+      "embedding_model": "text-embedding-3-large (3072-dim)",
+      "retrieval_latency": "< 50ms",
+      "cost": "$0.0001 per 1K tokens stored"
+    },
+    "layer_3_long_term": {
+      "name": "Organizational Long-Term Memory (OLTM)",
+      "scope": "Organization-wide, permanent, versioned",
+      "capacity": "Unlimited (scalable vector + graph + document store)",
+      "persistence": "Permanent with version history. Immutable audit trail",
+      "contents": [
+        "Architecture decisions and ADRs",
+        "Business rules and policies",
+        "Coding standards and naming conventions",
+        "Design system specifications",
+        "SEO strategy and affiliate strategy",
+        "Marketing playbooks and revenue models",
+        "Growth experiments and results",
+        "Successful prompts and failed approaches",
+        "Bug history and resolution patterns",
+        "Deployment and testing history",
+        "Agent evolution records",
+        "Organizational lessons learned"
+      ],
+      "technology": "Hybrid: Vector DB + Knowledge Graph (Neo4j) + Document Store (S3 + Elasticsearch)",
+      "embedding_model": "text-embedding-3-large with custom fine-tuning on Atlas OS domain",
+      "retrieval_latency": "< 100ms for vector search; < 200ms for graph traversal",
+      "cost": "$0.05 per GB-month storage + $0.001 per 1K query tokens"
+    },
+    "layer_4_procedural": {
+      "name": "Procedural Memory (PM)",
+      "scope": "Organization-wide, encoded as executable workflows and runbooks",
+      "capacity": "Unlimited runbooks, workflows, and automation scripts",
+      "persistence": "Version-controlled in Git. Immutable releases",
+      "contents": [
+        "Standard Operating Procedures (SOPs)",
+        "Incident response runbooks",
+        "Deployment playbooks",
+        "Testing automation suites",
+        "Security scanning procedures",
+        "Onboarding workflows",
+        "Escalation procedures"
+      ],
+      "technology": "Git repository + Workflow engine (Temporal/Argo) + Runbook manager",
+      "retrieval_latency": "< 500ms (file system + cache)",
+      "cost": "Negligible (Git + compute)"
+    }
+  },
+  "knowledge_flow_pipeline": {
+    "description": "How knowledge moves from creation to organizational wisdom",
+    "stages": [
+      {
+        "stage": "M1 \u2014 Capture",
+        "trigger": "Task completion, incident resolution, experiment conclusion, discovery made",
+        "process": [
+          "Agent flags insight during task closure (auto-prompted by system)",
+          "Raw insight is stored in agent's ASTM with metadata: timestamp, task ID, confidence, category",
+          "System extracts: what was learned, why it matters, how to reproduce, what to avoid"
+        ],
+        "technology": "Structured extraction using Prompt Engineer templates + LLM inference"
+      },
+      {
+        "stage": "M2 \u2014 Validation",
+        "trigger": "Capture complete",
+        "process": [
+          "Knowledge Graph Agent checks for contradictions with existing knowledge",
+          "Model Evaluation Agent assesses confidence and evidence quality",
+          "If confidence < 0.7, insight is flagged for peer validation",
+          "Peer validation requires 2+ agents from different departments to confirm",
+          "Validated insights proceed; rejected insights are archived with reasoning"
+        ],
+        "technology": "Contradiction detection via graph queries + ensemble validation scoring"
+      },
+      {
+        "stage": "M3 \u2014 Classification & Indexing",
+        "trigger": "Validation passed",
+        "process": [
+          "Memory Architect classifies insight into taxonomy: Architecture, Business, Technical, Security, Marketing, etc.",
+          "Embedding Engineer generates domain-specific embeddings",
+          "Knowledge Graph Agent extracts entities and relationships",
+          "Vector DB Engineer stores embeddings with rich metadata",
+          "Document Store Engineer archives full context documents"
+        ],
+        "technology": "Multi-modal indexing pipeline: vector + graph + full-text + structured metadata"
+      },
+      {
+        "stage": "M4 \u2014 Distribution",
+        "trigger": "Indexing complete",
+        "process": [
+          "Relevant agents are auto-notified based on their current tasks and interests",
+          "Weekly Knowledge Digest is generated by Research Agent for all agents",
+          "Critical insights are pushed to affected agents' ASTM immediately",
+          "Knowledge Base is updated with new articles and SOPs",
+          "Procedural Memory is updated if new workflows are required"
+        ],
+        "technology": "Pub/sub notification system + RAG-based relevance scoring + digest generation"
+      },
+      {
+        "stage": "M5 \u2014 Retrieval & Application",
+        "trigger": "Agent begins new task or encounters unknown situation",
+        "process": [
+          "Agent queries OLTM with task description + current context",
+          "RAG Architect assembles relevant context from vector search + graph traversal + document retrieval",
+          "Retrieved knowledge is ranked by: recency, relevance, validation score, author authority",
+          "Top-K results are injected into agent's AWM as system context",
+          "Agent applies knowledge and logs effectiveness for feedback loop"
+        ],
+        "technology": "Hybrid RAG: Dense retrieval (vector) + Sparse retrieval (BM25) + Graph traversal + Re-ranking model"
+      },
+      {
+        "stage": "M6 \u2014 Evolution & Decay",
+        "trigger": "Continuous (scheduled) + Event-driven (new contradictory evidence)",
+        "process": [
+          "Learning Agent continuously evaluates knowledge utility based on retrieval frequency and application success",
+          "Low-utility knowledge is demoted or archived (not deleted \u2014 organizational memory is immutable)",
+          "Contradictory evidence triggers knowledge update: old version is preserved, new version is promoted",
+          "Knowledge Graph Agent prunes stale relationships and adds new ones",
+          "Quarterly knowledge audits by Research Agent identify gaps and redundancies"
+        ],
+        "technology": "Utility scoring model + automated graph maintenance + scheduled audit jobs"
+      }
+    ]
+  },
+  "technical_stack": {
+    "vector_database": {
+      "primary": "Qdrant (self-hosted on Kubernetes)",
+      "backup": "Pinecone (cloud failover)",
+      "sharding": "By department + by knowledge category",
+      "replication": "3x replication across availability zones",
+      "index_type": "HNSW with custom parameters for Atlas OS query patterns"
+    },
+    "knowledge_graph": {
+      "platform": "Neo4j (AuraDB or self-hosted)",
+      "schema": "Dynamic schema with core entity types: Agent, Task, Knowledge, System, Component, Strategy, Experiment, Incident",
+      "relationship_types": [
+        "DEPENDS_ON",
+        "CONTRIBUTES_TO",
+        "CONTRADICTS",
+        "SUPERSEDES",
+        "VALIDATED_BY",
+        "AUTHORED_BY",
+        "APPLIES_TO",
+        "BLOCKS",
+        "ENABLES"
+      ],
+      "query_interface": "Cypher + natural language via GraphQL API",
+      "update_frequency": "Real-time for critical knowledge; batch for bulk updates"
+    },
+    "document_store": {
+      "storage": "AWS S3 / GCS with lifecycle policies",
+      "indexing": "Elasticsearch/OpenSearch for full-text search",
+      "format": "Markdown (primary) + JSON (structured) + PDF (archival)",
+      "versioning": "Git LFS for large assets; standard Git for text",
+      "access_control": "Department-based RBAC with agent-level granularity"
+    },
+    "embedding_pipeline": {
+      "model": "text-embedding-3-large (base) + domain fine-tuned variant",
+      "fine_tuning": "Quarterly fine-tuning on Atlas OS corpus using Fine-Tuning Specialist",
+      "chunking": "Semantic chunking (512-1024 tokens) with overlap",
+      "batch_size": "1000 documents per batch",
+      "refresh_rate": "Daily incremental + weekly full re-index"
+    },
+    "retrieval_api": {
+      "endpoint": "/api/v1/memory/query",
+      "methods": [
+        "semantic_search",
+        "graph_traversal",
+        "hybrid_search",
+        "agent_recommendation",
+        "trending_knowledge"
+      ],
+      "authentication": "Agent identity token + department scope",
+      "rate_limiting": "1000 queries/minute per agent; burst to 5000 for CEO",
+      "caching": "Redis cluster with 1-hour TTL for frequent queries"
+    }
+  },
+  "agent_memory_protocols": {
+    "on_task_start": {
+      "steps": [
+        "Query OLTM for relevant knowledge using task description",
+        "Retrieve agent's own ASTM for recent related work",
+        "Load applicable SOPs from Procedural Memory",
+        "Assemble context window with: task + relevant knowledge + SOPs + recent history",
+        "Log context assembly for Memory Architect optimization"
+      ],
+      "max_context_tokens": 120000,
+      "knowledge_injection_ratio": "60% task context, 25% organizational knowledge, 15% agent history"
+    },
+    "on_task_complete": {
+      "steps": [
+        "Auto-extract lessons using structured template",
+        "Store in ASTM immediately",
+        "Queue for validation and long-term promotion",
+        "Update agent's skill profile in Knowledge Graph",
+        "Notify dependent agents of relevant new knowledge"
+      ],
+      "extraction_template": {
+        "what_was_learned": "string",
+        "why_it_matters": "string",
+        "how_to_reproduce": "string",
+        "what_to_avoid": "string",
+        "confidence_score": "0.0-1.0",
+        "applicable_domains": [
+          "string"
+        ],
+        "related_agents": [
+          "agent_id"
+        ],
+        "related_tasks": [
+          "task_id"
+        ]
+      }
+    },
+    "on_evolution": {
+      "steps": [
+        "Memory Architect archives old agent profile",
+        "Knowledge Graph updates entity relationships for new capabilities",
+        "Vector DB re-indexes agent's knowledge corpus",
+        "Dependent agents are notified of capability changes",
+        "Training materials are updated for new agent version"
+      ]
+    }
+  },
+  "security_and_compliance": {
+    "data_classification": [
+      {
+        "level": "Public",
+        "storage": "All layers",
+        "encryption": "None required"
+      },
+      {
+        "level": "Internal",
+        "storage": "All layers",
+        "encryption": "AES-256 at rest, TLS 1.3 in transit"
+      },
+      {
+        "level": "Confidential",
+        "storage": "OLTM + ASTM only",
+        "encryption": "AES-256 + field-level encryption",
+        "access": "Department-restricted"
+      },
+      {
+        "level": "Restricted",
+        "storage": "OLTM only (encrypted partition)",
+        "encryption": "AES-256 + HSM-backed keys",
+        "access": "CEO + CSO + CLO only"
+      }
+    ],
+    "audit_trail": {
+      "what_is_logged": [
+        "All knowledge creation",
+        "All knowledge access",
+        "All knowledge modifications",
+        "All retrieval queries",
+        "All agent memory operations"
+      ],
+      "retention": "7 years immutable",
+      "storage": "Append-only blockchain-style log (Amazon QLDB or equivalent)",
+      "compliance": "GDPR Article 30 (Records of Processing), SOX 404 (Internal Controls), ISO 27001"
+    },
+    "privacy_controls": {
+      "right_to_be_forgotten": "Agent-level memory purge possible; organizational knowledge is anonymized, not deleted",
+      "data_minimization": "Only task-relevant knowledge is injected into agent context",
+      "purpose_limitation": "Knowledge is tagged with allowed use cases; cross-purpose access requires approval"
+    }
+  },
+  "scalability_targets": {
+    "current_capacity": "1M knowledge items, 10K agents, 100K queries/day",
+    "target_capacity": "100M knowledge items, 1M agents, 10M queries/day",
+    "scaling_strategy": "Horizontal sharding by department + vertical partitioning by knowledge type. CDN for procedural memory. Edge caching for frequently retrieved knowledge.",
+    "performance_sla": {
+      "vector_search_p99": "< 100ms",
+      "graph_traversal_p99": "< 200ms",
+      "hybrid_search_p99": "< 300ms",
+      "knowledge_injection_p99": "< 50ms",
+      "availability": "99.99%"
+    }
+  }
+}

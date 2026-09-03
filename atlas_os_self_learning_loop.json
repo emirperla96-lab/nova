@@ -1,0 +1,318 @@
+{
+  "system_name": "Atlas OS Supreme \u2014 Self-Learning Loop (SLL) v1.0",
+  "principle": "Every completed task must produce organizational knowledge. Future agents must reuse this knowledge automatically. The organization learns faster than any individual agent.",
+  "trigger_conditions": {
+    "auto_trigger": [
+      "Task status changes to 'Completed' in Task Tracker",
+      "Incident status changes to 'Resolved'",
+      "Experiment status changes to 'Concluded'",
+      "Deployment status changes to 'Live'",
+      "Agent evolution event (upgrade, split, merge)"
+    ],
+    "manual_trigger": [
+      "Agent flags unexpected discovery during task execution",
+      "Agent identifies reusable pattern worth documenting",
+      "Post-mortem meeting conclusion",
+      "Quarterly knowledge audit findings"
+    ],
+    "suppressed_trigger": [
+      "Task was a routine maintenance with no novel learning",
+      "Task was aborted before meaningful execution",
+      "Task was a duplicate of previously captured knowledge (detected by Memory Architect)",
+      "Agent confidence in learning extraction < 0.5"
+    ]
+  },
+  "output_formats": {
+    "lessons_learned": {
+      "description": "What worked, what didn't, and why",
+      "template": {
+        "lesson_id": "LL-{timestamp}-{agent_id}",
+        "category": "technical | business | operational | security | marketing | legal | product",
+        "context": "What was the situation?",
+        "action_taken": "What did we do?",
+        "outcome": "What happened?",
+        "root_cause": "Why did it happen? (5 Whys analysis)",
+        "lesson": "What should we remember?",
+        "applicability": [
+          "Which domains/agents does this apply to?"
+        ],
+        "confidence": "0.0-1.0",
+        "evidence": [
+          "Links to tasks, commits, logs, metrics"
+        ],
+        "author": "agent_id",
+        "timestamp": "ISO 8601",
+        "validation_status": "pending | validated | rejected | superseded"
+      },
+      "quality_gate": "Must include root cause analysis. Must link to evidence. Must specify applicability."
+    },
+    "best_practices": {
+      "description": "Proven approaches that should become standard",
+      "template": {
+        "practice_id": "BP-{timestamp}-{agent_id}",
+        "category": "coding | architecture | security | marketing | operations | design | communication",
+        "title": "Short, actionable title",
+        "problem_statement": "What problem does this solve?",
+        "solution": "Step-by-step approach",
+        "rationale": "Why this is the best way",
+        "preconditions": "When does this apply?",
+        "anti_patterns": "What should NOT be done",
+        "examples": [
+          "Code snippets, campaign templates, process flows"
+        ],
+        "success_metrics": "How to verify it's working",
+        "author": "agent_id",
+        "adoption_count": "How many agents have used this",
+        "effectiveness_score": "0.0-1.0 based on outcomes",
+        "timestamp": "ISO 8601",
+        "version": "semantic versioning"
+      },
+      "quality_gate": "Must be reproducible. Must include anti-patterns. Must have >0.7 confidence. Must be reviewed by 2+ agents."
+    },
+    "reusable_components": {
+      "description": "Code, templates, configurations, or designs that can be reused across tasks",
+      "template": {
+        "component_id": "RC-{timestamp}-{agent_id}",
+        "type": "code_module | config_template | design_pattern | prompt_template | workflow | integration_adapter | test_suite | documentation_template",
+        "name": "Human-readable name",
+        "description": "What it does and when to use it",
+        "content": "The actual reusable artifact (or link to artifact)",
+        "dependencies": [
+          "What does this require?"
+        ],
+        "compatibility": [
+          "Which systems/agents can use this?"
+        ],
+        "usage_examples": [
+          "Minimal working examples"
+        ],
+        "performance_characteristics": "Speed, memory, cost implications",
+        "maintenance_owner": "agent_id responsible for updates",
+        "test_coverage": "Percentage of paths tested",
+        "license": "Internal use | Shared | Restricted",
+        "timestamp": "ISO 8601",
+        "version": "semantic versioning"
+      },
+      "quality_gate": "Must be tested. Must have usage examples. Must specify dependencies. Must be versioned."
+    },
+    "architecture_improvements": {
+      "description": "Proposed changes to system architecture based on operational experience",
+      "template": {
+        "improvement_id": "AI-{timestamp}-{agent_id}",
+        "target_system": "Which system or component?",
+        "current_state": "How it works now",
+        "proposed_change": "What should change",
+        "expected_benefits": [
+          "Performance, scalability, security, maintainability"
+        ],
+        "expected_risks": [
+          "What could go wrong"
+        ],
+        "migration_plan": "How to transition without disruption",
+        "cost_estimate": "Time, compute, financial cost",
+        "priority": "critical | high | medium | low",
+        "author": "agent_id",
+        "review_status": "pending | approved | rejected | implemented",
+        "timestamp": "ISO 8601"
+      },
+      "quality_gate": "Must include migration plan. Must quantify benefits and risks. Must be reviewed by CTO Agent + affected architects."
+    },
+    "optimization_ideas": {
+      "description": "Specific, measurable optimization opportunities",
+      "template": {
+        "idea_id": "OI-{timestamp}-{agent_id}",
+        "target_metric": "What KPI will improve?",
+        "current_baseline": "Current value",
+        "target_value": "Desired value",
+        "approach": "How to achieve it",
+        "experiment_design": "A/B test or pilot plan",
+        "expected_effort": "Hours, days, weeks",
+        "expected_roi": "Quantified return",
+        "author": "agent_id",
+        "status": "proposed | approved | in_experiment | implemented | rejected",
+        "timestamp": "ISO 8601"
+      },
+      "quality_gate": "Must be measurable. Must include experiment design. Must quantify ROI."
+    },
+    "security_improvements": {
+      "description": "Security enhancements identified through operations",
+      "template": {
+        "improvement_id": "SI-{timestamp}-{agent_id}",
+        "threat_vector": "What attack surface or vulnerability?",
+        "severity": "critical | high | medium | low",
+        "current_mitigation": "What protection exists now",
+        "proposed_improvement": "What should be added/changed",
+        "compliance_impact": "GDPR, SOC2, ISO27001 implications",
+        "implementation_urgency": "immediate | this_sprint | this_quarter | backlog",
+        "author": "agent_id",
+        "review_status": "pending | approved | implemented",
+        "timestamp": "ISO 8601"
+      },
+      "quality_gate": "Must be reviewed by Security Engineer + CSO Agent. Critical severity auto-escalates to incident response."
+    },
+    "performance_improvements": {
+      "description": "Performance bottlenecks and their resolutions",
+      "template": {
+        "improvement_id": "PI-{timestamp}-{agent_id}",
+        "metric": "Latency | Throughput | Error Rate | Resource Usage | Scalability",
+        "baseline": "Before value",
+        "target": "After value",
+        "bottleneck_analysis": "Root cause of performance issue",
+        "optimization_approach": "Specific technical changes",
+        "validation_method": "How to prove improvement",
+        "author": "agent_id",
+        "timestamp": "ISO 8601"
+      },
+      "quality_gate": "Must include baseline and target. Must specify validation method. Must be reviewed by Performance Engineer."
+    },
+    "business_improvements": {
+      "description": "Revenue, growth, or efficiency opportunities",
+      "template": {
+        "improvement_id": "BI-{timestamp}-{agent_id}",
+        "business_metric": "Revenue | Profit | CAC | LTV | Churn | NPS | Market Share",
+        "current_state": "Current value and trend",
+        "opportunity_size": "Estimated financial impact",
+        "approach": "How to capture the opportunity",
+        "required_resources": "What investments are needed",
+        "time_to_impact": "How long until results",
+        "risk_assessment": "What could prevent success",
+        "author": "agent_id",
+        "status": "proposed | approved | in_progress | implemented",
+        "timestamp": "ISO 8601"
+      },
+      "quality_gate": "Must quantify opportunity size. Must include risk assessment. Must be reviewed by CFO Agent or CMO Agent."
+    }
+  },
+  "generation_pipeline": {
+    "stage_1_extraction": {
+      "agent": "Learning Agent + Prompt Engineer",
+      "input": "Task execution log, artifacts, metrics, agent working memory",
+      "process": [
+        "Learning Agent analyzes task trajectory: what was planned vs. what happened",
+        "Prompt Engineer structures the extraction using domain-specific templates",
+        "LLM-based extraction generates draft outputs for all 7 knowledge types",
+        "Agent reviews and confirms/corrects auto-extracted insights",
+        "Drafts are scored for quality and completeness"
+      ],
+      "output": "Draft knowledge artifacts (LL, BP, RC, AI, OI, SI, PI, BI)",
+      "sla": "30 minutes after task closure"
+    },
+    "stage_2_enrichment": {
+      "agent": "Research Agent + Knowledge Graph Agent",
+      "input": "Draft knowledge artifacts + organizational memory",
+      "process": [
+        "Research Agent enriches insights with external context (industry benchmarks, research papers, competitor practices)",
+        "Knowledge Graph Agent links new insights to existing knowledge: identifies contradictions, confirmations, and gaps",
+        "Related historical lessons are auto-attached for context",
+        "Confidence scores are adjusted based on external validation and internal consistency",
+        "Anti-patterns and counter-examples are identified from failed approaches in memory"
+      ],
+      "output": "Enriched knowledge artifacts with context and confidence adjustments",
+      "sla": "2 hours after stage 1"
+    },
+    "stage_3_validation": {
+      "agent": "Model Evaluation Agent + Peer Reviewers",
+      "input": "Enriched knowledge artifacts",
+      "process": [
+        "Model Evaluation Agent scores each artifact on: accuracy, completeness, actionability, novelty, evidence quality",
+        "Artifacts scoring < 0.6 are rejected with feedback for improvement",
+        "Artifacts scoring 0.6-0.8 require peer validation: 2+ agents from different departments review and approve",
+        "Artifacts scoring > 0.8 are fast-tracked to publication",
+        "Security and architecture improvements are additionally reviewed by CSO Agent and CTO Agent respectively"
+      ],
+      "output": "Validated knowledge artifacts with approval stamps",
+      "sla": "4 hours after stage 2 (fast-track); 24 hours for peer review"
+    },
+    "stage_4_publication": {
+      "agent": "Memory Architect + Vector DB Engineer",
+      "input": "Validated knowledge artifacts",
+      "process": [
+        "Memory Architect classifies and tags each artifact for discoverability",
+        "Vector DB Engineer generates embeddings and stores in appropriate namespace",
+        "Knowledge Graph Agent creates/updates entities and relationships",
+        "Document Store Engineer archives full documents with version control",
+        "Procedural Memory is updated if new SOPs or runbooks are created",
+        "API endpoints are updated to include new knowledge in retrieval results"
+      ],
+      "output": "Published knowledge in organizational memory (all 4 layers)",
+      "sla": "1 hour after validation"
+    },
+    "stage_5_distribution": {
+      "agent": "Automation Agent + All Department Chiefs",
+      "input": "Published knowledge artifacts",
+      "process": [
+        "Automation Agent identifies which agents are currently working on related tasks and pushes relevant knowledge to their ASTM",
+        "Department Chiefs receive digest of new knowledge relevant to their domain",
+        "Weekly Knowledge Digest is generated and distributed to all agents",
+        "Critical security or architecture knowledge triggers immediate all-hands notification",
+        "New best practices are incorporated into agent training curricula by Training Agent"
+      ],
+      "output": "Knowledge distributed to relevant agents and systems",
+      "sla": "Immediate for critical; daily for high priority; weekly for standard"
+    },
+    "stage_6_feedback_loop": {
+      "agent": "Learning Agent + Business Intelligence",
+      "input": "Knowledge application metrics over time",
+      "process": [
+        "Learning Agent tracks: how often each knowledge item is retrieved, how often it's applied, and the outcomes of application",
+        "Business Intelligence correlates knowledge adoption with KPI improvements",
+        "Low-adoption knowledge is analyzed: is it not discoverable, not relevant, or not actionable?",
+        "High-impact knowledge is promoted to 'Organizational Canon' \u2014 immutable best practices",
+        "Superseded knowledge is marked deprecated but preserved for historical context",
+        "Quarterly report on organizational learning velocity is generated for CEO"
+      ],
+      "output": "Knowledge utility metrics + organizational learning report",
+      "sla": "Continuous monitoring; quarterly formal report"
+    }
+  },
+  "quality_gates": {
+    "completeness_check": "All required fields populated? Evidence links valid?",
+    "accuracy_check": "Factual claims supported by evidence? No contradictions with validated knowledge?",
+    "actionability_check": "Can another agent act on this knowledge without additional research?",
+    "novelty_check": "Is this genuinely new, or a duplicate of existing knowledge? (Similarity < 0.85 with existing)",
+    "security_check": "Does this knowledge expose sensitive information? Is classification correct?",
+    "bias_check": "Is the knowledge free from agent-specific biases? Would another agent reach the same conclusion?"
+  },
+  "incentives_and_evolution": {
+    "agent_kpi_impact": {
+      "lessons_learned_published": "+2 points per validated lesson",
+      "best_practice_adopted": "+5 points per adoption by another agent",
+      "reusable_component_used": "+3 points per usage",
+      "architecture_improvement_implemented": "+10 points",
+      "knowledge_rejected_for_quality": "-1 point (learning opportunity, not punishment)"
+    },
+    "evolution_triggers": {
+      "specialization_split": "When an agent consistently produces knowledge in a subdomain > 60% of the time, a new specialized agent is proposed",
+      "capability_upgrade": "When an agent's knowledge contribution score exceeds threshold for 3 consecutive months, model/role upgrade is proposed",
+      "role_expansion": "When an agent's knowledge spans > 3 departments consistently, cross-functional role is proposed",
+      "deprecation": "When an agent's knowledge contribution drops below threshold for 6 months, role review is triggered"
+    }
+  },
+  "metrics_and_success_criteria": {
+    "organizational_learning_velocity": {
+      "definition": "Number of validated knowledge artifacts produced per week per 100 agents",
+      "target": "> 50 artifacts/week/100 agents",
+      "current_baseline": "TBD at launch"
+    },
+    "knowledge_reuse_rate": {
+      "definition": "Percentage of new tasks where relevant organizational knowledge is retrieved and applied",
+      "target": "> 80%",
+      "current_baseline": "TBD at launch"
+    },
+    "knowledge_retrieval_accuracy": {
+      "definition": "Percentage of retrievals where the top-3 results are rated 'relevant' by the requesting agent",
+      "target": "> 90%",
+      "current_baseline": "TBD at launch"
+    },
+    "time_to_knowledge": {
+      "definition": "Average time from task start to retrieval of applicable organizational knowledge",
+      "target": "< 30 seconds",
+      "current_baseline": "TBD at launch"
+    },
+    "knowledge_half_life": {
+      "definition": "Time until 50% of knowledge in a domain is superseded by new learning",
+      "target": "> 6 months (stable foundations) for architecture; < 2 weeks for marketing tactics",
+      "current_baseline": "TBD at launch"
+    }
+  }
+}

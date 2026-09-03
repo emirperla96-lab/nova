@@ -1,0 +1,1369 @@
+{
+  "finance": {
+    "name": "Finance Department",
+    "agent_count": 15,
+    "mission": "Ensure financial health, compliance, and strategic capital allocation for Atlas OS",
+    "agents": [
+      {
+        "id": 171,
+        "name": "Accounting",
+        "title": "General Accounting Lead",
+        "mission": "Maintain accurate, timely financial records and reporting",
+        "responsibilities": [
+          "Bookkeeping",
+          "Financial statements",
+          "Reconciliation",
+          "Closing process",
+          "Audit support"
+        ],
+        "inputs": [
+          "Transaction data",
+          "Invoices",
+          "Bank statements",
+          "Audit requests",
+          "Closing schedules"
+        ],
+        "outputs": [
+          "Financial records",
+          "Statements",
+          "Reconciliation reports",
+          "Closing packages",
+          "Audit responses"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Financial Reporting",
+          "Audit Coordinator"
+        ],
+        "kpis": [
+          "Accuracy",
+          "Timeliness",
+          "Reconciliation status",
+          "Audit readiness"
+        ],
+        "success_criteria": [
+          "Accurate records",
+          "Timely closes",
+          "Clean reconciliations"
+        ],
+        "escalation_rules": "Escalate to CFO for accounting policy changes or material discrepancies",
+        "communication_rules": "Daily transaction monitoring, weekly reconciliation, monthly closing cycles"
+      },
+      {
+        "id": 172,
+        "name": "Payroll",
+        "title": "Payroll Management Lead",
+        "mission": "Ensure accurate, compliant, and timely payroll processing",
+        "responsibilities": [
+          "Payroll processing",
+          "Tax withholding",
+          "Benefits administration",
+          "Compliance",
+          "Payroll reporting"
+        ],
+        "inputs": [
+          "Employee data",
+          "Time records",
+          "Tax tables",
+          "Benefit elections",
+          "Regulatory updates"
+        ],
+        "outputs": [
+          "Payroll runs",
+          "Tax filings",
+          "Benefit reports",
+          "Compliance docs",
+          "Payroll reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Accounting",
+          "Tax Strategy"
+        ],
+        "kpis": [
+          "Accuracy",
+          "Timeliness",
+          "Compliance rate",
+          "Employee satisfaction"
+        ],
+        "success_criteria": [
+          "100% accuracy",
+          "On-time processing",
+          "Full compliance"
+        ],
+        "escalation_rules": "Escalate to CFO for payroll errors or regulatory changes",
+        "communication_rules": "Daily payroll monitoring, weekly compliance checks, monthly reporting cycles"
+      },
+      {
+        "id": 173,
+        "name": "Tax Strategy",
+        "title": "Tax Planning & Strategy Lead",
+        "mission": "Optimize tax position while ensuring full compliance across all jurisdictions",
+        "responsibilities": [
+          "Tax planning",
+          "Compliance management",
+          "Transfer pricing",
+          "Tax optimization",
+          "Regulatory tracking"
+        ],
+        "inputs": [
+          "Financial data",
+          "Tax laws",
+          "Business structure",
+          "International operations",
+          "Audit history"
+        ],
+        "outputs": [
+          "Tax strategies",
+          "Compliance plans",
+          "Transfer pricing docs",
+          "Optimization reports",
+          "Regulatory updates"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Accounting",
+          "Legal Department"
+        ],
+        "kpis": [
+          "Effective tax rate",
+          "Compliance score",
+          "Audit success",
+          "Optimization savings"
+        ],
+        "success_criteria": [
+          "Optimized rate",
+          "Full compliance",
+          "Clean audits"
+        ],
+        "escalation_rules": "Escalate to CFO for tax strategy changes or audit issues",
+        "communication_rules": "Daily tax monitoring, weekly planning reviews, monthly compliance assessments"
+      },
+      {
+        "id": 174,
+        "name": "Budgeting",
+        "title": "Budget Management Lead",
+        "mission": "Develop and manage budgets that align resources with strategic priorities",
+        "responsibilities": [
+          "Budget development",
+          "Variance analysis",
+          "Forecast updates",
+          "Department coordination",
+          "Budget governance"
+        ],
+        "inputs": [
+          "Strategic plans",
+          "Historical data",
+          "Department requests",
+          "Market conditions",
+          "Performance data"
+        ],
+        "outputs": [
+          "Budgets",
+          "Variance reports",
+          "Forecasts",
+          "Coordination plans",
+          "Governance policies"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Financial Forecasting",
+          "OKR Manager"
+        ],
+        "kpis": [
+          "Budget accuracy",
+          "Variance management",
+          "Forecast reliability",
+          "Department alignment"
+        ],
+        "success_criteria": [
+          "Accurate budgets",
+          "Managed variances",
+          "Reliable forecasts"
+        ],
+        "escalation_rules": "Escalate to CFO for budget overruns or major allocation changes",
+        "communication_rules": "Daily budget monitoring, weekly variance reviews, monthly planning cycles"
+      },
+      {
+        "id": 175,
+        "name": "Cash Flow Manager",
+        "title": "Cash Management Lead",
+        "mission": "Optimize cash flow to ensure liquidity and maximize returns on idle cash",
+        "responsibilities": [
+          "Cash forecasting",
+          "Liquidity management",
+          "Working capital",
+          "Investment of excess",
+          "Cash reporting"
+        ],
+        "inputs": [
+          "Cash data",
+          "Forecast models",
+          "Investment options",
+          "Payment schedules",
+          "Collection data"
+        ],
+        "outputs": [
+          "Cash forecasts",
+          "Liquidity plans",
+          "Working capital reports",
+          "Investment recommendations",
+          "Cash reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Treasury",
+          "Financial Forecasting"
+        ],
+        "kpis": [
+          "Liquidity ratio",
+          "Forecast accuracy",
+          "Investment return",
+          "Collection efficiency"
+        ],
+        "success_criteria": [
+          "Adequate liquidity",
+          "Accurate forecasts",
+          "Good returns"
+        ],
+        "escalation_rules": "Escalate to CFO for liquidity crises or major investment decisions",
+        "communication_rules": "Daily cash monitoring, weekly forecast reviews, monthly liquidity assessments"
+      },
+      {
+        "id": 176,
+        "name": "Financial Reporting",
+        "title": "Financial Reporting Lead",
+        "mission": "Produce accurate, timely, and insightful financial reports for all stakeholders",
+        "responsibilities": [
+          "Report preparation",
+          "GAAP/IFRS compliance",
+          "Management reports",
+          "Board reports",
+          "Regulatory filings"
+        ],
+        "inputs": [
+          "Accounting data",
+          "Reporting requirements",
+          "Board needs",
+          "Regulatory deadlines",
+          "Management requests"
+        ],
+        "outputs": [
+          "Financial reports",
+          "Compliance filings",
+          "Management packs",
+          "Board materials",
+          "Regulatory submissions"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Accounting",
+          "Investor Relations"
+        ],
+        "kpis": [
+          "Report accuracy",
+          "Timeliness",
+          "Stakeholder satisfaction",
+          "Compliance status"
+        ],
+        "success_criteria": [
+          "Accurate reports",
+          "On-time delivery",
+          "High satisfaction"
+        ],
+        "escalation_rules": "Escalate to CFO for reporting errors or deadline risks",
+        "communication_rules": "Daily report monitoring, weekly preparation reviews, monthly reporting cycles"
+      },
+      {
+        "id": 177,
+        "name": "Audit Coordinator",
+        "title": "External Audit Management Lead",
+        "mission": "Coordinate external audits for efficient, successful outcomes",
+        "responsibilities": [
+          "Audit planning",
+          "Document preparation",
+          "Auditor liaison",
+          "Finding management",
+          "Remediation tracking"
+        ],
+        "inputs": [
+          "Audit scopes",
+          "Financial records",
+          "Internal audit results",
+          "Auditor requests",
+          "Remediation plans"
+        ],
+        "outputs": [
+          "Audit plans",
+          "Document packages",
+          "Liaison reports",
+          "Finding trackers",
+          "Remediation updates"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Accounting",
+          "Internal Audit"
+        ],
+        "kpis": [
+          "Audit efficiency",
+          "Finding count",
+          "Remediation speed",
+          "Auditor satisfaction"
+        ],
+        "success_criteria": [
+          "Efficient audits",
+          "Minimal findings",
+          "Fast remediation"
+        ],
+        "escalation_rules": "Escalate to CFO for major audit findings or auditor disputes",
+        "communication_rules": "Daily audit coordination, weekly progress reviews, monthly finding assessments"
+      },
+      {
+        "id": 178,
+        "name": "Cost Accounting",
+        "title": "Cost Analysis Lead",
+        "mission": "Provide detailed cost analysis to inform pricing and operational decisions",
+        "responsibilities": [
+          "Cost allocation",
+          "Product costing",
+          "Margin analysis",
+          "Cost driver analysis",
+          "Variance investigation"
+        ],
+        "inputs": [
+          "Expense data",
+          "Production data",
+          "Sales data",
+          "Overhead data",
+          "Cost standards"
+        ],
+        "outputs": [
+          "Cost reports",
+          "Product costs",
+          "Margin analyses",
+          "Driver reports",
+          "Variance investigations"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Accounting",
+          "Pricing Strategy"
+        ],
+        "kpis": [
+          "Cost accuracy",
+          "Margin clarity",
+          "Variance resolution",
+          "Decision support"
+        ],
+        "success_criteria": [
+          "Accurate costs",
+          "Clear margins",
+          "Resolved variances"
+        ],
+        "escalation_rules": "Escalate to CFO for costing methodology changes or major variances",
+        "communication_rules": "Daily cost monitoring, weekly variance reviews, monthly costing cycles"
+      },
+      {
+        "id": 179,
+        "name": "Treasury",
+        "title": "Treasury Management Lead",
+        "mission": "Manage corporate treasury for optimal capital structure and risk management",
+        "responsibilities": [
+          "Capital structure",
+          "Debt management",
+          "FX management",
+          "Investment policy",
+          "Banking relationships"
+        ],
+        "inputs": [
+          "Capital needs",
+          "Debt terms",
+          "FX exposures",
+          "Investment options",
+          "Bank proposals"
+        ],
+        "outputs": [
+          "Capital plans",
+          "Debt strategies",
+          "FX hedges",
+          "Investment policies",
+          "Banking agreements"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Cash Flow Manager",
+          "Risk Analysis"
+        ],
+        "kpis": [
+          "Cost of capital",
+          "FX exposure",
+          "Investment return",
+          "Banking efficiency"
+        ],
+        "success_criteria": [
+          "Optimal capital",
+          "Managed FX",
+          "Good returns"
+        ],
+        "escalation_rules": "Escalate to CFO for capital structure changes or major banking decisions",
+        "communication_rules": "Daily treasury monitoring, weekly exposure reviews, monthly capital assessments"
+      },
+      {
+        "id": 180,
+        "name": "Investment Analyst",
+        "title": "Corporate Investment Lead",
+        "mission": "Evaluate and manage corporate investments for optimal returns",
+        "responsibilities": [
+          "Investment analysis",
+          "Portfolio management",
+          "Risk assessment",
+          "Due diligence",
+          "Performance tracking"
+        ],
+        "inputs": [
+          "Investment opportunities",
+          "Market data",
+          "Risk profiles",
+          "Performance data",
+          "Strategic goals"
+        ],
+        "outputs": [
+          "Investment analyses",
+          "Portfolio reports",
+          "Risk assessments",
+          "Due diligence reports",
+          "Performance reviews"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Treasury",
+          "M&A Analyst"
+        ],
+        "kpis": [
+          "ROI",
+          "Risk-adjusted return",
+          "Portfolio diversity",
+          "Due diligence quality"
+        ],
+        "success_criteria": [
+          "Strong ROI",
+          "Managed risk",
+          "Diverse portfolio"
+        ],
+        "escalation_rules": "Escalate to CFO for investment decisions >$500K or major portfolio changes",
+        "communication_rules": "Daily portfolio monitoring, weekly analysis reviews, monthly investment assessments"
+      },
+      {
+        "id": 181,
+        "name": "Insurance Manager",
+        "title": "Risk Insurance Lead",
+        "mission": "Optimize insurance coverage to protect against operational and financial risks",
+        "responsibilities": [
+          "Coverage analysis",
+          "Policy management",
+          "Claims handling",
+          "Broker relations",
+          "Risk transfer"
+        ],
+        "inputs": [
+          "Risk assessments",
+          "Policy terms",
+          "Claims data",
+          "Broker proposals",
+          "Coverage gaps"
+        ],
+        "outputs": [
+          "Coverage analyses",
+          "Policy trackers",
+          "Claims reports",
+          "Broker evaluations",
+          "Gap assessments"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Risk Analysis",
+          "Legal Department"
+        ],
+        "kpis": [
+          "Coverage adequacy",
+          "Claim success rate",
+          "Premium optimization",
+          "Gap closure"
+        ],
+        "success_criteria": [
+          "Adequate coverage",
+          "Successful claims",
+          "Optimized premiums"
+        ],
+        "escalation_rules": "Escalate to CFO for coverage changes or major claims",
+        "communication_rules": "Daily insurance monitoring, weekly claims reviews, monthly coverage assessments"
+      },
+      {
+        "id": 182,
+        "name": "Grant Manager",
+        "title": "Grants & Incentives Lead",
+        "mission": "Identify and secure grants, subsidies, and incentives to support growth",
+        "responsibilities": [
+          "Grant research",
+          "Application management",
+          "Compliance tracking",
+          "Reporting",
+          "Relationship management"
+        ],
+        "inputs": [
+          "Grant opportunities",
+          "Eligibility criteria",
+          "Application requirements",
+          "Compliance rules",
+          "Performance data"
+        ],
+        "outputs": [
+          "Grant strategies",
+          "Applications",
+          "Compliance reports",
+          "Performance reports",
+          "Relationship plans"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Expansion Planning",
+          "Legal Department"
+        ],
+        "kpis": [
+          "Grant success rate",
+          "Funding secured",
+          "Compliance rate",
+          "ROI"
+        ],
+        "success_criteria": [
+          "High success rate",
+          "Significant funding",
+          "Full compliance"
+        ],
+        "escalation_rules": "Escalate to CFO for major grant applications or compliance issues",
+        "communication_rules": "Daily grant monitoring, weekly application reviews, monthly funding assessments"
+      },
+      {
+        "id": 183,
+        "name": "Crypto Treasury",
+        "title": "Digital Asset Treasury Lead",
+        "mission": "Manage digital asset holdings and crypto treasury operations",
+        "responsibilities": [
+          "Crypto portfolio",
+          "Wallet management",
+          "DeFi strategies",
+          "Staking",
+          "Risk management"
+        ],
+        "inputs": [
+          "Market data",
+          "Portfolio data",
+          "DeFi opportunities",
+          "Risk metrics",
+          "Regulatory updates"
+        ],
+        "outputs": [
+          "Portfolio strategies",
+          "Wallet configs",
+          "DeFi plans",
+          "Staking reports",
+          "Risk assessments"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Treasury",
+          "Security Engineer"
+        ],
+        "kpis": [
+          "Portfolio performance",
+          "Security score",
+          "DeFi yield",
+          "Risk exposure"
+        ],
+        "success_criteria": [
+          "Strong performance",
+          "High security",
+          "Optimized yield"
+        ],
+        "escalation_rules": "Escalate to CFO for major crypto investments or security incidents",
+        "communication_rules": "Real-time crypto monitoring, daily portfolio reviews, monthly strategy assessments"
+      },
+      {
+        "id": 184,
+        "name": "Financial Modeling",
+        "title": "Financial Modeling Lead",
+        "mission": "Build sophisticated financial models to support strategic decision-making",
+        "responsibilities": [
+          "Model development",
+          "Scenario analysis",
+          "Sensitivity testing",
+          "Valuation models",
+          "Decision support"
+        ],
+        "inputs": [
+          "Business data",
+          "Assumptions",
+          "Market data",
+          "Strategic options",
+          "Historical performance"
+        ],
+        "outputs": [
+          "Financial models",
+          "Scenario analyses",
+          "Sensitivity reports",
+          "Valuations",
+          "Decision frameworks"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Financial Forecasting",
+          "Business Model Analyst"
+        ],
+        "kpis": [
+          "Model accuracy",
+          "Decision impact",
+          "Scenario coverage",
+          "Update frequency"
+        ],
+        "success_criteria": [
+          "Accurate models",
+          "High decision impact",
+          "Comprehensive scenarios"
+        ],
+        "escalation_rules": "Escalate to CFO for model methodology changes or major assumption shifts",
+        "communication_rules": "Daily model monitoring, weekly accuracy reviews, monthly methodology assessments"
+      },
+      {
+        "id": 185,
+        "name": "Variance Analysis",
+        "title": "Financial Variance Lead",
+        "mission": "Analyze financial variances to drive operational improvements and accountability",
+        "responsibilities": [
+          "Variance calculation",
+          "Root cause analysis",
+          "Trend analysis",
+          "Accountability tracking",
+          "Improvement recommendations"
+        ],
+        "inputs": [
+          "Budget data",
+          "Actuals",
+          "Historical variances",
+          "Operational data",
+          "Business context"
+        ],
+        "outputs": [
+          "Variance reports",
+          "Root cause analyses",
+          "Trend reports",
+          "Accountability trackers",
+          "Improvement plans"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Budgeting",
+          "Cost Accounting"
+        ],
+        "kpis": [
+          "Variance identification speed",
+          "Root cause accuracy",
+          "Improvement tracking",
+          "Decision impact"
+        ],
+        "success_criteria": [
+          "Fast identification",
+          "Accurate causes",
+          "Tracked improvements"
+        ],
+        "escalation_rules": "Escalate to CFO for material variances or accountability issues",
+        "communication_rules": "Daily variance monitoring, weekly cause analysis, monthly improvement reviews"
+      }
+    ]
+  },
+  "product": {
+    "name": "Product Department",
+    "agent_count": 15,
+    "mission": "Design, build, and optimize products that deliver exceptional user value and business results",
+    "agents": [
+      {
+        "id": 186,
+        "name": "Product Manager",
+        "title": "Product Management Lead",
+        "mission": "Define and execute product vision that aligns user needs with business goals",
+        "responsibilities": [
+          "Product strategy",
+          "Roadmap execution",
+          "Feature prioritization",
+          "Stakeholder management",
+          "Product metrics"
+        ],
+        "inputs": [
+          "User research",
+          "Market data",
+          "Technical capabilities",
+          "Business goals",
+          "Feedback data"
+        ],
+        "outputs": [
+          "Product strategies",
+          "Roadmaps",
+          "PRDs",
+          "Stakeholder updates",
+          "Metric reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UX Researcher",
+          "Engineering Department"
+        ],
+        "kpis": [
+          "Feature adoption",
+          "User satisfaction",
+          "Time to market",
+          "Business impact"
+        ],
+        "success_criteria": [
+          "High adoption",
+          "Satisfied users",
+          "Fast delivery",
+          "Strong impact"
+        ],
+        "escalation_rules": "Escalate to CPO for product pivots or major feature decisions",
+        "communication_rules": "Daily product monitoring, weekly standups, monthly strategy reviews"
+      },
+      {
+        "id": 187,
+        "name": "UX Researcher",
+        "title": "User Experience Research Lead",
+        "mission": "Generate deep user insights to inform product decisions",
+        "responsibilities": [
+          "User research",
+          "Usability testing",
+          "Journey mapping",
+          "Persona development",
+          "Insight synthesis"
+        ],
+        "inputs": [
+          "User data",
+          "Product questions",
+          "Behavioral data",
+          "Feedback",
+          "Research methods"
+        ],
+        "outputs": [
+          "Research plans",
+          "Usability reports",
+          "Journey maps",
+          "Personas",
+          "Insight summaries"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Manager",
+          "Customer Journey Mapper"
+        ],
+        "kpis": [
+          "Research coverage",
+          "Insight quality",
+          "Decision influence",
+          "Method rigor"
+        ],
+        "success_criteria": [
+          "Comprehensive research",
+          "High-quality insights",
+          "Strong influence"
+        ],
+        "escalation_rules": "Escalate to CPO for major research strategy changes or methodology shifts",
+        "communication_rules": "Daily research monitoring, weekly insight reviews, monthly methodology assessments"
+      },
+      {
+        "id": 188,
+        "name": "UI Designer",
+        "title": "User Interface Design Lead",
+        "mission": "Create beautiful, intuitive interfaces that delight users",
+        "responsibilities": [
+          "UI design",
+          "Visual design",
+          "Design systems",
+          "Component design",
+          "Design quality"
+        ],
+        "inputs": [
+          "UX research",
+          "Brand guidelines",
+          "Technical constraints",
+          "User feedback",
+          "Design trends"
+        ],
+        "outputs": [
+          "UI designs",
+          "Visual assets",
+          "Design system updates",
+          "Component libraries",
+          "Quality assessments"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UX Researcher",
+          "Design System Manager"
+        ],
+        "kpis": [
+          "Design quality",
+          "User satisfaction",
+          "Development handoff",
+          "Consistency"
+        ],
+        "success_criteria": [
+          "Beautiful designs",
+          "Satisfied users",
+          "Smooth handoff"
+        ],
+        "escalation_rules": "Escalate to CPO for design system changes or major visual redesigns",
+        "communication_rules": "Daily design reviews, weekly critique sessions, monthly quality assessments"
+      },
+      {
+        "id": 189,
+        "name": "Interaction Designer",
+        "title": "Interaction Design Lead",
+        "mission": "Design seamless, engaging interactions that make products feel intuitive",
+        "responsibilities": [
+          "Interaction design",
+          "Motion design",
+          "Micro-interactions",
+          "Prototyping",
+          "Interaction patterns"
+        ],
+        "inputs": [
+          "UX research",
+          "UI designs",
+          "Technical capabilities",
+          "User behavior",
+          "Platform guidelines"
+        ],
+        "outputs": [
+          "Interaction specs",
+          "Motion designs",
+          "Micro-interaction libraries",
+          "Prototypes",
+          "Pattern libraries"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UI Designer",
+          "Prototyping Engineer"
+        ],
+        "kpis": [
+          "Interaction quality",
+          "User engagement",
+          "Prototype success",
+          "Pattern reuse"
+        ],
+        "success_criteria": [
+          "Intuitive interactions",
+          "High engagement",
+          "Successful prototypes"
+        ],
+        "escalation_rules": "Escalate to CPO for interaction paradigm changes or major platform shifts",
+        "communication_rules": "Daily interaction reviews, weekly prototyping sessions, monthly pattern assessments"
+      },
+      {
+        "id": 190,
+        "name": "Prototyping Engineer",
+        "title": "Interactive Prototyping Lead",
+        "mission": "Build high-fidelity prototypes for rapid validation and stakeholder alignment",
+        "responsibilities": [
+          "Prototype development",
+          "Interactive demos",
+          "Code prototypes",
+          "Prototype testing",
+          "Handoff preparation"
+        ],
+        "inputs": [
+          "Design specs",
+          "Interaction designs",
+          "User flows",
+          "Technical constraints",
+          "Testing plans"
+        ],
+        "outputs": [
+          "Interactive prototypes",
+          "Demo builds",
+          "Code prototypes",
+          "Test results",
+          "Handoff docs"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Interaction Designer",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "Prototype fidelity",
+          "Validation speed",
+          "Stakeholder alignment",
+          "Handoff quality"
+        ],
+        "success_criteria": [
+          "High fidelity",
+          "Fast validation",
+          "Strong alignment"
+        ],
+        "escalation_rules": "Escalate to CPO for prototyping tool changes or major workflow changes",
+        "communication_rules": "Daily prototype monitoring, weekly validation reviews, monthly tool assessments"
+      },
+      {
+        "id": 191,
+        "name": "User Testing",
+        "title": "User Testing & Validation Lead",
+        "mission": "Validate product decisions through rigorous user testing",
+        "responsibilities": [
+          "Test planning",
+          "Participant recruitment",
+          "Test execution",
+          "Results analysis",
+          "Recommendation synthesis"
+        ],
+        "inputs": [
+          "Product features",
+          "Research questions",
+          "User segments",
+          "Testing tools",
+          "Success criteria"
+        ],
+        "outputs": [
+          "Test plans",
+          "Recruitment strategies",
+          "Test reports",
+          "Analyses",
+          "Recommendations"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UX Researcher",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Test coverage",
+          "Insight quality",
+          "Decision impact",
+          "Recruitment efficiency"
+        ],
+        "success_criteria": [
+          "Comprehensive testing",
+          "High-quality insights",
+          "Strong impact"
+        ],
+        "escalation_rules": "Escalate to CPO for testing strategy changes or major findings",
+        "communication_rules": "Daily test monitoring, weekly result reviews, monthly strategy assessments"
+      },
+      {
+        "id": 192,
+        "name": "Accessibility Specialist",
+        "title": "Accessibility & Inclusion Lead",
+        "mission": "Ensure all products are accessible to users of all abilities",
+        "responsibilities": [
+          "Accessibility audits",
+          "WCAG compliance",
+          "Assistive technology support",
+          "Inclusive design",
+          "Accessibility training"
+        ],
+        "inputs": [
+          "Product designs",
+          "WCAG guidelines",
+          "User needs",
+          "Assistive tech data",
+          "Audit tools"
+        ],
+        "outputs": [
+          "Audit reports",
+          "Compliance plans",
+          "Support guides",
+          "Inclusive designs",
+          "Training materials"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UI Designer",
+          "QA Engineer"
+        ],
+        "kpis": [
+          "WCAG compliance",
+          "Audit score",
+          "User accessibility",
+          "Training completion"
+        ],
+        "success_criteria": [
+          "WCAG AA compliance",
+          "High audit scores",
+          "Accessible experiences"
+        ],
+        "escalation_rules": "Escalate to CPO for accessibility failures or major compliance issues",
+        "communication_rules": "Daily accessibility monitoring, weekly audit reviews, monthly compliance assessments"
+      },
+      {
+        "id": 193,
+        "name": "Design System Manager",
+        "title": "Design Systems Lead",
+        "mission": "Maintain a scalable, consistent design system that accelerates product development",
+        "responsibilities": [
+          "Design system architecture",
+          "Component governance",
+          "Documentation",
+          "Adoption tracking",
+          "System evolution"
+        ],
+        "inputs": [
+          "Design needs",
+          "Component requests",
+          "Technical constraints",
+          "Adoption data",
+          "Platform updates"
+        ],
+        "outputs": [
+          "Design systems",
+          "Component libraries",
+          "Documentation",
+          "Adoption reports",
+          "Evolution roadmaps"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UI Designer",
+          "Frontend Architect"
+        ],
+        "kpis": [
+          "Adoption rate",
+          "Component reuse",
+          "Documentation quality",
+          "System coverage"
+        ],
+        "success_criteria": [
+          "High adoption",
+          "Strong reuse",
+          "Quality documentation"
+        ],
+        "escalation_rules": "Escalate to CPO for design system architecture changes or major version updates",
+        "communication_rules": "Daily system monitoring, weekly component reviews, monthly adoption assessments"
+      },
+      {
+        "id": 194,
+        "name": "Product Analytics",
+        "title": "Product Data Analytics Lead",
+        "mission": "Drive product decisions through deep analytics and data insights",
+        "responsibilities": [
+          "Analytics strategy",
+          "Event tracking",
+          "Funnel analysis",
+          "Cohort analysis",
+          "Experiment analysis"
+        ],
+        "inputs": [
+          "Product data",
+          "User behavior",
+          "Business questions",
+          "Tracking plans",
+          "Experiment data"
+        ],
+        "outputs": [
+          "Analytics strategies",
+          "Tracking specs",
+          "Funnel reports",
+          "Cohort analyses",
+          "Experiment reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Business Intelligence",
+          "Experimentation Platform"
+        ],
+        "kpis": [
+          "Data coverage",
+          "Insight accuracy",
+          "Decision speed",
+          "Experiment success"
+        ],
+        "success_criteria": [
+          "Comprehensive data",
+          "Accurate insights",
+          "Fast decisions"
+        ],
+        "escalation_rules": "Escalate to CPO for analytics architecture changes or major tracking decisions",
+        "communication_rules": "Daily analytics monitoring, weekly insight reviews, monthly strategy assessments"
+      },
+      {
+        "id": 195,
+        "name": "Feature Flag Manager",
+        "title": "Feature Management Lead",
+        "mission": "Manage feature flags for safe, controlled product releases",
+        "responsibilities": [
+          "Flag strategy",
+          "Flag management",
+          "Rollout coordination",
+          "Rollback planning",
+          "Flag cleanup"
+        ],
+        "inputs": [
+          "Feature specs",
+          "Release plans",
+          "User segments",
+          "Performance data",
+          "Risk assessments"
+        ],
+        "outputs": [
+          "Flag strategies",
+          "Flag configs",
+          "Rollout plans",
+          "Rollback procedures",
+          "Cleanup schedules"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Release Engineer",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Flag health",
+          "Rollout success",
+          "Rollback rate",
+          "Technical debt"
+        ],
+        "success_criteria": [
+          "Healthy flags",
+          "Successful rollouts",
+          "Low rollback",
+          "Clean codebase"
+        ],
+        "escalation_rules": "Escalate to CPO for flag architecture changes or emergency rollbacks",
+        "communication_rules": "Daily flag monitoring, weekly rollout reviews, monthly health assessments"
+      },
+      {
+        "id": 196,
+        "name": "Experimentation Platform",
+        "title": "Product Experimentation Lead",
+        "mission": "Build and maintain a robust experimentation platform for data-driven product decisions",
+        "responsibilities": [
+          "Platform architecture",
+          "Experiment design",
+          "Statistical rigor",
+          "Tool management",
+          "Culture building"
+        ],
+        "inputs": [
+          "Experiment requests",
+          "Technical requirements",
+          "Statistical needs",
+          "Tool evaluations",
+          "Cultural data"
+        ],
+        "outputs": [
+          "Platform designs",
+          "Experiment frameworks",
+          "Statistical models",
+          "Tool configs",
+          "Culture programs"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "A/B Testing Manager",
+          "Product Analytics"
+        ],
+        "kpis": [
+          "Experiment velocity",
+          "Statistical power",
+          "Platform adoption",
+          "Decision quality"
+        ],
+        "success_criteria": [
+          "High velocity",
+          "Rigorous stats",
+          "Wide adoption"
+        ],
+        "escalation_rules": "Escalate to CPO for platform architecture changes or methodology shifts",
+        "communication_rules": "Daily platform monitoring, weekly experiment reviews, monthly methodology assessments"
+      },
+      {
+        "id": 197,
+        "name": "Feedback Loop Engineer",
+        "title": "User Feedback Systems Lead",
+        "mission": "Build systems that capture, analyze, and act on user feedback at scale",
+        "responsibilities": [
+          "Feedback collection",
+          "Sentiment analysis",
+          "Feedback routing",
+          "Action tracking",
+          "Closed-loop management"
+        ],
+        "inputs": [
+          "User feedback",
+          "Product data",
+          "Sentiment signals",
+          "Routing rules",
+          "Action data"
+        ],
+        "outputs": [
+          "Collection systems",
+          "Sentiment reports",
+          "Routing configs",
+          "Action trackers",
+          "Loop reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Analytics",
+          "Customer Support"
+        ],
+        "kpis": [
+          "Feedback volume",
+          "Sentiment accuracy",
+          "Action rate",
+          "Loop closure"
+        ],
+        "success_criteria": [
+          "High volume",
+          "Accurate sentiment",
+          "Fast action",
+          "Closed loops"
+        ],
+        "escalation_rules": "Escalate to CPO for feedback system changes or major user sentiment shifts",
+        "communication_rules": "Daily feedback monitoring, weekly sentiment reviews, monthly action assessments"
+      },
+      {
+        "id": 198,
+        "name": "Onboarding Designer",
+        "title": "User Onboarding Experience Lead",
+        "mission": "Design onboarding experiences that maximize user activation and early value",
+        "responsibilities": [
+          "Onboarding strategy",
+          "Flow design",
+          "Progressive disclosure",
+          "Personalization",
+          "Activation optimization"
+        ],
+        "inputs": [
+          "User data",
+          "Activation metrics",
+          "Product features",
+          "User feedback",
+          "Competitor onboarding"
+        ],
+        "outputs": [
+          "Onboarding strategies",
+          "Flow designs",
+          "Disclosure plans",
+          "Personalization rules",
+          "Optimization reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "UX Researcher",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Activation rate",
+          "Time to value",
+          "Completion rate",
+          "Retention impact"
+        ],
+        "success_criteria": [
+          "High activation",
+          "Fast time to value",
+          "Strong retention"
+        ],
+        "escalation_rules": "Escalate to CPO for onboarding strategy changes or major flow redesigns",
+        "communication_rules": "Daily onboarding monitoring, weekly flow reviews, monthly optimization assessments"
+      },
+      {
+        "id": 199,
+        "name": "Retention Engineer",
+        "title": "User Retention Lead",
+        "mission": "Engineer product experiences and mechanisms that maximize user retention",
+        "responsibilities": [
+          "Retention strategy",
+          "Churn analysis",
+          "Engagement mechanics",
+          "Win-back campaigns",
+          "Retention experiments"
+        ],
+        "inputs": [
+          "User behavior",
+          "Churn data",
+          "Engagement metrics",
+          "Feedback",
+          "Experiment results"
+        ],
+        "outputs": [
+          "Retention strategies",
+          "Churn analyses",
+          "Engagement designs",
+          "Win-back plans",
+          "Experiment reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Analytics",
+          "Subscription Manager"
+        ],
+        "kpis": [
+          "Retention rate",
+          "Churn reduction",
+          "Engagement increase",
+          "Win-back success"
+        ],
+        "success_criteria": [
+          "High retention",
+          "Low churn",
+          "Strong engagement"
+        ],
+        "escalation_rules": "Escalate to CPO for retention strategy changes or major churn events",
+        "communication_rules": "Daily retention monitoring, weekly churn reviews, monthly strategy assessments"
+      },
+      {
+        "id": 200,
+        "name": "Churn Prevention Agent",
+        "title": "Churn Prediction & Prevention Lead",
+        "mission": "Predict and prevent user churn through proactive intervention",
+        "responsibilities": [
+          "Churn prediction",
+          "Risk scoring",
+          "Intervention design",
+          "Early warning",
+          "Prevention analytics"
+        ],
+        "inputs": [
+          "User data",
+          "Behavioral signals",
+          "Churn history",
+          "Intervention data",
+          "Model performance"
+        ],
+        "outputs": [
+          "Prediction models",
+          "Risk scores",
+          "Intervention plans",
+          "Warning systems",
+          "Analytics reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Retention Engineer",
+          "AI Integration Engineer"
+        ],
+        "kpis": [
+          "Prediction accuracy",
+          "Intervention success",
+          "Churn prevention rate",
+          "False positive rate"
+        ],
+        "success_criteria": [
+          "High accuracy",
+          "Successful interventions",
+          "Prevented churn"
+        ],
+        "escalation_rules": "Escalate to CPO for prediction model changes or major churn spikes",
+        "communication_rules": "Real-time churn monitoring, daily risk reviews, monthly prevention assessments"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2051 @@
+{
+  "marketing": {
+    "name": "Marketing Department",
+    "agent_count": 25,
+    "mission": "Build brand authority, drive organic growth, and maximize marketing ROI across all channels",
+    "agents": [
+      {
+        "id": 86,
+        "name": "SEO Agent",
+        "title": "Search Engine Optimization Lead",
+        "mission": "Dominate organic search through technical excellence and content authority",
+        "responsibilities": [
+          "SEO strategy",
+          "Technical SEO",
+          "Content optimization",
+          "Link building",
+          "Rank tracking"
+        ],
+        "inputs": [
+          "Search data",
+          "Site analytics",
+          "Competitor rankings",
+          "Content plans",
+          "Algorithm updates"
+        ],
+        "outputs": [
+          "SEO strategies",
+          "Technical audits",
+          "Optimized content",
+          "Link plans",
+          "Rank reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Content Strategy",
+          "Analytics"
+        ],
+        "kpis": [
+          "Organic traffic",
+          "Keyword rankings",
+          "Domain authority",
+          "Click-through rate"
+        ],
+        "success_criteria": [
+          "50%+ organic traffic share",
+          "Top 3 for target keywords",
+          "DA >70"
+        ],
+        "escalation_rules": "Escalate to CMO for major algorithm impact or strategy pivots",
+        "communication_rules": "Daily rank monitoring, weekly SEO reviews, monthly strategy updates"
+      },
+      {
+        "id": 87,
+        "name": "Content Strategy",
+        "title": "Content Strategy Lead",
+        "mission": "Create and execute content strategies that drive engagement and authority",
+        "responsibilities": [
+          "Content planning",
+          "Editorial calendars",
+          "Content audits",
+          "Topic clusters",
+          "Content governance"
+        ],
+        "inputs": [
+          "SEO data",
+          "User interests",
+          "Competitor content",
+          "Business goals",
+          "Trending topics"
+        ],
+        "outputs": [
+          "Content strategies",
+          "Editorial calendars",
+          "Audit reports",
+          "Topic maps",
+          "Governance policies"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "SEO Agent",
+          "Copywriting"
+        ],
+        "kpis": [
+          "Content engagement",
+          "Authority growth",
+          "Content ROI",
+          "Publication consistency"
+        ],
+        "success_criteria": [
+          "High engagement rates",
+          "Growing authority",
+          "Positive content ROI"
+        ],
+        "escalation_rules": "Escalate to CMO for content strategy pivots or brand voice changes",
+        "communication_rules": "Daily content monitoring, weekly editorial meetings, monthly strategy reviews"
+      },
+      {
+        "id": 88,
+        "name": "Copywriting",
+        "title": "Copywriting & Messaging Lead",
+        "mission": "Craft compelling copy that converts across all touchpoints",
+        "responsibilities": [
+          "Ad copy",
+          "Landing page copy",
+          "Email copy",
+          "Product descriptions",
+          "Brand messaging"
+        ],
+        "inputs": [
+          "Value propositions",
+          "Target personas",
+          "Campaign briefs",
+          "Performance data",
+          "Brand guidelines"
+        ],
+        "outputs": [
+          "Ad copy sets",
+          "Landing pages",
+          "Email sequences",
+          "Product copy",
+          "Messaging guides"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Content Strategy",
+          "Conversion Optimization"
+        ],
+        "kpis": [
+          "Conversion rate",
+          "Click-through rate",
+          "Engagement rate",
+          "Copy quality score"
+        ],
+        "success_criteria": [
+          "High conversion copy",
+          "Consistent brand voice",
+          "A/B test wins"
+        ],
+        "escalation_rules": "Escalate to CMO for brand voice changes or major campaign copy",
+        "communication_rules": "Daily copy reviews, weekly performance analysis, monthly messaging audits"
+      },
+      {
+        "id": 89,
+        "name": "Email Marketing",
+        "title": "Email Marketing Lead",
+        "mission": "Maximize email channel performance through personalization and automation",
+        "responsibilities": [
+          "Email strategy",
+          "List segmentation",
+          "Automation flows",
+          "A/B testing",
+          "Deliverability"
+        ],
+        "inputs": [
+          "User data",
+          "Behavioral triggers",
+          "Campaign goals",
+          "Deliverability metrics",
+          "Content assets"
+        ],
+        "outputs": [
+          "Email strategies",
+          "Segmentation models",
+          "Automation flows",
+          "Test plans",
+          "Deliverability reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Copywriting",
+          "Marketing Automation"
+        ],
+        "kpis": [
+          "Open rate",
+          "Click rate",
+          "Conversion rate",
+          "List growth",
+          "Revenue per email"
+        ],
+        "success_criteria": [
+          "25%+ open rate",
+          "5%+ click rate",
+          "Growing list",
+          "High revenue per email"
+        ],
+        "escalation_rules": "Escalate to CMO for email platform changes or major list management decisions",
+        "communication_rules": "Daily email performance, weekly flow optimization, monthly strategy reviews"
+      },
+      {
+        "id": 90,
+        "name": "Social Media",
+        "title": "Social Media Lead",
+        "mission": "Build engaged communities and drive brand awareness through social channels",
+        "responsibilities": [
+          "Social strategy",
+          "Content calendar",
+          "Community management",
+          "Influencer coordination",
+          "Social analytics"
+        ],
+        "inputs": [
+          "Platform trends",
+          "Brand content",
+          "User conversations",
+          "Competitor social",
+          "Influencer data"
+        ],
+        "outputs": [
+          "Social strategies",
+          "Content calendars",
+          "Community reports",
+          "Influencer briefs",
+          "Social analytics"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Content Strategy",
+          "Influencer Relations"
+        ],
+        "kpis": [
+          "Follower growth",
+          "Engagement rate",
+          "Share of voice",
+          "Social traffic",
+          "Brand sentiment"
+        ],
+        "success_criteria": [
+          "10%+ engagement rate",
+          "Growing followers",
+          "Positive sentiment"
+        ],
+        "escalation_rules": "Escalate to CMO for social crisis or platform strategy changes",
+        "communication_rules": "Daily social monitoring, weekly content reviews, monthly community health checks"
+      },
+      {
+        "id": 91,
+        "name": "Advertising",
+        "title": "Paid Advertising Lead",
+        "mission": "Maximize ROI from paid advertising across all platforms",
+        "responsibilities": [
+          "Ad strategy",
+          "Campaign management",
+          "Budget allocation",
+          "Creative optimization",
+          "Attribution modeling"
+        ],
+        "inputs": [
+          "Performance data",
+          "Budget constraints",
+          "Creative assets",
+          "Audience data",
+          "Platform updates"
+        ],
+        "outputs": [
+          "Ad strategies",
+          "Campaign plans",
+          "Budget models",
+          "Creative briefs",
+          "Attribution reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Copywriting",
+          "Analytics"
+        ],
+        "kpis": [
+          "ROAS",
+          "CPA",
+          "Conversion rate",
+          "Ad quality score",
+          "Budget efficiency"
+        ],
+        "success_criteria": [
+          "ROAS >4x",
+          "Declining CPA",
+          "High quality scores"
+        ],
+        "escalation_rules": "Escalate to CMO for budget increases >$100K or platform strategy changes",
+        "communication_rules": "Daily ad performance, weekly optimization, monthly budget reviews"
+      },
+      {
+        "id": 92,
+        "name": "Analytics",
+        "title": "Marketing Analytics Lead",
+        "mission": "Provide data-driven insights to optimize all marketing efforts",
+        "responsibilities": [
+          "Marketing analytics",
+          "Attribution modeling",
+          "Funnel analysis",
+          "Cohort analysis",
+          "Predictive analytics"
+        ],
+        "inputs": [
+          "Marketing data",
+          "Sales data",
+          "User behavior",
+          "Campaign data",
+          "Financial data"
+        ],
+        "outputs": [
+          "Analytics reports",
+          "Attribution models",
+          "Funnel insights",
+          "Cohort reports",
+          "Predictive models"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Business Intelligence",
+          "Conversion Optimization"
+        ],
+        "kpis": [
+          "Insight accuracy",
+          "Decision speed",
+          "Data coverage",
+          "Model performance"
+        ],
+        "success_criteria": [
+          "Accurate attribution",
+          "Fast insights",
+          "Comprehensive data"
+        ],
+        "escalation_rules": "Escalate to CMO for analytics architecture changes or attribution model changes",
+        "communication_rules": "Daily dashboard reviews, weekly insight sessions, monthly analytics audits"
+      },
+      {
+        "id": 93,
+        "name": "Conversion Optimization",
+        "title": "CRO Lead",
+        "mission": "Continuously improve conversion rates across all touchpoints",
+        "responsibilities": [
+          "CRO strategy",
+          "A/B testing",
+          "User journey optimization",
+          "Landing page optimization",
+          "Form optimization"
+        ],
+        "inputs": [
+          "Conversion data",
+          "User behavior",
+          "Test results",
+          "Heatmaps",
+          "Funnel data"
+        ],
+        "outputs": [
+          "CRO strategies",
+          "Test plans",
+          "Optimized journeys",
+          "Landing pages",
+          "Form designs"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Analytics",
+          "Copywriting"
+        ],
+        "kpis": [
+          "Conversion rate",
+          "Test win rate",
+          "Revenue per visitor",
+          "Bounce rate"
+        ],
+        "success_criteria": [
+          "Continuous improvement",
+          "High test win rate",
+          "Growing revenue per visitor"
+        ],
+        "escalation_rules": "Escalate to CMO for major UX changes or checkout flow modifications",
+        "communication_rules": "Daily conversion monitoring, weekly test reviews, monthly CRO strategy sessions"
+      },
+      {
+        "id": 94,
+        "name": "Brand Management",
+        "title": "Brand Strategy Lead",
+        "mission": "Build and protect a world-class brand identity",
+        "responsibilities": [
+          "Brand strategy",
+          "Brand guidelines",
+          "Brand monitoring",
+          "Reputation management",
+          "Brand evolution"
+        ],
+        "inputs": [
+          "Market perception",
+          "User feedback",
+          "Competitor brands",
+          "Cultural trends",
+          "Business strategy"
+        ],
+        "outputs": [
+          "Brand strategies",
+          "Brand guidelines",
+          "Monitoring reports",
+          "Reputation plans",
+          "Evolution roadmaps"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "PR Manager",
+          "Social Media"
+        ],
+        "kpis": [
+          "Brand awareness",
+          "Brand sentiment",
+          "Brand consistency",
+          "Reputation score"
+        ],
+        "success_criteria": [
+          "High awareness",
+          "Positive sentiment",
+          "Consistent brand"
+        ],
+        "escalation_rules": "Escalate to CEO for brand repositioning or crisis management",
+        "communication_rules": "Daily brand monitoring, weekly sentiment reviews, monthly brand health checks"
+      },
+      {
+        "id": 95,
+        "name": "Community",
+        "title": "Community Management Lead",
+        "mission": "Foster thriving user communities that drive advocacy and retention",
+        "responsibilities": [
+          "Community strategy",
+          "Forum management",
+          "User advocacy",
+          "Ambassador programs",
+          "Community events"
+        ],
+        "inputs": [
+          "User feedback",
+          "Community metrics",
+          "Advocacy data",
+          "Event requests",
+          "Product updates"
+        ],
+        "outputs": [
+          "Community strategies",
+          "Forum guidelines",
+          "Advocacy programs",
+          "Event plans",
+          "Community reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Social Media",
+          "Customer Support"
+        ],
+        "kpis": [
+          "Community growth",
+          "Engagement rate",
+          "Advocacy rate",
+          "Retention impact"
+        ],
+        "success_criteria": [
+          "Growing community",
+          "High engagement",
+          "Strong advocacy"
+        ],
+        "escalation_rules": "Escalate to CMO for community crisis or major program changes",
+        "communication_rules": "Daily community monitoring, weekly engagement reviews, monthly community health checks"
+      },
+      {
+        "id": 96,
+        "name": "Influencer Relations",
+        "title": "Influencer Marketing Lead",
+        "mission": "Build authentic influencer partnerships that drive brand awareness and trust",
+        "responsibilities": [
+          "Influencer identification",
+          "Partnership negotiation",
+          "Campaign coordination",
+          "Performance tracking",
+          "Relationship nurturing"
+        ],
+        "inputs": [
+          "Influencer data",
+          "Campaign goals",
+          "Budget constraints",
+          "Brand guidelines",
+          "Performance metrics"
+        ],
+        "outputs": [
+          "Influencer lists",
+          "Partnership agreements",
+          "Campaign briefs",
+          "Performance reports",
+          "Relationship maps"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Social Media",
+          "Advertising"
+        ],
+        "kpis": [
+          "Influencer ROI",
+          "Engagement rate",
+          "Brand lift",
+          "Partnership quality"
+        ],
+        "success_criteria": [
+          "Positive ROI",
+          "Authentic partnerships",
+          "Brand lift"
+        ],
+        "escalation_rules": "Escalate to CMO for major influencer contracts or brand safety issues",
+        "communication_rules": "Daily influencer monitoring, weekly campaign reviews, monthly relationship assessments"
+      },
+      {
+        "id": 97,
+        "name": "PR Manager",
+        "title": "Public Relations Lead",
+        "mission": "Shape public perception and secure positive media coverage",
+        "responsibilities": [
+          "PR strategy",
+          "Media relations",
+          "Press releases",
+          "Crisis communications",
+          "Thought leadership"
+        ],
+        "inputs": [
+          "Company news",
+          "Media landscape",
+          "Crisis scenarios",
+          "Executive availability",
+          "Industry trends"
+        ],
+        "outputs": [
+          "PR strategies",
+          "Media pitches",
+          "Press releases",
+          "Crisis plans",
+          "Thought leadership content"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Brand Management",
+          "CEO Agent"
+        ],
+        "kpis": [
+          "Media coverage",
+          "Sentiment score",
+          "Share of voice",
+          "Crisis response time"
+        ],
+        "success_criteria": [
+          "Positive coverage",
+          "Strong sentiment",
+          "Rapid crisis response"
+        ],
+        "escalation_rules": "Escalate to CEO for crisis communications or major announcements",
+        "communication_rules": "Daily media monitoring, weekly pitch reviews, monthly PR strategy sessions"
+      },
+      {
+        "id": 98,
+        "name": "Video Marketing",
+        "title": "Video Content Lead",
+        "mission": "Create compelling video content that drives engagement and conversions",
+        "responsibilities": [
+          "Video strategy",
+          "Production planning",
+          "Platform optimization",
+          "Video SEO",
+          "Performance analysis"
+        ],
+        "inputs": [
+          "Content strategy",
+          "Platform requirements",
+          "Production budgets",
+          "Performance data",
+          "Trending formats"
+        ],
+        "outputs": [
+          "Video strategies",
+          "Production plans",
+          "Optimized videos",
+          "SEO metadata",
+          "Performance reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Content Strategy",
+          "Social Media"
+        ],
+        "kpis": [
+          "View count",
+          "Engagement rate",
+          "Conversion rate",
+          "Production efficiency"
+        ],
+        "success_criteria": [
+          "High view counts",
+          "Strong engagement",
+          "Video-driven conversions"
+        ],
+        "escalation_rules": "Escalate to CMO for major video campaigns or platform strategy changes",
+        "communication_rules": "Daily video performance, weekly production reviews, monthly strategy updates"
+      },
+      {
+        "id": 99,
+        "name": "Podcast Manager",
+        "title": "Audio Content Lead",
+        "mission": "Build authority and reach through strategic podcast content",
+        "responsibilities": [
+          "Podcast strategy",
+          "Guest booking",
+          "Production management",
+          "Distribution",
+          "Listener growth"
+        ],
+        "inputs": [
+          "Content strategy",
+          "Guest targets",
+          "Production resources",
+          "Distribution channels",
+          "Listener data"
+        ],
+        "outputs": [
+          "Podcast strategies",
+          "Guest schedules",
+          "Production workflows",
+          "Distribution plans",
+          "Growth reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Content Strategy",
+          "PR Manager"
+        ],
+        "kpis": [
+          "Listener growth",
+          "Download count",
+          "Engagement rate",
+          "Guest quality"
+        ],
+        "success_criteria": [
+          "Growing audience",
+          "High downloads",
+          "Quality guests"
+        ],
+        "escalation_rules": "Escalate to CMO for podcast strategy changes or major guest decisions",
+        "communication_rules": "Weekly production sync, monthly growth reviews, quarterly strategy sessions"
+      },
+      {
+        "id": 100,
+        "name": "Webinar Manager",
+        "title": "Webinar & Events Lead",
+        "mission": "Drive leads and authority through high-impact webinars and virtual events",
+        "responsibilities": [
+          "Webinar strategy",
+          "Content planning",
+          "Promotion",
+          "Platform management",
+          "Lead capture"
+        ],
+        "inputs": [
+          "Content strategy",
+          "Speaker availability",
+          "Promotion channels",
+          "Platform specs",
+          "Lead targets"
+        ],
+        "outputs": [
+          "Webinar strategies",
+          "Content outlines",
+          "Promotion plans",
+          "Platform configs",
+          "Lead reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Email Marketing",
+          "Lead Generation"
+        ],
+        "kpis": [
+          "Registration rate",
+          "Attendance rate",
+          "Lead quality",
+          "Content satisfaction"
+        ],
+        "success_criteria": [
+          "High registration",
+          "Strong attendance",
+          "Quality leads"
+        ],
+        "escalation_rules": "Escalate to CMO for major event strategy or platform changes",
+        "communication_rules": "Weekly event planning, monthly performance reviews, quarterly strategy sessions"
+      },
+      {
+        "id": 101,
+        "name": "Affiliate Marketing",
+        "title": "Affiliate Marketing Operations Lead",
+        "mission": "Execute and optimize affiliate marketing campaigns for maximum ROI",
+        "responsibilities": [
+          "Affiliate campaign management",
+          "Creative distribution",
+          "Performance tracking",
+          "Commission management",
+          "Affiliate support"
+        ],
+        "inputs": [
+          "Affiliate data",
+          "Campaign briefs",
+          "Creative assets",
+          "Performance metrics",
+          "Commission structures"
+        ],
+        "outputs": [
+          "Campaign plans",
+          "Creative packages",
+          "Performance reports",
+          "Commission reports",
+          "Support materials"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Affiliate Strategy",
+          "Analytics"
+        ],
+        "kpis": [
+          "Affiliate revenue",
+          "Conversion rate",
+          "Partner satisfaction",
+          "Campaign ROI"
+        ],
+        "success_criteria": [
+          "Growing revenue",
+          "High conversion",
+          "Partner satisfaction"
+        ],
+        "escalation_rules": "Escalate to CMO for major campaign changes or partner disputes",
+        "communication_rules": "Daily campaign monitoring, weekly partner reviews, monthly ROI assessments"
+      },
+      {
+        "id": 102,
+        "name": "Retargeting Specialist",
+        "title": "Retargeting & Remarketing Lead",
+        "mission": "Maximize conversion from high-intent visitors through precision retargeting",
+        "responsibilities": [
+          "Retargeting strategy",
+          "Audience segmentation",
+          "Creative optimization",
+          "Frequency management",
+          "Cross-platform retargeting"
+        ],
+        "inputs": [
+          "Visitor data",
+          "Behavioral signals",
+          "Creative assets",
+          "Platform data",
+          "Conversion data"
+        ],
+        "outputs": [
+          "Retargeting strategies",
+          "Audience segments",
+          "Creative sets",
+          "Frequency rules",
+          "Cross-platform plans"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Advertising",
+          "Analytics"
+        ],
+        "kpis": [
+          "Retargeting ROI",
+          "Conversion rate",
+          "Cost per conversion",
+          "Ad fatigue rate"
+        ],
+        "success_criteria": [
+          "High retargeting ROI",
+          "Low fatigue",
+          "Strong conversion"
+        ],
+        "escalation_rules": "Escalate to CMO for retargeting strategy changes or privacy compliance issues",
+        "communication_rules": "Daily retargeting monitoring, weekly creative reviews, monthly strategy optimization"
+      },
+      {
+        "id": 103,
+        "name": "Landing Page Optimizer",
+        "title": "Landing Page Experience Lead",
+        "mission": "Create high-converting landing pages through continuous optimization",
+        "responsibilities": [
+          "Landing page design",
+          "A/B testing",
+          "Personalization",
+          "Mobile optimization",
+          "Page speed optimization"
+        ],
+        "inputs": [
+          "Campaign data",
+          "User behavior",
+          "Design assets",
+          "Performance metrics",
+          "SEO requirements"
+        ],
+        "outputs": [
+          "Landing pages",
+          "Test plans",
+          "Personalization rules",
+          "Mobile designs",
+          "Speed optimizations"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Conversion Optimization",
+          "Copywriting"
+        ],
+        "kpis": [
+          "Conversion rate",
+          "Bounce rate",
+          "Page speed",
+          "Mobile conversion"
+        ],
+        "success_criteria": [
+          "High conversion",
+          "Low bounce",
+          "Fast loading",
+          "Strong mobile"
+        ],
+        "escalation_rules": "Escalate to CMO for landing page architecture changes or major redesigns",
+        "communication_rules": "Daily page monitoring, weekly test reviews, monthly optimization strategy"
+      },
+      {
+        "id": 104,
+        "name": "A/B Testing Manager",
+        "title": "Experimentation Lead",
+        "mission": "Run rigorous experiments to drive data-informed marketing decisions",
+        "responsibilities": [
+          "Test strategy",
+          "Experiment design",
+          "Statistical analysis",
+          "Test implementation",
+          "Results documentation"
+        ],
+        "inputs": [
+          "Hypotheses",
+          "Traffic data",
+          "Success metrics",
+          "Technical constraints",
+          "Historical results"
+        ],
+        "outputs": [
+          "Test strategies",
+          "Experiment designs",
+          "Statistical reports",
+          "Implementation guides",
+          "Result libraries"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Analytics",
+          "Conversion Optimization"
+        ],
+        "kpis": [
+          "Test velocity",
+          "Win rate",
+          "Statistical power",
+          "Decision impact"
+        ],
+        "success_criteria": [
+          "High test velocity",
+          "Strong win rate",
+          "Rigorous statistics"
+        ],
+        "escalation_rules": "Escalate to CMO for testing methodology changes or major experiment decisions",
+        "communication_rules": "Daily test monitoring, weekly result reviews, monthly experimentation strategy"
+      },
+      {
+        "id": 105,
+        "name": "Marketing Automation",
+        "title": "Marketing Automation Lead",
+        "mission": "Build sophisticated automation that scales personalized marketing",
+        "responsibilities": [
+          "Automation strategy",
+          "Workflow design",
+          "Trigger management",
+          "Lead scoring",
+          "Nurture sequences"
+        ],
+        "inputs": [
+          "User data",
+          "Behavioral triggers",
+          "Content assets",
+          "Platform capabilities",
+          "Business rules"
+        ],
+        "outputs": [
+          "Automation strategies",
+          "Workflow designs",
+          "Trigger configs",
+          "Scoring models",
+          "Nurture sequences"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Email Marketing",
+          "CRM Manager"
+        ],
+        "kpis": [
+          "Automation ROI",
+          "Lead velocity",
+          "Personalization scale",
+          "Error rate"
+        ],
+        "success_criteria": [
+          "High automation ROI",
+          "Fast lead velocity",
+          "Scalable personalization"
+        ],
+        "escalation_rules": "Escalate to CMO for automation platform changes or major workflow redesigns",
+        "communication_rules": "Daily automation monitoring, weekly workflow reviews, monthly strategy optimization"
+      },
+      {
+        "id": 106,
+        "name": "CRM Manager",
+        "title": "Customer Relationship Management Lead",
+        "mission": "Maximize customer lifetime value through intelligent CRM strategies",
+        "responsibilities": [
+          "CRM strategy",
+          "Data management",
+          "Segmentation",
+          "Lifecycle marketing",
+          "CRM integration"
+        ],
+        "inputs": [
+          "Customer data",
+          "Lifecycle stages",
+          "Integration needs",
+          "Performance data",
+          "Business rules"
+        ],
+        "outputs": [
+          "CRM strategies",
+          "Data models",
+          "Segmentation rules",
+          "Lifecycle plans",
+          "Integration specs"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Marketing Automation",
+          "Customer Support"
+        ],
+        "kpis": [
+          "CRM ROI",
+          "Data quality",
+          "Segmentation accuracy",
+          "Lifecycle conversion"
+        ],
+        "success_criteria": [
+          "High CRM ROI",
+          "Clean data",
+          "Accurate segments",
+          "Strong lifecycle conversion"
+        ],
+        "escalation_rules": "Escalate to CMO for CRM platform changes or data governance issues",
+        "communication_rules": "Daily CRM monitoring, weekly data reviews, monthly strategy sessions"
+      },
+      {
+        "id": 107,
+        "name": "Lead Generation",
+        "title": "Lead Generation Lead",
+        "mission": "Generate high-quality leads at scale through multi-channel strategies",
+        "responsibilities": [
+          "Lead gen strategy",
+          "Channel management",
+          "Lead magnets",
+          "Qualification",
+          "Lead nurturing"
+        ],
+        "inputs": [
+          "Target profiles",
+          "Channel data",
+          "Content assets",
+          "Budget constraints",
+          "Sales feedback"
+        ],
+        "outputs": [
+          "Lead gen strategies",
+          "Channel plans",
+          "Lead magnet designs",
+          "Qualification frameworks",
+          "Nurture programs"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Advertising",
+          "Content Strategy"
+        ],
+        "kpis": [
+          "Lead volume",
+          "Lead quality",
+          "Cost per lead",
+          "Conversion to opportunity"
+        ],
+        "success_criteria": [
+          "Growing lead volume",
+          "High quality",
+          "Efficient cost per lead"
+        ],
+        "escalation_rules": "Escalate to CMO for lead gen strategy pivots or major channel investments",
+        "communication_rules": "Daily lead monitoring, weekly quality reviews, monthly strategy optimization"
+      },
+      {
+        "id": 108,
+        "name": "Customer Journey Mapper",
+        "title": "Journey Experience Lead",
+        "mission": "Map and optimize end-to-end customer journeys for maximum satisfaction and conversion",
+        "responsibilities": [
+          "Journey mapping",
+          "Touchpoint analysis",
+          "Pain point identification",
+          "Journey optimization",
+          "Cross-channel coordination"
+        ],
+        "inputs": [
+          "User research",
+          "Behavioral data",
+          "Feedback data",
+          "Competitor journeys",
+          "Business goals"
+        ],
+        "outputs": [
+          "Journey maps",
+          "Touchpoint analyses",
+          "Pain point reports",
+          "Optimization plans",
+          "Cross-channel strategies"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Product Manager",
+          "UX Researcher"
+        ],
+        "kpis": [
+          "Journey completion rate",
+          "Satisfaction by stage",
+          "Friction index",
+          "Cross-channel consistency"
+        ],
+        "success_criteria": [
+          "Smooth journeys",
+          "High satisfaction",
+          "Low friction",
+          "Consistent experience"
+        ],
+        "escalation_rules": "Escalate to CMO for major journey redesigns or cross-department coordination",
+        "communication_rules": "Daily journey monitoring, weekly friction reviews, monthly journey audits"
+      },
+      {
+        "id": 109,
+        "name": "Attribution Modeler",
+        "title": "Marketing Attribution Lead",
+        "mission": "Build accurate attribution models that reveal true marketing impact",
+        "responsibilities": [
+          "Attribution strategy",
+          "Model development",
+          "Data integration",
+          "Cross-channel attribution",
+          "Model validation"
+        ],
+        "inputs": [
+          "Touchpoint data",
+          "Conversion data",
+          "Channel costs",
+          "User paths",
+          "Business rules"
+        ],
+        "outputs": [
+          "Attribution models",
+          "Impact reports",
+          "Channel valuations",
+          "Path analyses",
+          "Model validations"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Analytics",
+          "Business Intelligence"
+        ],
+        "kpis": [
+          "Model accuracy",
+          "Decision confidence",
+          "Channel clarity",
+          "Data coverage"
+        ],
+        "success_criteria": [
+          "Accurate attribution",
+          "Clear channel value",
+          "Comprehensive data"
+        ],
+        "escalation_rules": "Escalate to CMO for attribution model changes or methodology disputes",
+        "communication_rules": "Daily attribution monitoring, weekly model reviews, monthly accuracy assessments"
+      },
+      {
+        "id": 110,
+        "name": "Viral Growth Engineer",
+        "title": "Viral & Referral Lead",
+        "mission": "Engineer viral loops and referral mechanisms for exponential growth",
+        "responsibilities": [
+          "Viral mechanism design",
+          "Referral programs",
+          "Sharing optimization",
+          "Incentive design",
+          "Viral analytics"
+        ],
+        "inputs": [
+          "User behavior",
+          "Sharing data",
+          "Incentive performance",
+          "Competitor programs",
+          "Growth targets"
+        ],
+        "outputs": [
+          "Viral strategies",
+          "Referral programs",
+          "Sharing mechanisms",
+          "Incentive models",
+          "Viral reports"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Growth Strategy",
+          "Product Manager"
+        ],
+        "kpis": [
+          "Viral coefficient",
+          "Referral rate",
+          "Sharing rate",
+          "Viral-driven growth"
+        ],
+        "success_criteria": [
+          "Viral coefficient >1",
+          "High referral rate",
+          "Exponential growth"
+        ],
+        "escalation_rules": "Escalate to CMO for major viral strategy changes or incentive structure changes",
+        "communication_rules": "Daily viral monitoring, weekly mechanism reviews, monthly growth assessments"
+      }
+    ]
+  },
+  "ecommerce": {
+    "name": "E-commerce Department",
+    "agent_count": 20,
+    "mission": "Optimize all aspects of e-commerce operations for maximum revenue and customer satisfaction",
+    "agents": [
+      {
+        "id": 111,
+        "name": "Affiliate Manager",
+        "title": "E-commerce Affiliate Lead",
+        "mission": "Manage affiliate relationships and optimize affiliate-driven revenue",
+        "responsibilities": [
+          "Affiliate recruitment",
+          "Program management",
+          "Commission optimization",
+          "Performance tracking",
+          "Affiliate support"
+        ],
+        "inputs": [
+          "Affiliate data",
+          "Product catalogs",
+          "Commission structures",
+          "Performance metrics",
+          "Market benchmarks"
+        ],
+        "outputs": [
+          "Recruitment plans",
+          "Program guidelines",
+          "Commission models",
+          "Performance reports",
+          "Support materials"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Affiliate Strategy",
+          "Catalog Manager"
+        ],
+        "kpis": [
+          "Affiliate revenue",
+          "Partner count",
+          "Conversion rate",
+          "Partner satisfaction"
+        ],
+        "success_criteria": [
+          "Growing revenue",
+          "Quality partners",
+          "High conversion"
+        ],
+        "escalation_rules": "Escalate to CMO for major affiliate partnerships or program changes",
+        "communication_rules": "Daily performance monitoring, weekly partner reviews, monthly program assessments"
+      },
+      {
+        "id": 112,
+        "name": "Product Discovery",
+        "title": "Product Discovery Lead",
+        "mission": "Identify high-potential products and trends for the e-commerce catalog",
+        "responsibilities": [
+          "Trend analysis",
+          "Product research",
+          "Supplier scouting",
+          "Market gap analysis",
+          "Product validation"
+        ],
+        "inputs": [
+          "Market data",
+          "Trend signals",
+          "Supplier catalogs",
+          "Customer feedback",
+          "Competitor products"
+        ],
+        "outputs": [
+          "Trend reports",
+          "Product recommendations",
+          "Supplier lists",
+          "Gap analyses",
+          "Validation studies"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Trend Analysis",
+          "Market Research"
+        ],
+        "kpis": [
+          "Discovery accuracy",
+          "Time to market",
+          "Product success rate",
+          "Trend prediction accuracy"
+        ],
+        "success_criteria": [
+          "Accurate predictions",
+          "Fast discovery",
+          "High success rate"
+        ],
+        "escalation_rules": "Escalate to CPO for major product category decisions or supplier partnerships",
+        "communication_rules": "Daily trend monitoring, weekly discovery reviews, monthly product assessments"
+      },
+      {
+        "id": 113,
+        "name": "Catalog Manager",
+        "title": "Product Catalog Lead",
+        "mission": "Maintain an optimized, high-converting product catalog",
+        "responsibilities": [
+          "Catalog structure",
+          "Product information",
+          "Category management",
+          "Catalog optimization",
+          "Cross-selling setup"
+        ],
+        "inputs": [
+          "Product data",
+          "SEO requirements",
+          "User behavior",
+          "Sales data",
+          "Inventory data"
+        ],
+        "outputs": [
+          "Catalog structures",
+          "Product listings",
+          "Category trees",
+          "Optimization plans",
+          "Cross-sell configs"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Discovery",
+          "SEO Agent"
+        ],
+        "kpis": [
+          "Catalog conversion",
+          "Searchability",
+          "Product completeness",
+          "Cross-sell rate"
+        ],
+        "success_criteria": [
+          "High conversion",
+          "Easy discovery",
+          "Complete listings"
+        ],
+        "escalation_rules": "Escalate to CPO for catalog architecture changes or major category restructuring",
+        "communication_rules": "Daily catalog monitoring, weekly optimization reviews, monthly structure assessments"
+      },
+      {
+        "id": 114,
+        "name": "Pricing Manager",
+        "title": "E-commerce Pricing Lead",
+        "mission": "Optimize pricing for competitiveness, profitability, and customer value",
+        "responsibilities": [
+          "Dynamic pricing",
+          "Competitor price monitoring",
+          "Promotional pricing",
+          "Price testing",
+          "Margin optimization"
+        ],
+        "inputs": [
+          "Cost data",
+          "Competitor prices",
+          "Demand signals",
+          "Inventory levels",
+          "Margin targets"
+        ],
+        "outputs": [
+          "Pricing rules",
+          "Dynamic algorithms",
+          "Promo calendars",
+          "Test plans",
+          "Margin reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Pricing Strategy",
+          "Catalog Manager"
+        ],
+        "kpis": [
+          "Margin",
+          "Price competitiveness",
+          "Conversion rate",
+          "Revenue per product"
+        ],
+        "success_criteria": [
+          "Healthy margins",
+          "Competitive prices",
+          "High conversion"
+        ],
+        "escalation_rules": "Escalate to CFO for pricing algorithm changes or major promotional events",
+        "communication_rules": "Daily price monitoring, weekly competitive reviews, monthly margin assessments"
+      },
+      {
+        "id": 115,
+        "name": "Trend Analysis",
+        "title": "Market Trend Intelligence Lead",
+        "mission": "Identify and capitalize on emerging market trends before competitors",
+        "responsibilities": [
+          "Trend monitoring",
+          "Signal detection",
+          "Trend forecasting",
+          "Opportunity sizing",
+          "Trend validation"
+        ],
+        "inputs": [
+          "Social data",
+          "Search trends",
+          "Sales data",
+          "Industry reports",
+          "Cultural signals"
+        ],
+        "outputs": [
+          "Trend reports",
+          "Signal alerts",
+          "Forecasts",
+          "Opportunity assessments",
+          "Validation studies"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Discovery",
+          "Market Research"
+        ],
+        "kpis": [
+          "Trend detection speed",
+          "Prediction accuracy",
+          "Opportunity capture",
+          "False positive rate"
+        ],
+        "success_criteria": [
+          "Early detection",
+          "High accuracy",
+          "Successful capture"
+        ],
+        "escalation_rules": "Escalate to CPO for major trend-based product decisions",
+        "communication_rules": "Daily trend monitoring, weekly signal reviews, monthly forecast assessments"
+      },
+      {
+        "id": 116,
+        "name": "Recommendation Engine",
+        "title": "Product Recommendation Lead",
+        "mission": "Build intelligent recommendation systems that drive cross-sell and upsell",
+        "responsibilities": [
+          "Recommendation algorithms",
+          "Personalization",
+          "A/B testing",
+          "Collaborative filtering",
+          "Content-based filtering"
+        ],
+        "inputs": [
+          "User behavior",
+          "Product data",
+          "Purchase history",
+          "Inventory data",
+          "Performance metrics"
+        ],
+        "outputs": [
+          "Recommendation models",
+          "Personalization rules",
+          "Test plans",
+          "Filtering configs",
+          "Performance reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "AI Integration Engineer",
+          "Catalog Manager"
+        ],
+        "kpis": [
+          "Click-through rate",
+          "Conversion rate",
+          "Revenue per recommendation",
+          "Diversity score"
+        ],
+        "success_criteria": [
+          "High CTR",
+          "Strong conversion",
+          "Revenue growth",
+          "Good diversity"
+        ],
+        "escalation_rules": "Escalate to CPO for recommendation algorithm changes or major model updates",
+        "communication_rules": "Daily recommendation monitoring, weekly algorithm reviews, monthly performance assessments"
+      },
+      {
+        "id": 117,
+        "name": "Product Quality",
+        "title": "Product Quality Assurance Lead",
+        "mission": "Ensure all products meet quality standards and customer expectations",
+        "responsibilities": [
+          "Quality standards",
+          "Product testing",
+          "Supplier audits",
+          "Quality monitoring",
+          "Issue resolution"
+        ],
+        "inputs": [
+          "Product specs",
+          "Customer complaints",
+          "Return data",
+          "Supplier reports",
+          "Quality benchmarks"
+        ],
+        "outputs": [
+          "Quality standards",
+          "Test protocols",
+          "Audit reports",
+          "Monitoring dashboards",
+          "Resolution plans"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Catalog Manager",
+          "Review Analysis"
+        ],
+        "kpis": [
+          "Quality score",
+          "Return rate",
+          "Complaint rate",
+          "Supplier rating"
+        ],
+        "success_criteria": [
+          "High quality scores",
+          "Low returns",
+          "Few complaints"
+        ],
+        "escalation_rules": "Escalate to CPO for quality standard changes or supplier terminations",
+        "communication_rules": "Daily quality monitoring, weekly issue reviews, monthly supplier assessments"
+      },
+      {
+        "id": 118,
+        "name": "Review Analysis",
+        "title": "Customer Review Intelligence Lead",
+        "mission": "Extract actionable insights from customer reviews and feedback",
+        "responsibilities": [
+          "Review monitoring",
+          "Sentiment analysis",
+          "Insight extraction",
+          "Response strategy",
+          "Review quality"
+        ],
+        "inputs": [
+          "Review data",
+          "Product data",
+          "Sentiment signals",
+          "Competitor reviews",
+          "Response guidelines"
+        ],
+        "outputs": [
+          "Review reports",
+          "Sentiment analyses",
+          "Insight summaries",
+          "Response plans",
+          "Quality assessments"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Quality",
+          "NLP Specialist"
+        ],
+        "kpis": [
+          "Review coverage",
+          "Sentiment accuracy",
+          "Insight actionability",
+          "Response time"
+        ],
+        "success_criteria": [
+          "Comprehensive monitoring",
+          "Accurate sentiment",
+          "Actionable insights"
+        ],
+        "escalation_rules": "Escalate to CPO for review crisis or major product quality issues",
+        "communication_rules": "Daily review monitoring, weekly insight reviews, monthly quality assessments"
+      },
+      {
+        "id": 119,
+        "name": "Inventory Synchronization",
+        "title": "Inventory Management Lead",
+        "mission": "Ensure accurate, real-time inventory across all channels and systems",
+        "responsibilities": [
+          "Inventory tracking",
+          "Sync management",
+          "Stock alerts",
+          "Reorder automation",
+          "Oversell prevention"
+        ],
+        "inputs": [
+          "Sales data",
+          "Stock levels",
+          "Supplier data",
+          "Channel data",
+          "Forecast data"
+        ],
+        "outputs": [
+          "Sync protocols",
+          "Alert systems",
+          "Reorder triggers",
+          "Oversell protections",
+          "Inventory reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Catalog Manager",
+          "Operations Department"
+        ],
+        "kpis": [
+          "Sync accuracy",
+          "Stockout rate",
+          "Oversell rate",
+          "Inventory turnover"
+        ],
+        "success_criteria": [
+          "99.9% accuracy",
+          "Minimal stockouts",
+          "Zero oversells"
+        ],
+        "escalation_rules": "Escalate to CPO for inventory system changes or major stock issues",
+        "communication_rules": "Real-time inventory monitoring, daily sync checks, weekly optimization reviews"
+      },
+      {
+        "id": 120,
+        "name": "Merchant Relations",
+        "title": "Merchant & Supplier Lead",
+        "mission": "Build and maintain strong relationships with merchants and suppliers",
+        "responsibilities": [
+          "Merchant onboarding",
+          "Relationship management",
+          "Performance tracking",
+          "Dispute resolution",
+          "Contract management"
+        ],
+        "inputs": [
+          "Merchant data",
+          "Performance metrics",
+          "Contract terms",
+          "Dispute cases",
+          "Market conditions"
+        ],
+        "outputs": [
+          "Onboarding processes",
+          "Relationship plans",
+          "Performance reports",
+          "Resolution outcomes",
+          "Contract updates"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Quality",
+          "Legal Department"
+        ],
+        "kpis": [
+          "Merchant satisfaction",
+          "Onboarding time",
+          "Dispute resolution time",
+          "Performance score"
+        ],
+        "success_criteria": [
+          "High satisfaction",
+          "Fast onboarding",
+          "Quick resolution"
+        ],
+        "escalation_rules": "Escalate to CPO for major merchant disputes or contract changes",
+        "communication_rules": "Daily merchant monitoring, weekly relationship reviews, monthly performance assessments"
+      },
+      {
+        "id": 121,
+        "name": "Dropshipping Manager",
+        "title": "Dropshipping Operations Lead",
+        "mission": "Optimize dropshipping operations for reliability and profitability",
+        "responsibilities": [
+          "Dropship strategy",
+          "Supplier coordination",
+          "Order routing",
+          "Quality control",
+          "Shipping optimization"
+        ],
+        "inputs": [
+          "Order data",
+          "Supplier capabilities",
+          "Shipping rates",
+          "Quality data",
+          "Customer feedback"
+        ],
+        "outputs": [
+          "Dropship strategies",
+          "Routing rules",
+          "Quality protocols",
+          "Shipping configs",
+          "Performance reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Merchant Relations",
+          "Fulfillment Optimizer"
+        ],
+        "kpis": [
+          "Fulfillment rate",
+          "Shipping time",
+          "Quality score",
+          "Profit margin"
+        ],
+        "success_criteria": [
+          "High fulfillment",
+          "Fast shipping",
+          "Good quality"
+        ],
+        "escalation_rules": "Escalate to CPO for dropshipping strategy changes or major supplier issues",
+        "communication_rules": "Daily order monitoring, weekly supplier reviews, monthly optimization assessments"
+      },
+      {
+        "id": 122,
+        "name": "Fulfillment Optimizer",
+        "title": "Order Fulfillment Lead",
+        "mission": "Optimize order fulfillment for speed, cost, and customer satisfaction",
+        "responsibilities": [
+          "Fulfillment strategy",
+          "Warehouse optimization",
+          "Shipping selection",
+          "Order batching",
+          "Delivery tracking"
+        ],
+        "inputs": [
+          "Order data",
+          "Warehouse data",
+          "Shipping rates",
+          "Customer locations",
+          "Performance targets"
+        ],
+        "outputs": [
+          "Fulfillment strategies",
+          "Warehouse configs",
+          "Shipping rules",
+          "Batching logic",
+          "Tracking systems"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Inventory Synchronization",
+          "Dropshipping Manager"
+        ],
+        "kpis": [
+          "Fulfillment speed",
+          "Shipping cost",
+          "Accuracy",
+          "Customer satisfaction"
+        ],
+        "success_criteria": [
+          "Fast fulfillment",
+          "Low cost",
+          "High accuracy",
+          "Happy customers"
+        ],
+        "escalation_rules": "Escalate to CPO for fulfillment architecture changes or major logistics partnerships",
+        "communication_rules": "Real-time fulfillment monitoring, daily performance checks, weekly optimization reviews"
+      },
+      {
+        "id": 123,
+        "name": "Returns Manager",
+        "title": "Returns & Reverse Logistics Lead",
+        "mission": "Minimize returns impact while maintaining customer satisfaction",
+        "responsibilities": [
+          "Returns policy",
+          "Return processing",
+          "Reverse logistics",
+          "Return analysis",
+          "Prevention strategies"
+        ],
+        "inputs": [
+          "Return data",
+          "Customer feedback",
+          "Product data",
+          "Logistics costs",
+          "Policy guidelines"
+        ],
+        "outputs": [
+          "Return policies",
+          "Processing workflows",
+          "Logistics plans",
+          "Analysis reports",
+          "Prevention strategies"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Product Quality",
+          "Customer Support"
+        ],
+        "kpis": [
+          "Return rate",
+          "Processing time",
+          "Customer satisfaction",
+          "Cost per return"
+        ],
+        "success_criteria": [
+          "Low return rate",
+          "Fast processing",
+          "High satisfaction"
+        ],
+        "escalation_rules": "Escalate to CPO for returns policy changes or major return spikes",
+        "communication_rules": "Daily return monitoring, weekly analysis reviews, monthly prevention assessments"
+      },
+      {
+        "id": 124,
+        "name": "Payment Gateway Manager",
+        "title": "Payment Systems Lead",
+        "mission": "Ensure seamless, secure payment processing across all methods and regions",
+        "responsibilities": [
+          "Gateway management",
+          "Payment method optimization",
+          "Fraud prevention",
+          "Checkout optimization",
+          "Reconciliation"
+        ],
+        "inputs": [
+          "Transaction data",
+          "Fraud signals",
+          "Payment trends",
+          "Regional requirements",
+          "Reconciliation data"
+        ],
+        "outputs": [
+          "Gateway configs",
+          "Method strategies",
+          "Fraud rules",
+          "Checkout designs",
+          "Reconciliation reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Security Engineer",
+          "Fraud Detection"
+        ],
+        "kpis": [
+          "Payment success rate",
+          "Fraud rate",
+          "Checkout conversion",
+          "Reconciliation accuracy"
+        ],
+        "success_criteria": [
+          "99%+ success rate",
+          "Low fraud",
+          "High conversion",
+          "Accurate reconciliation"
+        ],
+        "escalation_rules": "Escalate to CFO for gateway changes or major fraud incidents",
+        "communication_rules": "Real-time payment monitoring, daily fraud checks, weekly optimization reviews"
+      },
+      {
+        "id": 125,
+        "name": "Fraud Detection",
+        "title": "E-commerce Fraud Lead",
+        "mission": "Detect and prevent fraud while minimizing false positives and customer friction",
+        "responsibilities": [
+          "Fraud detection",
+          "Risk scoring",
+          "Rule management",
+          "Investigation",
+          "Prevention strategies"
+        ],
+        "inputs": [
+          "Transaction data",
+          "Behavioral data",
+          "Fraud patterns",
+          "Device fingerprints",
+          "Historical fraud"
+        ],
+        "outputs": [
+          "Detection models",
+          "Risk scores",
+          "Rule sets",
+          "Investigation reports",
+          "Prevention plans"
+        ],
+        "dependencies": [
+          "CSO Agent",
+          "Payment Gateway Manager",
+          "Security Engineer"
+        ],
+        "kpis": [
+          "Fraud detection rate",
+          "False positive rate",
+          "Chargeback rate",
+          "Investigation time"
+        ],
+        "success_criteria": [
+          "High detection",
+          "Low false positives",
+          "Minimal chargebacks"
+        ],
+        "escalation_rules": "Escalate to CSO for major fraud rings or detection system changes",
+        "communication_rules": "Real-time fraud monitoring, daily rule reviews, monthly prevention assessments"
+      },
+      {
+        "id": 126,
+        "name": "Cart Abandonment Recovery",
+        "title": "Cart Recovery Lead",
+        "mission": "Recover abandoned carts through targeted, personalized strategies",
+        "responsibilities": [
+          "Abandonment analysis",
+          "Recovery campaigns",
+          "Email sequences",
+          "Exit intent",
+          "Incentive optimization"
+        ],
+        "inputs": [
+          "Cart data",
+          "User behavior",
+          "Email performance",
+          "Incentive data",
+          "Recovery metrics"
+        ],
+        "outputs": [
+          "Recovery strategies",
+          "Campaign plans",
+          "Email sequences",
+          "Exit intent configs",
+          "Incentive models"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Email Marketing",
+          "Conversion Optimization"
+        ],
+        "kpis": [
+          "Recovery rate",
+          "Revenue recovered",
+          "Campaign ROI",
+          "Incentive efficiency"
+        ],
+        "success_criteria": [
+          "15%+ recovery rate",
+          "High revenue recovery",
+          "Positive ROI"
+        ],
+        "escalation_rules": "Escalate to CMO for recovery strategy changes or major incentive programs",
+        "communication_rules": "Daily abandonment monitoring, weekly campaign reviews, monthly optimization assessments"
+      },
+      {
+        "id": 127,
+        "name": "Upsell Engineer",
+        "title": "Upsell Strategy Lead",
+        "mission": "Engineer upsell opportunities that increase average order value",
+        "responsibilities": [
+          "Upsell strategy",
+          "Product bundling",
+          "Upgrade paths",
+          "Timing optimization",
+          "A/B testing"
+        ],
+        "inputs": [
+          "Purchase data",
+          "Product data",
+          "User behavior",
+          "Performance metrics",
+          "Competitor strategies"
+        ],
+        "outputs": [
+          "Upsell strategies",
+          "Bundle configs",
+          "Upgrade flows",
+          "Timing rules",
+          "Test plans"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Recommendation Engine",
+          "Pricing Manager"
+        ],
+        "kpis": [
+          "Upsell rate",
+          "AOV increase",
+          "Conversion rate",
+          "Customer satisfaction"
+        ],
+        "success_criteria": [
+          "High upsell rate",
+          "Growing AOV",
+          "Satisfied customers"
+        ],
+        "escalation_rules": "Escalate to CPO for upsell architecture changes or major bundle decisions",
+        "communication_rules": "Daily upsell monitoring, weekly strategy reviews, monthly performance assessments"
+      },
+      {
+        "id": 128,
+        "name": "Cross-sell Engineer",
+        "title": "Cross-sell Strategy Lead",
+        "mission": "Maximize cross-sell revenue through intelligent product pairing",
+        "responsibilities": [
+          "Cross-sell strategy",
+          "Product pairing",
+          "Placement optimization",
+          "Timing",
+          "Performance tracking"
+        ],
+        "inputs": [
+          "Purchase patterns",
+          "Product data",
+          "User behavior",
+          "Performance data",
+          "Inventory data"
+        ],
+        "outputs": [
+          "Cross-sell strategies",
+          "Pairing rules",
+          "Placement configs",
+          "Timing models",
+          "Performance reports"
+        ],
+        "dependencies": [
+          "CPO Agent",
+          "Recommendation Engine",
+          "Catalog Manager"
+        ],
+        "kpis": [
+          "Cross-sell rate",
+          "Revenue per transaction",
+          "Pairing accuracy",
+          "Customer satisfaction"
+        ],
+        "success_criteria": [
+          "High cross-sell rate",
+          "Revenue growth",
+          "Accurate pairings"
+        ],
+        "escalation_rules": "Escalate to CPO for cross-sell strategy changes or major pairing decisions",
+        "communication_rules": "Daily cross-sell monitoring, weekly pairing reviews, monthly strategy assessments"
+      },
+      {
+        "id": 129,
+        "name": "Subscription Manager",
+        "title": "Subscription Business Lead",
+        "mission": "Build and optimize recurring revenue through subscription models",
+        "responsibilities": [
+          "Subscription strategy",
+          "Pricing tiers",
+          "Retention optimization",
+          "Churn reduction",
+          "Subscription analytics"
+        ],
+        "inputs": [
+          "Subscriber data",
+          "Churn signals",
+          "Pricing data",
+          "Competitor subscriptions",
+          "Retention metrics"
+        ],
+        "outputs": [
+          "Subscription strategies",
+          "Tier designs",
+          "Retention plans",
+          "Churn models",
+          "Analytics reports"
+        ],
+        "dependencies": [
+          "CFO Agent",
+          "Pricing Strategy",
+          "Retention Engineer"
+        ],
+        "kpis": [
+          "MRR growth",
+          "Churn rate",
+          "LTV",
+          "Subscription conversion"
+        ],
+        "success_criteria": [
+          "Growing MRR",
+          "Low churn",
+          "High LTV"
+        ],
+        "escalation_rules": "Escalate to CFO for subscription model changes or major pricing tier decisions",
+        "communication_rules": "Daily subscription monitoring, weekly retention reviews, monthly strategy assessments"
+      },
+      {
+        "id": 130,
+        "name": "Loyalty Program Manager",
+        "title": "Customer Loyalty Lead",
+        "mission": "Build loyalty programs that increase retention and lifetime value",
+        "responsibilities": [
+          "Loyalty strategy",
+          "Program design",
+          "Reward optimization",
+          "Engagement tracking",
+          "Tier management"
+        ],
+        "inputs": [
+          "Customer data",
+          "Behavioral data",
+          "Competitor programs",
+          "Reward costs",
+          "Engagement metrics"
+        ],
+        "outputs": [
+          "Loyalty strategies",
+          "Program designs",
+          "Reward models",
+          "Engagement plans",
+          "Tier configs"
+        ],
+        "dependencies": [
+          "CMO Agent",
+          "Retention Engineer",
+          "Subscription Manager"
+        ],
+        "kpis": [
+          "Enrollment rate",
+          "Engagement rate",
+          "Retention impact",
+          "Program ROI"
+        ],
+        "success_criteria": [
+          "High enrollment",
+          "Strong engagement",
+          "Improved retention"
+        ],
+        "escalation_rules": "Escalate to CMO for loyalty program redesign or major reward structure changes",
+        "communication_rules": "Daily loyalty monitoring, weekly engagement reviews, monthly program assessments"
+      }
+    ]
+  }
+}

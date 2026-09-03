@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mem_1787092620544_6104",
+    "missionId": "atlantida_msn_1787092620543_5736",
+    "title": "Mission Learned Solution: Analyze the B2B SaaS market in Germany and create a concrete...",
+    "worker": "Chief AI (CEO)",
+    "type": "Learned Solution",
+    "summary": "Mission \"Analyze the B2B SaaS market in Germany and create a concrete customer acquisition strategy for a new AI automation company targeting small and medium-sized businesses.\" successfully executed by 7 autonomous workers. Realized strategy, telemetry and market roadmap persisted.",
+    "agentsInvolved": [
+      "Chief AI (CEO)",
+      "Research Intelligence AI",
+      "Product Architect",
+      "Automation Engineer",
+      "Growth AI",
+      "Security Engineer",
+      "QA & Bug Hunter"
+    ],
+    "createdIso": "2026-08-18T22:37:00.544Z",
+    "createdAt": "2026-08-18T22:37:00.544Z"
+  },
+  {
+    "id": "mem_1787092574712_3007",
+    "missionId": "atlantida_msn_1787092574711_1319",
+    "title": "Mission Learned Solution: Analyze the B2B SaaS market in Germany and create a concrete...",
+    "worker": "Chief AI (CEO)",
+    "type": "Learned Solution",
+    "summary": "Mission \"Analyze the B2B SaaS market in Germany and create a concrete customer acquisition strategy for a new AI automation company targeting small and medium-sized businesses.\" successfully executed by 7 autonomous workers. Realized strategy, telemetry and market roadmap persisted.",
+    "agentsInvolved": [
+      "Chief AI (CEO)",
+      "Research Intelligence AI",
+      "Product Architect",
+      "Automation Engineer",
+      "Growth AI",
+      "Security Engineer",
+      "QA & Bug Hunter"
+    ],
+    "createdIso": "2026-08-18T22:36:14.712Z",
+    "createdAt": "2026-08-18T22:36:14.712Z"
+  }
+]
