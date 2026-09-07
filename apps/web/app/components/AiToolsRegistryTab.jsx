@@ -608,20 +608,20 @@ export default function AiToolsRegistryTab() {
     switch (group) {
       case 'Agent':
         return {
-          icon: <Bot className="w-3.5 h-3.5 text-indigo-400" />,
+          Icon: <Bot className="w-3.5 h-3.5 text-indigo-400" />,
           bg: 'bg-indigo-950/80 border-indigo-700/60 text-indigo-200',
           label: 'Agent'
         };
       case 'Generator':
         return {
-          icon: <Sparkles className="w-3.5 h-3.5 text-amber-400" />,
+          Icon: <Sparkles className="w-3.5 h-3.5 text-amber-400" />,
           bg: 'bg-amber-950/80 border-amber-700/60 text-amber-200',
           label: 'Generator'
         };
       case 'Utility':
       default:
         return {
-          icon: <Wrench className="w-3.5 h-3.5 text-cyan-400" />,
+          Icon: <Wrench className="w-3.5 h-3.5 text-cyan-400" />,
           bg: 'bg-cyan-950/80 border-cyan-700/60 text-cyan-200',
           label: 'Utility'
         };

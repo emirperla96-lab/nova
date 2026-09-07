@@ -219,7 +219,7 @@ export default function MainDashboardLayout({
     icon: Sparkles,
     description: 'Autonomous AI Operating System tool suite'
   };
-  const CurrentIcon = currentTool.icon;
+  const CurrentIcon = currentTool.icon || Sparkles;
 
   // Filter tools based on search query
   const filteredCategories = AI_TOOL_CATEGORIES.map(cat => ({

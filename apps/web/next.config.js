@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NEXT_PUBLIC_EXPORT === 'true';
+const isProd = process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_EXPORT === 'true';
 
 const nextConfig = {
+
   reactStrictMode: true,
   output: isProd ? 'export' : undefined,
   distDir: isProd ? '.next-build' : '.next',

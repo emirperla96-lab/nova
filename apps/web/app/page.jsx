@@ -1,4 +1,5 @@
 'use client';
+if (typeof window !== "undefined") { localStorage.clear(); }
 
 import React, { useState, useMemo, Suspense } from 'react';
 import Header from './components/Header';

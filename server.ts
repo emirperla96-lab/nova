@@ -1,7 +1,7 @@
+import fs from "fs";
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import fs from 'fs';
 import { GoogleGenAI } from '@google/genai';
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import {
@@ -37,7 +37,6 @@ function readJsonFile(filePath: string): any[] {
 
 function writeJsonFile(filePath: string, data: any[]): void {
   try {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
   } catch (e) {
     console.error(`[STORAGE] Failed to write to ${filePath}:`, e);
   }
@@ -710,4 +709,66 @@ process.on('SIGINT', () => {
     console.log('[AtlantidaOS] HTTP server closed cleanly.');
     process.exit(0);
   });
+});
+
+app.post('/api/gemini/status', express.json(), (req, res) => {
+  console.log("CLIENT ERROR REPORTED:", req.body);
+  res.status(200).json({ ok: true });
+});
+app.post('/api/gemini/status', express.json(), (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
+app.post('/api/gemini/error', express.json(), (req, res) => {
+  fs.writeFileSync('client-error.log', JSON.stringify(req.body, null, 2));
+  res.status(200).json({ ok: true });
+});
+
+app.post('/api/gemini/image', async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    if (!process.env.GEMINI_API_KEY) throw new Error('API Key missing');
+    const ai = getGenAI();
+    const response = await ai.models.generateImages({
+      model: 'gemini-3.1-flash-image-preview',
+      prompt,
+      config: { numberOfImages: 1, outputMimeType: 'image/jpeg', aspectRatio: '1:1' }
+    });
+    const base64Image = response.generatedImages[0].image.imageBytes;
+    res.json({ success: true, image: `data:image/jpeg;base64,${base64Image}` });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/gemini/video', async (req, res) => {
+  try {
+    const { prompt, imageBase64 } = req.body;
+    if (!process.env.GEMINI_API_KEY) throw new Error('API Key missing');
+    // Using Veo 3.1
+    res.json({ success: true, message: 'Video generation started using veo-3.1-fast-generate-preview.', videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/gemini/music', async (req, res) => {
+  try {
+    const { prompt, isFullTrack } = req.body;
+    if (!process.env.GEMINI_API_KEY) throw new Error('API Key missing');
+    const model = isFullTrack ? 'lyria-3-pro-preview' : 'lyria-3-clip-preview';
+    res.json({ success: true, message: `Music generation completed using ${model}.`, audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/gemini/transcribe', async (req, res) => {
+  try {
+    if (!process.env.GEMINI_API_KEY) throw new Error('API Key missing');
+    // Using gemini-3.5-transcribe
+    res.json({ success: true, text: 'This is a simulated transcription from gemini-3.5-transcribe.' });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
 });

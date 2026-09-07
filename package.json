@@ -10,7 +10,7 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "rm -rf apps/web/.next && PORT=3001 node --experimental-strip-types server.ts & npm --prefix apps/web run dev",
+    "dev": "rm -rf apps/web/.next && PORT=3001 node --experimental-strip-types server.ts > server.log 2>&1 & npm --prefix apps/web run dev > next.log 2>&1",
     "build": "NODE_ENV=production NEXT_PUBLIC_EXPORT=true npm --prefix apps/web run build && rm -rf dist build out apps/web/dist && mkdir -p dist build out apps/web/dist && cp -r apps/web/.next-build/. dist/ && cp -r apps/web/.next-build/. build/ && cp -r apps/web/.next-build/. out/ && cp -r apps/web/.next-build/. apps/web/dist/",
     "start": "node --experimental-strip-types server.ts",
     "lint": "npm --prefix apps/web run lint"
@@ -33,6 +33,7 @@
     "drizzle-orm": "^0.45.2",
     "express": "^4.19.2",
     "firebase": "^12.17.1",
-    "pg": "^8.22.0"
+    "pg": "^8.22.0",
+    "puppeteer": "^25.10.0"
   }
 }

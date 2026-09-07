@@ -24,7 +24,7 @@ const firebaseConfig = {
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = typeof window !== 'undefined' ? getAuth(app) : null;
-export const db = typeof window !== 'undefined' ? getFirestore(app) : null;
+export const db = typeof window !== 'undefined' ? getFirestore(app, 'ai-studio-atlantidaos-90244648-1c8c-45e1-b2f7-0663c0cf42ef') : null;
 
 export const googleProvider = typeof window !== 'undefined' ? new GoogleAuthProvider() : null;
 export const githubProvider = typeof window !== 'undefined' ? new GithubAuthProvider() : null;
