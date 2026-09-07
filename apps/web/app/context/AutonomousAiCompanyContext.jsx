@@ -669,49 +669,48 @@ export const INITIAL_REPORTS = {
 const AutonomousAiCompanyContext = createContext(null);
 
 export function AutonomousAiCompanyProvider({ children }) {
-  // Workers state
-  const [workers, setWorkers] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('atlantida_ai_workers');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) { /* fallback */ }
-      }
-    }
-    return INITIAL_WORKERS;
-  });
+  // Workers state (initialized consistently on server and client)
+  const [workers, setWorkers] = useState(INITIAL_WORKERS);
 
   // Task Queue state
-  const [taskQueue, setTaskQueue] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('atlantida_ai_tasks');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) { /* fallback */ }
-      }
-    }
-    return INITIAL_TASK_QUEUE;
-  });
+  const [taskQueue, setTaskQueue] = useState(INITIAL_TASK_QUEUE);
 
   // Shared Memory logs state
-  const [memoryLogs, setMemoryLogs] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('atlantida_ai_memory');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) { /* fallback */ }
-      }
-    }
-    return INITIAL_MEMORY_LOGS;
-  });
+  const [memoryLogs, setMemoryLogs] = useState(INITIAL_MEMORY_LOGS);
 
   // Real-time Activity Logs state
-  const [activityLogs, setActivityLogs] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('atlantida_ai_activity_logs');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) { /* fallback */ }
+  const [activityLogs, setActivityLogs] = useState(INITIAL_ACTIVITY_LOGS);
+
+  // Hydrate saved state from localStorage safely after mount
+  useEffect(() => {
+    try {
+      const savedWorkers = localStorage.getItem('atlantida_ai_workers');
+      if (savedWorkers) {
+        const parsed = JSON.parse(savedWorkers);
+        if (Array.isArray(parsed)) setWorkers(parsed);
       }
+
+      const savedTasks = localStorage.getItem('atlantida_ai_tasks');
+      if (savedTasks) {
+        const parsed = JSON.parse(savedTasks);
+        if (Array.isArray(parsed)) setTaskQueue(parsed);
+      }
+
+      const savedMemory = localStorage.getItem('atlantida_ai_memory');
+      if (savedMemory) {
+        const parsed = JSON.parse(savedMemory);
+        if (Array.isArray(parsed)) setMemoryLogs(parsed);
+      }
+
+      const savedLogs = localStorage.getItem('atlantida_ai_activity_logs');
+      if (savedLogs) {
+        const parsed = JSON.parse(savedLogs);
+        if (Array.isArray(parsed)) setActivityLogs(parsed);
+      }
+    } catch (e) {
+      console.warn('Failed to restore state from localStorage:', e);
     }
-    return INITIAL_ACTIVITY_LOGS;
-  });
+  }, []);
 
   // Executive Reports
   const [reports, setReports] = useState(INITIAL_REPORTS);

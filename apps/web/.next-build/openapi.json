@@ -1,0 +1,241 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AtlantidaOS AI Orchestration API",
+    "description": "API interface for ChatGPT Custom GPT Actions & Nexora Proxy to interact with AtlantidaOS micro-agents, persistent database missions, and ACOS pipeline.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://ais-dev-dgzodvgs4p6cylsnh6mspz-224382426458.europe-west2.run.app"
+    }
+  ],
+  "paths": {
+    "/api/mission": {
+      "post": {
+        "operationId": "dispatchMission",
+        "summary": "Dispatch and persist autonomous agent mission",
+        "description": "Dispatches a high-level operational goal to the AtlantidaOS micro-agent fleet, persists in Firestore database with real missionId, and returns step-by-step telemetry logs.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "prompt": {
+                    "type": "string",
+                    "description": "The mission goal, task, or directive to execute."
+                  },
+                  "department": {
+                    "type": "string",
+                    "description": "Target department code (e.g. ALL, DEV, MKT, OPS, SEC)."
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Authenticated user email or identifier."
+                  }
+                },
+                "required": ["prompt"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Mission execution telemetry stream, real Firestore missionId, and status report.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "missionId": { "type": "string", "description": "Real Firestore Database document ID." },
+                    "status": { "type": "string", "description": "Mission status (PLANNING, RUNNING, COMPLETED, FAILED)." },
+                    "goal": { "type": "string" },
+                    "prompt": { "type": "string" },
+                    "department": { "type": "string" },
+                    "assignedAgent": { "type": "string" },
+                    "agentsExecuted": { "type": "array", "items": { "type": "string" } },
+                    "steps": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "agent": { "type": "string" },
+                          "action": { "type": "string" },
+                          "log": { "type": "string" },
+                          "status": { "type": "string" },
+                          "timestamp": { "type": "string" }
+                        }
+                      }
+                    },
+                    "report": { "type": "string" },
+                    "summary": { "type": "string" },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "missionId": { "type": "string" },
+                        "status": { "type": "string" },
+                        "steps": { "type": "array", "items": { "type": "object" } },
+                        "report": { "type": "string" }
+                      }
+                    },
+                    "createdAt": { "type": "string" },
+                    "completedAt": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid prompt or missing required parameters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server or database error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mission/{id}": {
+      "get": {
+        "operationId": "getMissionById",
+        "summary": "Get persistent mission record by real database ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Mission found" },
+          "404": { "description": "Mission not found" }
+        }
+      }
+    },
+    "/api/missions": {
+      "get": {
+        "operationId": "listMissions",
+        "summary": "List recent persistent missions from database",
+        "responses": {
+          "200": { "description": "List of missions" }
+        }
+      }
+    },
+    "/api/agent-chat": {
+      "post": {
+        "operationId": "chatWithAgent",
+        "summary": "Direct communication with a specialized AtlantidaOS micro-agent",
+        "description": "Send queries or commands directly to any dedicated AI agent (Security, Architect, DevOps, Marketer, etc.).",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "agentId": {
+                    "type": "string",
+                    "description": "Target Agent ID (e.g. agent-arch-01, agent-sec-01)"
+                  },
+                  "agentName": {
+                    "type": "string",
+                    "description": "Name of the agent"
+                  },
+                  "message": {
+                    "type": "string",
+                    "description": "User prompt or command to the agent"
+                  },
+                  "department": {
+                    "type": "string",
+                    "description": "Agent department"
+                  }
+                },
+                "required": ["agentName", "message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response from the micro-agent.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "reply": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/acos-pipeline": {
+      "post": {
+        "operationId": "runAcosPipeline",
+        "summary": "Run CEO Super-Agent 6-Stage Autonomous Pipeline",
+        "description": "Triggers the full ACOS (Autonomous Company Operating System) pipeline from ideation to deployment.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "directive": {
+                    "type": "string",
+                    "description": "CEO directive or company goal"
+                  }
+                },
+                "required": ["directive"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pipeline execution report with all 6 stages resolved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "pipeline": { "type": "array", "items": { "type": "object" } },
+                    "summary": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

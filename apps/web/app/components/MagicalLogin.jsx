@@ -154,6 +154,22 @@ export default function MagicalLogin({ onLoginSuccess }) {
             <span>Prijavi se sa Google-om</span>
           </button>
 
+          <button
+            type="button"
+            onClick={() => {
+              onLoginSuccess({
+                uid: 'super-admin-emir',
+                email: 'emirperla96@gmail.com',
+                name: 'Emir Perla (Super Admin)',
+                isSuperAdmin: true,
+              });
+            }}
+            className="w-full mt-3 py-2.5 px-4 bg-gradient-to-r from-indigo-600/30 to-cyan-600/30 hover:from-indigo-600/50 hover:to-cyan-600/50 border border-indigo-500/40 text-cyan-200 text-xs font-semibold rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Instant Launch as Super Admin (Emir Perla)</span>
+          </button>
+
           {/* Helper buttons to autofill for demo */}
           <div className="mt-8 flex justify-center gap-4">
              <button

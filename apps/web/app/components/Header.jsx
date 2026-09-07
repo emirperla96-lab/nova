@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Shield, Activity, Cpu, Database, Zap, Sparkles, Terminal, Rocket, CreditCard, Users, Lock, UserCheck, FileSpreadsheet, LogIn, UserPlus, LogOut, Github, Bot, Wrench, Download, ChevronDown, User } from 'lucide-react';
+import { Shield, Activity, Cpu, Database, Zap, Sparkles, Terminal, Rocket, CreditCard, Users, Lock, UserCheck, FileSpreadsheet, LogIn, UserPlus, LogOut, Github, Bot, Wrench, Download, ChevronDown, User, MessageSquare } from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab, activeAgentCount, totalAgents, systemStatus, onOpenSimulator, currentUser, onSwitchUser, onOpenPaywall, onOpenAuth, onLogout }) {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function Header({ activeTab, setActiveTab, activeAgentCount, tota
   }, []);
 
   const tabs = [
-
+    { id: 'gemini-chat', label: 'Gemini Chat Assistant (GenAI SDK)', icon: MessageSquare, highlight: true },
     { id: 'autonomous-company', label: 'Autonomous AI Company (20 Workers)', icon: Bot, highlight: true },
     { id: 'terminal', label: 'Interactive CLI Terminal', icon: Terminal, highlight: true },
     { id: 'acos-team', label: 'CEO Super Agent & 50 AI Workforce', icon: Rocket, highlight: true },

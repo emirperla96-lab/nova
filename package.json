@@ -10,8 +10,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "PORT=3001 node --experimental-strip-types server.ts & npm --prefix apps/web run dev",
-    "build": "NEXT_PUBLIC_EXPORT=true npm --prefix apps/web run build && rm -rf dist build out apps/web/dist && mkdir -p dist build out apps/web/dist && cp -r apps/web/out/. dist/ && cp -r apps/web/out/. build/ && cp -r apps/web/out/. out/ && cp -r apps/web/out/. apps/web/dist/",
+    "dev": "rm -rf apps/web/.next && PORT=3001 node --experimental-strip-types server.ts & npm --prefix apps/web run dev",
+    "build": "NODE_ENV=production NEXT_PUBLIC_EXPORT=true npm --prefix apps/web run build && rm -rf dist build out apps/web/dist && mkdir -p dist build out apps/web/dist && cp -r apps/web/.next-build/. dist/ && cp -r apps/web/.next-build/. build/ && cp -r apps/web/.next-build/. out/ && cp -r apps/web/.next-build/. apps/web/dist/",
     "start": "node --experimental-strip-types server.ts",
     "lint": "npm --prefix apps/web run lint"
   },

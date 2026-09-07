@@ -2,6 +2,8 @@
 
 import React, { useState, useMemo, Suspense } from 'react';
 import Header from './components/Header';
+import MainDashboardLayout from './components/MainDashboardLayout';
+import GeminiChatInterface from './components/GeminiChatInterface';
 import OverviewTab from './components/OverviewTab';
 import AgentsDirectoryTab from './components/AgentsDirectoryTab';
 import DepartmentCommandTab from './components/DepartmentCommandTab';
@@ -33,7 +35,7 @@ import { auth, onAuthStateChanged } from './lib/firebase';
 import { getAllAgents, getDepartments, masterData, roadmapData, playbookData, learningData, memoryData } from './lib/atlasData';
 
 export default function AtlasOSApp() {
-  const [activeTab, setActiveTab] = useState('autonomous-company');
+  const [activeTab, setActiveTab] = useState('gemini-chat');
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [selectedDepartment, setSelectedDepartment] = useState(null);
   const [mounted, setMounted] = useState(false);
@@ -90,23 +92,22 @@ export default function AtlasOSApp() {
   const activeAgentCount = agents.filter(a => a.status === 'active').length;
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#05050a] to-black text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
-      <Header
+    <div className="h-screen w-full bg-[#05060b] text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30 selection:text-indigo-200 overflow-hidden">
+      <MainDashboardLayout
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        activeAgentCount={activeAgentCount}
-        totalAgents={agents.length}
-        systemStatus="AUTONOMOUS_ONLINE"
-        onOpenSimulator={() => setActiveTab('simulator')}
         currentUser={currentUser}
         onLogout={() => {
           if (auth) auth.signOut();
           setCurrentUser(null);
         }}
         onSwitchUser={(usr) => setCurrentUser(usr)}
-      />
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] pointer-events-none mix-blend-screen"></div>
+      >
+        {activeTab === 'gemini-chat' && (
+          <div className="h-full w-full max-w-5xl mx-auto flex flex-col min-h-[560px]">
+            <GeminiChatInterface currentUser={currentUser} />
+          </div>
+        )}
         {activeTab === 'autonomous-company' && <AutonomousAiCompanyTab currentUser={currentUser} />}
         {activeTab === 'terminal' && <TerminalInterfaceTab agents={agents} departments={departments} currentUser={currentUser} onNavigateTab={setActiveTab} />}
         {activeTab === 'acos-team' && <ACOSAiTeamTab onSelectAgent={setSelectedAgent} />}
@@ -126,18 +127,12 @@ export default function AtlasOSApp() {
         {activeTab === 'playbook' && <PlaybookTab playbookData={playbookData} />}
         {activeTab === 'operations' && <OperationsSecurityTab />}
         {activeTab === 'simulator' && <MissionSimulatorTab agents={agents} departments={departments} onSelectAgent={setSelectedAgent} />}
-      </main>
+      </MainDashboardLayout>
+
+      {selectedAgent && (
+        <AgentModal agent={selectedAgent} onClose={() => setSelectedAgent(null)} />
+      )}
       <LiveTelemetryStream agents={agents} onSelectAgent={setSelectedAgent} />
-      <footer className="border-t border-white/5 bg-black/50 backdrop-blur-xl py-6 text-center text-xs text-slate-500 font-mono">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>AtlantidaOS v1.0 • Magical Admin Dashboard</div>
-          <div className="flex items-center gap-4 text-slate-400">
-            <span>Admin: {currentUser.email}</span>
-            <span>•</span>
-            <span className="text-cyan-500 font-bold shadow-cyan-500/50 drop-shadow-md">SUPER_ADMIN (*) Access</span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

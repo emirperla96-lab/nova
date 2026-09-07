@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
+import { GoogleGenAI } from '@google/genai';
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import {
   getFirestore,
@@ -118,7 +119,7 @@ class PersistentDatabaseModel {
 }
 
 const app = express();
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = process.env.PORT === '3001' ? 3001 : 3000;
 
 // Standard middlewares
 app.use(cors());
@@ -525,6 +526,141 @@ app.post('/api/acos-pipeline', async (req: any, res: any) => {
     return res.status(500).json({
       success: false,
       error: error.message || 'Internal server error'
+    });
+  }
+});
+
+// ----------------------------------------------------
+// 8. GEMINI AI CLIENT & ENDPOINTS (/api/gemini/chat)
+// ----------------------------------------------------
+let aiClient: GoogleGenAI | null = null;
+function getGenAI(): GoogleGenAI {
+  if (!aiClient) {
+    aiClient = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY || '',
+      httpOptions: {
+        headers: {
+          'User-Agent': 'aistudio-build',
+        },
+      },
+    });
+  }
+  return aiClient;
+}
+
+// Check Gemini configuration status
+app.get('/api/gemini/status', (req: any, res: any) => {
+  const isKeyConfigured = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim().length > 0);
+  return res.status(200).json({
+    success: true,
+    model: 'gemini-3.8-flash',
+    isKeyConfigured,
+    provider: 'Google Gemini',
+    status: isKeyConfigured ? 'LIVE_ONLINE' : 'SIMULATED_STANDBY'
+  });
+});
+
+// Real-time Chat endpoint using gemini-3.8-flash
+app.post('/api/gemini/chat', async (req: any, res: any) => {
+  try {
+    const {
+      message,
+      history = [],
+      persona = 'Chief AI Assistant',
+      temperature = 0.7,
+      systemInstruction
+    } = req.body || {};
+
+    if (!message || typeof message !== 'string') {
+      return res.status(400).json({
+        success: false,
+        error: 'Message string is required'
+      });
+    }
+
+    // If no key is set yet, provide an informative and helpful simulated fallback response
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(200).json({
+        success: true,
+        reply: `Hello! I am **${persona}**, your AI executive copilot on **AtlantidaOS**.\n\n*Status Notice: The GEMINI_API_KEY secret is currently in Standby / Simulation mode. To connect directly to live Gemini production inference, attach your key under Settings > Secrets.*\n\nHere is my analysis of your prompt:\n\n> **"${message}"**\n\n### Strategic Plan & Execution Steps:\n1. **Directive Registration**: Captured in the AtlantidaOS shared memory bus.\n2. **Multi-Agent Task Allocation**: Dispatched to specialized sub-agents (Architect, Engineer, QA Bug Hunter).\n3. **Actionable Recommendation**: All system metrics are nominal. Ready to process deep multi-turn workflows, code generation, and DAG pipelines whenever you are ready!`,
+        model: 'gemini-3.8-flash (Standby Mode)',
+        timestamp: new Date().toISOString(),
+        isSimulated: true
+      });
+    }
+
+    const ai = getGenAI();
+    const defaultInstruction = `You are ${persona}, an advanced AI operating within AtlantidaOS (Autonomous AI Operating System).
+You assist the user with strategic company directives, software engineering, architecture reviews, multi-agent coordination, and answering inquiries.
+Format all answers with clean GitHub-flavored Markdown, including bold highlights, bullet points, structured tables, or syntax-highlighted code blocks where helpful.
+Be concise, proactive, technically authoritative, and articulate.`;
+
+    const contents: any[] = [];
+    if (Array.isArray(history)) {
+      for (const turn of history.slice(-12)) {
+        if (turn && (turn.role === 'user' || turn.role === 'assistant' || turn.role === 'model')) {
+          contents.push({
+            role: turn.role === 'assistant' ? 'model' : 'user',
+            parts: [{ text: turn.content || turn.text || '' }]
+          });
+        }
+      }
+    }
+
+    // Add current user prompt
+    contents.push({
+      role: 'user',
+      parts: [{ text: message }]
+    });
+
+    const candidateModels = ['gemini-3.8-flash', 'gemini-3.1-pro-preview', 'gemini-pro-latest'];
+    let response: any = null;
+    let selectedModel = 'gemini-3.8-flash';
+    let lastError: any = null;
+
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      for (const modelName of candidateModels) {
+        try {
+          response = await ai.models.generateContent({
+            model: modelName,
+            contents,
+            config: {
+              systemInstruction: systemInstruction || defaultInstruction,
+              temperature: typeof temperature === 'number' ? Math.max(0, Math.min(2, temperature)) : 0.7,
+            },
+          });
+          selectedModel = modelName;
+          break;
+        } catch (err: any) {
+          lastError = err;
+          console.warn(`[Gemini API] Model ${modelName} encountered: ${err.message?.slice(0, 120)}. Trying fallback...`);
+          if (err.message && err.message.includes('503')) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }
+        }
+      }
+      if (response) break;
+    }
+
+    if (!response) {
+      throw lastError || new Error('All Gemini model candidates failed to respond.');
+    }
+
+    const reply = response.text || 'No textual content returned from Gemini.';
+
+    return res.status(200).json({
+      success: true,
+      reply,
+      model: selectedModel,
+      timestamp: new Date().toISOString(),
+      isSimulated: false
+    });
+  } catch (error: any) {
+    console.error('[Gemini API Error]:', error);
+    return res.status(500).json({
+      success: false,
+      error: error.message || 'Error communicating with Gemini API',
+      model: 'gemini-3.8-flash'
     });
   }
 });
