@@ -102,10 +102,10 @@ export default function Header({ activeTab, setActiveTab, activeAgentCount, tota
                   </button>
                   <button
                     onClick={() => {
-                      onSwitchUser({ email: 'emir.p.win@gmail.com', name: 'Emir Win', provider: 'google', isSuperAdmin: true, isSubscribed: true, subscriptionTier: 'premium' });
+                      onSwitchUser({ email: 'emirperla96@gmail.com', name: 'Emir Win', provider: 'google', isSuperAdmin: true, isSubscribed: true, subscriptionTier: 'premium' });
                       setIsProfileMenuOpen(false);
                     }}
-                    className={`w-full text-left px-3 py-2 rounded-lg text-xs flex items-center gap-2 transition-colors ${currentUser?.email === 'emir.p.win@gmail.com' ? 'bg-indigo-950/50 text-indigo-300' : 'text-slate-300 hover:bg-slate-800'}`}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-xs flex items-center gap-2 transition-colors ${currentUser?.email === 'emirperla96@gmail.com' ? 'bg-indigo-950/50 text-indigo-300' : 'text-slate-300 hover:bg-slate-800'}`}
                   >
                     <UserCheck className="w-3.5 h-3.5" />
                     Emir Win (Admin 2)

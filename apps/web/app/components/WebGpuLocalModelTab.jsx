@@ -146,7 +146,7 @@ export function binarySearchLocal(arr: number[], target: number): number {
     }, 40);
   };
 
-  const isSuperAdmin = currentUser?.email === 'emir.p.win@gmail.com' || currentUser?.email === 'emirperla96@gmail.com';
+  const isSuperAdmin = currentUser?.email === 'emirperla96@gmail.com' || currentUser?.email === 'emirperla96@gmail.com';
   const isPremium = currentUser?.subscriptionTier === 'premium' || isSuperAdmin;
 
   return (
@@ -178,7 +178,7 @@ export function binarySearchLocal(arr: number[], target: number): number {
           <div className="flex flex-wrap items-center gap-4 text-xs font-mono pt-2 border-t border-slate-800/80">
             <div className="flex items-center gap-2 text-slate-300">
               <span className="text-slate-500">Super Admin Pristup:</span>
-              <strong className="text-amber-300">emir.p.win@gmail.com &amp; emirperla96@gmail.com (Omogućeno)</strong>
+              <strong className="text-amber-300">emirperla96@gmail.com (Omogućeno)</strong>
             </div>
             <div className="flex items-center gap-2 text-slate-300">
               <span className="text-slate-500">Status Preglednika:</span>
@@ -197,7 +197,7 @@ export function binarySearchLocal(arr: number[], target: number): number {
             <Lock className="w-6 h-6 text-amber-400 shrink-0" />
             <div>
               <strong className="block text-amber-100 font-bold">Super Admin ili Premium Pretplata Potrebna</strong>
-              <span>WebGPU lokalno izvršavanje u pregledniku je dostupno za Super Admine (emir.p.win@gmail.com / emirperla96@gmail.com) ili korisnike sa Premium paketom.</span>
+              <span>WebGPU lokalno izvršavanje u pregledniku je dostupno za Super Admine (emirperla96@gmail.com / emirperla96@gmail.com) ili korisnike sa Premium paketom.</span>
             </div>
           </div>
         </div>

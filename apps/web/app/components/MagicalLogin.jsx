@@ -8,7 +8,7 @@ export default function MagicalLogin({ onLoginSuccess }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const allowedAdmins = ['emirperla96@gmail.com', 'emir.p.win@gmail.com'];
+  const allowedAdmins = ['emirperla96@gmail.com'];
 
   const handleGoogleAuth = async () => {
     setLoading(true);
@@ -184,7 +184,7 @@ export default function MagicalLogin({ onLoginSuccess }) {
              <span className="text-slate-800">•</span>
              <button
                onClick={() => {
-                 setEmail('emir.p.win@gmail.com');
+                 setEmail('emirperla96@gmail.com');
                  setPassword('admin2026!');
                }}
                className="text-[10px] text-slate-500 hover:text-cyan-400 font-medium transition-colors"

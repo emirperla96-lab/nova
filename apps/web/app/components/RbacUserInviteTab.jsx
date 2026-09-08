@@ -37,13 +37,13 @@ import {
 
 export default function RbacUserInviteTab() {
   const [activeGovernanceSection, setActiveGovernanceSection] = useState('super-admins'); // super-admins, payouts, revenue, approvals, audit, rbac
-  const [activeAdminProfile, setActiveAdminProfile] = useState('emir.p.win@gmail.com');
+  const [activeAdminProfile, setActiveAdminProfile] = useState('emirperla96@gmail.com');
 
   // Super Admin Accounts Data
   const superAdmins = [
     {
       id: 'SUPER-001',
-      email: 'emir.p.win@gmail.com',
+      email: 'emirperla96@gmail.com',
       name: 'Emir Perla',
       title: 'Co-Founder & Executive Super Admin',
       role: 'SUPER_ADMIN',
@@ -60,7 +60,7 @@ export default function RbacUserInviteTab() {
       payoutMethods: [
         { id: 'PAY-1', type: 'Bank Account (ACH / Wire)', details: 'Chase Business Checking ****4892', isDefault: true, status: 'Verified' },
         { id: 'PAY-2', type: 'Stripe Connect Direct', details: 'acct_1M89X20491823901', isDefault: false, status: 'Verified' },
-        { id: 'PAY-3', type: 'PayPal Business', details: 'emir.p.win@gmail.com', isDefault: false, status: 'Verified' },
+        { id: 'PAY-3', type: 'PayPal Business', details: 'emirperla96@gmail.com', isDefault: false, status: 'Verified' },
       ],
       pendingPayout: 14250.00,
       completedPayouts: 68400.00,
@@ -133,7 +133,7 @@ export default function RbacUserInviteTab() {
       riskLevel: 'Medium',
       requiredApprovals: 1,
       currentApprovals: 1,
-      approvedBy: ['emir.p.win@gmail.com'],
+      approvedBy: ['emirperla96@gmail.com'],
       status: 'Approved & Executed'
     },
     {
@@ -180,7 +180,7 @@ export default function RbacUserInviteTab() {
       action: 'Subscription Pricing Tier Update (Pro $29.99 -> $34.99/mo)',
       project: 'ACOS Billing Engine',
       timestamp: '2026-07-29 17:18:05',
-      approvingAdmin: 'emir.p.win@gmail.com',
+      approvingAdmin: 'emirperla96@gmail.com',
       reason: 'Pricing adjustment approved based on Q3 margin analysis',
       status: 'SUCCESS'
     },
@@ -190,7 +190,7 @@ export default function RbacUserInviteTab() {
       action: 'Permanent Super Admin Governance Bootstrapped',
       project: 'ACOS Security Policy',
       timestamp: '2026-07-29 00:00:00',
-      approvingAdmin: 'emir.p.win@gmail.com & emirperla96@gmail.com',
+      approvingAdmin: 'emirperla96@gmail.com & emirperla96@gmail.com',
       reason: 'Root privilege lock enabled for dual Super Admin accounts',
       status: 'PROTECTED'
     }
@@ -198,9 +198,9 @@ export default function RbacUserInviteTab() {
 
   // Payout Transaction History
   const payoutHistory = [
-    { id: 'TX-701', date: '2026-07-28', method: 'Chase Business Checking (ACH)', amount: '$25,000.00', recipient: 'emir.p.win@gmail.com', status: 'Completed', ref: 'ACH-9018241' },
+    { id: 'TX-701', date: '2026-07-28', method: 'Chase Business Checking (ACH)', amount: '$25,000.00', recipient: 'emirperla96@gmail.com', status: 'Completed', ref: 'ACH-9018241' },
     { id: 'TX-702', date: '2026-07-25', method: 'Wise Business (USD/EUR)', amount: '$18,500.00', recipient: 'emirperla96@gmail.com', status: 'Completed', ref: 'WISE-881920' },
-    { id: 'TX-703', date: '2026-07-20', method: 'Stripe Connect Direct', amount: '$32,000.00', recipient: 'emir.p.win@gmail.com', status: 'Completed', ref: 'STRIPE-771829' },
+    { id: 'TX-703', date: '2026-07-20', method: 'Stripe Connect Direct', amount: '$32,000.00', recipient: 'emirperla96@gmail.com', status: 'Completed', ref: 'STRIPE-771829' },
     { id: 'TX-704', date: '2026-07-15', method: 'Coinbase Commerce (USDC)', amount: '$15,000.00', recipient: 'emirperla96@gmail.com', status: 'Completed', ref: 'CRYPTO-0x90a' },
   ];
 
@@ -334,7 +334,7 @@ export default function RbacUserInviteTab() {
           </h1>
 
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed max-w-4xl">
-            Two permanent Super Admin accounts (<code className="text-amber-300 font-mono font-bold">emir.p.win@gmail.com</code> &amp; <code className="text-amber-300 font-mono font-bold">emirperla96@gmail.com</code>) possess unrestricted root privileges (<code className="text-cyan-400 font-mono font-bold">*</code>) across all system resources. Neither account can be deleted, suspended, or downgraded by any user or AI worker. Critical operations follow the 1-of-2 approval threshold with immutable audit logs.
+            Two permanent Super Admin accounts (<code className="text-amber-300 font-mono font-bold">emirperla96@gmail.com</code> &amp; <code className="text-amber-300 font-mono font-bold">emirperla96@gmail.com</code>) possess unrestricted root privileges (<code className="text-cyan-400 font-mono font-bold">*</code>) across all system resources. Neither account can be deleted, suspended, or downgraded by any user or AI worker. Critical operations follow the 1-of-2 approval threshold with immutable audit logs.
           </p>
 
           {/* Sub Navigation Bar */}
@@ -716,7 +716,7 @@ export default function RbacUserInviteTab() {
                 1-of-2 Super Admin Protected Approval Center
               </h3>
               <p className="text-xs text-slate-400 font-sans mt-0.5">
-                Protected actions (Deployments, Pricing adjustments, DB deletions, Transfers) require sign-off from at least 1 of 2 Super Admins (<code className="text-amber-300">emir.p.win@gmail.com</code> or <code className="text-amber-300">emirperla96@gmail.com</code>).
+                Protected actions (Deployments, Pricing adjustments, DB deletions, Transfers) require sign-off from at least 1 of 2 Super Admins (<code className="text-amber-300">emirperla96@gmail.com</code> or <code className="text-amber-300">emirperla96@gmail.com</code>).
               </p>
             </div>
             <span className="text-xs font-bold text-cyan-400 bg-cyan-950 border border-cyan-800 px-3 py-1.5 rounded-xl">
@@ -750,7 +750,7 @@ export default function RbacUserInviteTab() {
                   {item.status.includes('Pending') && (
                     <div className="flex items-center gap-2">
                       <button
-                        onClick={() => handleApproveAction(item.id, 'emir.p.win@gmail.com')}
+                        onClick={() => handleApproveAction(item.id, 'emirperla96@gmail.com')}
                         className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-extrabold rounded-lg text-xs transition-all flex items-center gap-1"
                       >
                         <Check className="w-3.5 h-3.5" /> Approve as emir.p.win
@@ -762,7 +762,7 @@ export default function RbacUserInviteTab() {
                         <Check className="w-3.5 h-3.5" /> Approve as emirperla96
                       </button>
                       <button
-                        onClick={() => handleRejectAction(item.id, 'emir.p.win@gmail.com')}
+                        onClick={() => handleRejectAction(item.id, 'emirperla96@gmail.com')}
                         className="px-3 py-1.5 bg-rose-950 hover:bg-rose-900 text-rose-300 border border-rose-800 rounded-lg text-xs transition-all"
                       >
                         Veto / Reject

@@ -1069,7 +1069,7 @@ export default function ACOSAiTeamTab({ onSelectAgent }) {
               </div>
               <div className="flex justify-between text-slate-400 border-t border-slate-800 pt-2">
                 <span>Wallet Payout Address:</span>
-                <span className="text-slate-200">emir.p.win@gmail.com</span>
+                <span className="text-slate-200">emirperla96@gmail.com</span>
               </div>
             </div>
 

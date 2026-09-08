@@ -48,7 +48,7 @@ export default function AtlasOSApp() {
     if (auth) {
       unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
         if (firebaseUser) {
-          const allowedAdmins = ['emirperla96@gmail.com', 'emir.p.win@gmail.com'];
+          const allowedAdmins = ['emirperla96@gmail.com'];
           if (allowedAdmins.includes(firebaseUser.email)) {
             setCurrentUser({
               uid: firebaseUser.uid,

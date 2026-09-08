@@ -5,7 +5,7 @@ import { Shield, Server, Activity, Lock, RefreshCw, Cpu, CheckCircle2, Globe, Ha
 
 export default function OperationsSecurityTab() {
   const [logs, setLogs] = useState([
-    { id: 1, time: '18:14:02', event: 'Super Admin Login (emir.p.win@gmail.com) verified via 2FA', level: 'INFO', source: 'Auth Engine' },
+    { id: 1, time: '18:14:02', event: 'Super Admin Login (emirperla96@gmail.com) verified via 2FA', level: 'INFO', source: 'Auth Engine' },
     { id: 2, time: '18:12:45', event: 'PCI-DSS tokenized transaction processed via Stripe Gateway ($29.99)', level: 'INFO', source: 'Stripe Billing' },
     { id: 3, time: '18:10:11', event: 'Autonomous 5-Agent Pipeline executed cleanly for idea #904', level: 'SUCCESS', source: 'ACOS Pipeline' },
     { id: 4, time: '18:05:30', event: 'Enforced rate limit policy (1,000 req/min) on public telemetry API', level: 'SEC', source: 'Rate Limiter' },

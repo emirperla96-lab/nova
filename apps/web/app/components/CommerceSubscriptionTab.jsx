@@ -140,7 +140,7 @@ export default function CommerceSubscriptionTab() {
     const text = `==================================================
 ACOS SUPREME SAAS INVOICE - ${inv.id}
 ==================================================
-Customer: emir.p.win@gmail.com (SUPER_ADMIN)
+Customer: emirperla96@gmail.com (SUPER_ADMIN)
 Date: ${inv.date}
 Plan: ${inv.plan}
 Gateway: ${inv.gateway}

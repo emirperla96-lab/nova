@@ -264,7 +264,7 @@ ATLANTIDA OS SUBSCRIPTION TIERS & PRICING:
    - Cloud SQL Relaciona Baza + Pristup Google Workspace Integracijama
    - Neograničene Misije & RBAC Timski Pozivi
 
-Super Admini (emir.p.win@gmail.com) imaju trajni besplatni pristup svim funkcijama!`
+Super Admini (emirperla96@gmail.com) imaju trajni besplatni pristup svim funkcijama!`
           }
         ]);
         break;
